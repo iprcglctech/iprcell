@@ -1,0 +1,166 @@
+{
+  "certificateCourses": [
+    {
+      "id": "cc-2026",
+      "year": "2026",
+      "title": "Certificate Course on Cyber Security in Media & Entertainment",
+      "dates": "14th March 2026",
+      "status": "Completed",
+      "mode": "Online Weekend Program",
+      "description": "Explored the evolving intersection of Intellectual Property, Cyber Law, and Data Protection in the digital era, offering participants practical insights into protecting digital content in the media and entertainment space.",
+      "featuredExperts": [
+        { "name": "Purnima Thacker", "role": "Partner, Mulla & Mulla & Craigie Blunt & Caroe" },
+        { "name": "Rutwik Rao", "role": "Advocate, Bombay High Court" },
+        { "name": "V.C. Mathews", "role": "Partner, Fox Mandal & Associates" },
+        { "name": "Sujoy Mukerjee", "role": "Counsel, Bombay High Court" },
+        { "name": "Ishan Johri", "role": "Partner, Khaitan & Co." },
+        { "name": "Arpita K. Bhatt", "role": "Founder, BLU" },
+        { "name": "Astha Goel", "role": "Founder, Astha Goel & Associates" },
+        { "name": "Ritisha Mukherjee", "role": "Principal Associate, ANM Global" },
+        { "name": "Avadhi Joshi", "role": "Managing Partner, VNA Partners" }
+      ]
+    },
+    {
+      "id": "cc-2025",
+      "year": "2025",
+      "title": "Certificate Course in IPR with Special Emphasis on Copyright and Media & Entertainment",
+      "dates": "15th March – 21st April 2025",
+      "status": "Completed",
+      "mode": "Online Weekend Program (13 Interactive Lectures)",
+      "description": "Comprehensive curriculum covering the basics of IPR, copyright in media and entertainment, music rights, broadcasting and performing rights, influencer regulations, AI and copyright, e-sports and betting laws, dispute resolution, censorship issues, and strategies against online piracy.",
+      "featuredExperts": [
+        { "name": "Arrpita K. Bhatt", "role": "Founder, BLU" },
+        { "name": "Arushi Jain", "role": "Partner, Cyril Amarchand Mangaldas" },
+        { "name": "Kirti Balasubramanian", "role": "Partner, Trilegal" },
+        { "name": "Mathews Varghese", "role": "Partner, Fox Mandal LLP" },
+        { "name": "Prashant Ramdas", "role": "Vice President & Head, Legal at ENIL" },
+        { "name": "Purnima Thacker", "role": "Head IP Practice, Mulla & Mulla" },
+        { "name": "Ritisha Mukherjee", "role": "Principal Associate, ANM Global" },
+        { "name": "Shailendra Bhandare", "role": "Partner, Khaitan & Co" },
+        { "name": "Sujoy Mukherji", "role": "Principal Associate, Naik Naik & Co." }
+      ]
+    },
+    {
+      "id": "cc-2024",
+      "year": "2024",
+      "title": "TechDat: IPR on Course! With AI and Technologies",
+      "dates": "2nd March – 26th April 2024",
+      "status": "Inaugural Edition",
+      "mode": "Comprehensive Weekend Certificate Course",
+      "description": "Covered patents, trademarks, copyrights, designs, data protection, and emerging intersections with AI, blockchain, the metaverse, and space law. Emphasised monetization of IP, enforcement mechanisms, registration processes, and career pathways.",
+      "featuredExperts": [
+        { "name": "Shailendra Bhandare", "role": "Partner, Khaitan & Co." },
+        { "name": "Purnima Thacker", "role": "IP Head, Mulla & Mulla" },
+        { "name": "Mathews V.C.", "role": "IP Head, Fox Mandal & Co." },
+        { "name": "Rutwik Rao", "role": "Advocate, Bombay High Court" }
+      ]
+    },
+    {
+      "id": "cc-2027",
+      "year": "2027",
+      "title": "Certificate Course in Advanced IP Jurisprudence & Frontier Technologies",
+      "dates": "Academic Year 2026–27",
+      "status": "Upcoming",
+      "mode": "In the Works",
+      "description": "The 2027 edition is currently in development with leading international practitioners and corporate general counsels. Stay tuned for dates, curriculum release, and registration announcements."
+    }
+  ],
+  "trademarkOppositionCompetition": {
+    "title": "Prof. Tehemtan N. Daruwalla Trademark Opposition Competition (TOC)",
+    "tagline": "India's First-of-its-kind Procedural Trademark Simulation",
+    "commemoration": {
+      "name": "Prof. Tehemtan N. Daruwalla",
+      "image": "/images/tehemtan-daruwalla.jpg",
+      "text": "The competition is hosted in commemoration of Prof. Tehemtan N. Daruwalla, an alumnus of Government Law College (LL.B.) who qualified as a Solicitor in 1960. He pioneered the practice of Trade Mark and Patent Law in India, taught the LL.M. course in Intellectual Property at Mumbai University from 1976, and taught at GLC Mumbai from 1979 to 1992, shaping generations of leading IP attorneys."
+    },
+    "overview": "Designed as an authentic simulation of trademark opposition proceedings under the Trade Marks Act, 1999 and the Trade Marks Rules, 2017. Participants gain hands-on mastery over both substantive legal doctrines and intricate procedural requirements from notice of opposition to evidence affidavits and final oral hearings before the Registrar.",
+    "tracks": [
+      {
+        "type": "Inter-TOC (National)",
+        "eligibility": "Open to LL.B. & Integrated Law students across BCI-recognized law schools nationwide",
+        "format": "Two-Phase Competition: (1) Written Submissions under Rules 42–47 of the Trade Marks Rules, 2017 read with Section 21 of the Trade Marks Act, 1999. (2) Oral Argument rounds under Rule 50 conducted offline at the historic GLC Mumbai campus.",
+        "skillsTested": "Notice filing, evidence submission, counter-statements, oral opposition advocacy before the Registrar.",
+        "gallery": [
+          "/images/events/inter-toc-1.jpg",
+          "/images/events/inter-toc-2.jpg",
+          "/images/events/inter-toc-3.jpg"
+        ]
+      },
+      {
+        "type": "Intra-TOC (Institutional)",
+        "eligibility": "Exclusively for students of Government Law College, Mumbai",
+        "format": "Streamlined oral advocacy rounds strictly under Rule 50 of the Trade Marks Rules, 2017 read with Section 21 of the Trade Marks Act, 1999, focusing on live argument, cross-rebuttals, and procedural precision before the Registrar.",
+        "skillsTested": "Oral advocacy, procedural presentation, registrar argument tactics.",
+        "gallery": [
+          "/images/events/intra-toc-1.jpg",
+          "/images/events/intra-toc-2.jpg",
+          "/images/events/intra-toc-3.jpg"
+        ]
+      }
+    ]
+  },
+  "guestLecturesAndWebinars": [
+    {
+      "id": "javed-akhtar-panel",
+      "year": "2026",
+      "category": "Media & Copyright",
+      "title": "Javed Akhtar on Authorship, Lyrics & Intellectual Property in Indian Cinema",
+      "speaker": "Javed Akhtar (Renowned Lyricist, Screenwriter & Copyright Activist)",
+      "description": "A historic institutional panel examining the struggle for authors' and lyricists' statutory royalties, the 2012 Copyright Amendment, and contemporary challenges facing creators in the digital streaming era.",
+      "images": [
+        "/images/events/javed-akhtar-1.jpg",
+        "/images/events/javed-akhtar-2.jpg",
+        "/images/events/javed-akhtar-3.jpg"
+      ]
+    },
+    {
+      "id": "ai-vs-artist",
+      "year": "2025",
+      "category": "Frontier IP & AI",
+      "title": "IPR Colloquium: AI vs ARTIST — Who Really Holds the Creative Crown?",
+      "speaker": "Seven Distinguished IP Leaders (Arrpita K Bhatt, Pooja Kapadia, Prashant Ramdas, Purnima Thacker, Shailendra Bhandare, Sujoy Mukherji)",
+      "description": "Held on World IP Day 2025, exploring two critical legal debates: Intellectual Property Rights in AI-Generated Content, and Personality Rights & Voice Cloning Jurisprudence in India.",
+      "images": [
+        "/images/events/ai-artist-1.jpg",
+        "/images/events/ai-artist-2.jpg",
+        "/images/events/ai-artist-3.jpg"
+      ]
+    },
+    {
+      "id": "priyanka-khimani",
+      "year": "2025",
+      "category": "Entertainment Law",
+      "title": "In Conversation with Priyanka Khimani: Media Laws, Music Rights & IP Trends",
+      "speaker": "Priyanka Khimani (Founder, Khimani & Associates; Distinguished GLC Alumna)",
+      "description": "An intensive session delving into the commercial contracts, digital platform negotiations, and evolving entertainment law practices with interactive Q&A for GLC students.",
+      "images": [
+        "/images/events/priyanka-khimani-1.jpg",
+        "/images/events/priyanka-khimani-2.jpg",
+        "/images/events/priyanka-khimani-3.jpg"
+      ]
+    },
+    {
+      "id": "inta-unreal",
+      "year": "2025",
+      "category": "Brand Protection",
+      "title": "Deep Dive into IP Enforcement & The INTA Unreal Campaign",
+      "speaker": "Adv. Girish Bhatia (In collaboration with RNA, Technology and IP Attorneys & INTA)",
+      "description": "High-impact brand enforcement awareness focusing on counterfeit detection, anti-counterfeiting litigation, consumer economic impacts, and trademark defense.",
+      "images": [
+        "/images/events/toc-24-1.jpg",
+        "/images/events/toc-24-2.jpg"
+      ]
+    },
+    {
+      "id": "world-ip-day-2024",
+      "year": "2024",
+      "category": "Entertainment Law",
+      "title": "Panel Discussion: IP Challenges and Trends in Entertainment Law",
+      "speaker": "Purnima Thacker, Rutwik Kishan Rao, and Shailendra Bhandare",
+      "description": "Commemorating World Intellectual Property Day with a deep dive into media contracts, broadcasting rights, and the nascent impacts of generative AI on creative industries.",
+      "images": [
+        "/images/events/toc-24-1.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Government Law College IPR Clinic",
+  "tagline": "Grassroots Legal Literacy & Pro Bono Intellectual Property Advisory",
+  "vision": "The IPR Clinic at Government Law College Mumbai operates as an academic incubator and advisory cell designed to demystify intellectual property for student creators, small business founders, independent artists, and emerging innovators.",
+  "mandate": [
+    {
+      "title": "Pro Bono Preliminary Guidance",
+      "description": "Assisting student innovators and local creators in identifying protectable assets across patents, trademarks, design, and copyright."
+    },
+    {
+      "title": "Procedural Awareness & Filing Roadmap",
+      "description": "Educating creators on statutory filing workflows under the Indian Trade Marks Registry, Patent Office, and Copyright Board."
+    },
+    {
+      "title": "Workshops for Campus Entrepreneurs",
+      "description": "Conducting hands-on workshops on safeguarding brand identity, open-source compliance, and founder IP agreements."
+    },
+    {
+      "title": "Student Research Fellowships",
+      "description": "Empowering GLC law students to gain hands-on clinical legal training under faculty mentorship."
+    }
+  ],
+  "disclaimer": "The IPR Clinic provides academic information and preliminary intellectual property awareness for educational purposes. It does not substitute formal legal representation by an advocate."
+}

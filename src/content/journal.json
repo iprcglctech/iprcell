@@ -1,0 +1,111 @@
+{
+  "title": "Government Law College IPR Journal",
+  "subtitle": "Annual Peer-Reviewed Journal on Intellectual Property, Innovation & Tech Policy",
+  "partners": [
+    { "name": "Manupatra", "role": "Academic Knowledge Partner & Research Database" },
+    { "name": "CaseMine", "role": "Legal Analytics & Citation Partner" }
+  ],
+  "overview": "The IPR Journal, published by the Intellectual Property Rights Cell of Government Law College, Mumbai, is a student-edited, faculty-guided academic journal dedicated to high-calibre scholarship in IP law and allied fields including competition law, artificial intelligence, biotechnology, and technology policy. Every submission undergoes a stringent double-blind peer review to maintain academic precision and originality.",
+  "volume1": {
+    "title": "Volume I — Contemporary Horizons in IP Jurisprudence",
+    "status": "Published",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "recognitions": [
+      "Cash awards for meritorious contributions",
+      "Complimentary access to Manupatra Academy Certification Course for winning author",
+      "Special discounts (75% & 50%) on Manupatra Academy for runners-up"
+    ],
+    "papers": [
+      {
+        "author": "Aditi Sharma",
+        "title": "Patentability of Software Inventions in India",
+        "category": "Patent Law"
+      },
+      {
+        "author": "Harsh Rajani",
+        "title": "The Impact of GI Tags on Regional Economies",
+        "category": "Geographical Indications"
+      },
+      {
+        "author": "Prakruti Desai & N. Jha",
+        "title": "AI and Copyright: The New Frontier",
+        "category": "Artificial Intelligence & Copyright"
+      },
+      {
+        "author": "Rohan Kulkarni",
+        "title": "Comparative Study: DMCA vs Indian Copyright Law",
+        "category": "Comparative Law"
+      },
+      {
+        "author": "Sneha Pillai",
+        "title": "The Role of Patent Agents: Current Challenges",
+        "category": "Patent Practice"
+      },
+      {
+        "author": "Krishna Suresh",
+        "title": "Balancing Fair Use in Digital Education",
+        "category": "Copyright Law"
+      },
+      {
+        "author": "Tushar Gupta",
+        "title": "Remedies in Trademark Infringement Cases",
+        "category": "Trademark Litigation"
+      },
+      {
+        "author": "Meera Chopra & A. Singh",
+        "title": "Geographical Indications and Cultural Heritage",
+        "category": "Geographical Indications"
+      },
+      {
+        "author": "Raunak Jain",
+        "title": "Design Law in the Age of 3D Printing",
+        "category": "Design Law"
+      },
+      {
+        "author": "Ishita Bhagat",
+        "title": "Compulsory Licensing: Indian Jurisprudence",
+        "category": "Patent Policy & Public Health"
+      }
+    ]
+  },
+  "cfp": {
+    "edition": "Call For Papers 2026–27",
+    "theme": "Emerging Paradigms in IP Law, Artificial Intelligence & Allied Disciplines",
+    "eligibility": "Open to law students (LL.B., B.A. LL.B., LL.M.), research scholars, academicians, and legal practitioners across India and internationally.",
+    "categories": [
+      {
+        "type": "Research Articles",
+        "wordCount": "5,000 – 6,000 words",
+        "abstract": "200 – 250 words",
+        "description": "Comprehensive doctrinal or empirical analysis with constructive policy suggestions and rigorous citation."
+      },
+      {
+        "type": "Essays",
+        "wordCount": "3,000 – 5,000 words",
+        "abstract": "150 – 200 words",
+        "description": "Critical perspectives on emerging issues, legislative amendments, or statutory debates."
+      },
+      {
+        "type": "Case Comments",
+        "wordCount": "2,500 – 3,000 words",
+        "abstract": "150 – 200 words",
+        "description": "Analytical breakdown of landmark Indian or international intellectual property judicial decisions."
+      }
+    ],
+    "formatting": {
+      "citation": "Bluebook (21st Edition) strictly. Footnotes only (speaking footnotes strictly discouraged).",
+      "font": "Times New Roman (Size 12 for Body, Size 10 for Footnotes)",
+      "spacing": "1.5 Line Spacing for Main Body, 1.0 for Footnotes",
+      "alignment": "Justified with Capitalized Headings",
+      "headerFooter": "Header with Journal Name; Footer with Page Numbers",
+      "authorship": "Maximum 2 Co-authors permitted per submission",
+      "plagiarism": "Strict threshold below 10% (excluding standard statutory citations)"
+    },
+    "submissionProtocol": [
+      "Manuscripts must be completely anonymized (no author name or institutional identifiers in the document body).",
+      "A separate Cover Letter specifying Title, Author Name(s), Designation, Institutional Affiliation, Contact Number, and Email must be attached.",
+      "Submit in .docx / .doc format via the official IPR Cell submission portal.",
+      "Zero registration or publication processing fee."
+    ]
+  }
+}

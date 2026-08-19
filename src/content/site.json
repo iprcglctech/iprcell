@@ -1,0 +1,77 @@
+{
+  "name": "Intellectual Property Rights Cell",
+  "shortName": "IPR Cell",
+  "institution": "Government Law College, Mumbai",
+  "tagline": "Asia's Oldest Law College — Estd. 1855",
+  "heroHeading": "Advancing Intellectual Property Law & Scholarship",
+  "heroSubheading": "A premier institutional platform fostering legal research, rigorous advocacy simulations, and practical industry discourse at Government Law College, Mumbai.",
+  "aboutGlc": {
+    "title": "Legacy of Government Law College, Mumbai",
+    "established": "1855",
+    "description": "Established in 1855, Government Law College (GLC), Mumbai is a landmark institution in legal education and is recognised as Asia’s oldest law college. With a legacy built on academic excellence, practical legal training, and a commitment to shaping future legal professionals, GLC has played a defining role in India’s legal landscape.",
+    "distinguishedAlumni": [
+      { "name": "Dr. B.R. Ambedkar", "role": "Architect of the Indian Constitution" },
+      { "name": "Justice M.C. Chagla", "role": "First Permanent Indian Chief Justice of Bombay High Court" },
+      { "name": "Nani Palkhivala", "role": "Eminent Jurist & Constitutional Expert" },
+      { "name": "Ram Jethmalani", "role": "Legendary Senior Advocate & Former Union Law Minister" },
+      { "name": "Fali S. Nariman", "role": "Distinguished Jurist & Senior Advocate" }
+    ],
+    "image": "/images/glc-heritage-facade.jpg",
+    "campusImage": "/images/glc-campus-main.png"
+  },
+  "aboutIprc": {
+    "title": "About the IPR Cell",
+    "inauguration": "Academic Year 2023–2024",
+    "mission": "The college inaugurated the Intellectual Property Rights Cell (IPRC) in the academic year of 2023-2024 to illuminate students and innovators with a thorough understanding of intellectual property rights. By nurturing a self-sustainable environment that thrives on innovation and creativity within the college ecosystem, the Cell bridges classroom learning with real-world practice.",
+    "keyPillars": [
+      {
+        "number": "01",
+        "title": "Academic Rigour & Research",
+        "description": "Annual double-blind peer-reviewed IPR Journal published in academic partnership with leading databases like Manupatra and CaseMine."
+      },
+      {
+        "number": "02",
+        "title": "Advocacy & Moot Simulations",
+        "description": "Host to India's premier Trademark Opposition Competition (TOC) commemorating the legacy of Prof. Tehemtan N. Daruwalla."
+      },
+      {
+        "number": "03",
+        "title": "Executive Certificate Courses",
+        "description": "Intensive weekend programs instructed by senior partners and IP heads of Khaitan & Co, Mulla & Mulla, Trilegal, and Fox Mandal."
+      },
+      {
+        "number": "04",
+        "title": "Pro Bono IPR Clinic",
+        "description": "Connecting student researchers with emerging innovators, artists, and creators for grassroots intellectual property literacy."
+      }
+    ]
+  },
+  "messages": {
+    "principal": {
+      "name": "Dr. Asmita A. Vaidya",
+      "designation": "Principal, Government Law College, Mumbai",
+      "quote": "It gives me great pleasure to present the work of the Intellectual Property Rights (IPR) Cell of Government Law College, Mumbai. Established to create awareness and build capacity in the field of Intellectual Property, the Cell has been actively engaging students through seminars, workshops, and certificate courses. As Asia’s oldest law college, GLC has always been committed to academic excellence and practical learning. The IPR Cell furthers this legacy by equipping students with the skills and knowledge to meet the evolving challenges of Intellectual Property law. I congratulate the Cell for its efforts and am confident it will continue to inspire innovation and contribute meaningfully to the legal community.",
+      "image": "/images/glc-hall.jpg"
+    },
+    "founder": {
+      "name": "Gaurav Lokhandani",
+      "designation": "Founder, IPR Cell GLC Mumbai (2023)",
+      "quote": "I watched it happen too often — batchmates and seniors writing off IP as a career before really giving it a chance, assuming it did not pay or did not matter. In law school, IP rarely went beyond the syllabus. Businesses carried the same blind spot, treating IP as something to sort out later, after there was actually something worth protecting. By then, someone else had already filed the mark, already owned the idea. That is why I started the IPR Cell in 2023, to make at least a few students look twice. The ones who take IP seriously now will be the ones protecting it later, in boardrooms, in courtrooms, and in businesses of their own.",
+      "image": "/images/gaurav-lokhandani.jpg"
+    }
+  },
+  "contact": {
+    "address": "Government Law College, 'A' Road, Churchgate, Mumbai, Maharashtra, India - 400020",
+    "phone": "022-22041707",
+    "email": "iprcell.glc@gmail.com",
+    "studentOfficeBearers": [
+      { "name": "Ishita Dawda", "role": "President, IPR Cell", "phone": "+91 99224 49615" },
+      { "name": "Shivam Pawar", "role": "Vice-President, IPR Cell", "phone": "+91 84509 67696" },
+      { "name": "Kritika Parkale", "role": "Secretary, IPR Cell", "phone": "+91 95884 15510" }
+    ],
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/ipr-cell-glc-mumbai/",
+      "instagram": "https://instagram.com/iprcell.glc"
+    }
+  }
+}

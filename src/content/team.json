@@ -1,0 +1,110 @@
+{
+  "professorsInCharge": [
+    {
+      "name": "Mr. Rahul Dhoble",
+      "designation": "Professor In-Charge",
+      "department": "Faculty of Law, Government Law College, Mumbai",
+      "image": "/images/rahul-dhoble.jpg"
+    },
+    {
+      "name": "Ms. Krutika Tembhurnikar",
+      "designation": "Professor In-Charge",
+      "department": "Faculty of Law, Government Law College, Mumbai",
+      "image": "/images/glc-crest.png"
+    }
+  ],
+  "seniorCore": [
+    {
+      "name": "Awanti Bhandarwar",
+      "position": "Chief Advisor",
+      "image": "/images/awanti-bhandarwar.jpg",
+      "bio": "Guiding the strategic and institutional vision of the IPR Cell, overseeing key initiatives and academic collaborations."
+    },
+    {
+      "name": "Ishita Dawda",
+      "position": "President",
+      "image": "/images/ishita-dawda.jpg",
+      "bio": "Leading executive governance, external liaisons, and overall cell administration across all academic and competitive tracks."
+    },
+    {
+      "name": "Shivam Pawar",
+      "position": "Vice-President",
+      "image": "/images/shivam-pawar.png",
+      "bio": "Managing operational execution, departmental coordination, and flagship event implementations."
+    },
+    {
+      "name": "Kritika Parkale",
+      "position": "Secretary",
+      "image": "/images/kritika-parkale.jpg",
+      "bio": "Overseeing secretariat functions, formal communications, institutional correspondence, and records."
+    }
+  ],
+  "juniorCore": [
+    {
+      "name": "Jacob D'souza",
+      "position": "HOD Research",
+      "image": "/images/jacob-dsouza.jpg",
+      "department": "Research & Publications"
+    },
+    {
+      "name": "Hussein Burhanpurwala",
+      "position": "HOD Research",
+      "image": "/images/hussein-burhanpurwala.jpg",
+      "department": "Research & Publications"
+    },
+    {
+      "name": "Hitakshi Pardhi",
+      "position": "HOD Creatives",
+      "image": "/images/hitakshi-pardhi.jpg",
+      "department": "Creatives & Design"
+    },
+    {
+      "name": "Sanika Kanse",
+      "position": "HOD Creatives",
+      "image": "/images/sanika-kanse.jpg",
+      "department": "Creatives & Design"
+    },
+    {
+      "name": "Tarushi Gupta",
+      "position": "HOD IPR Clinic",
+      "image": "/images/tarushi-gupta.jpg",
+      "department": "IPR Clinic & Pro Bono"
+    },
+    {
+      "name": "Nidhi Doshi",
+      "position": "HOD Public Relations",
+      "image": "/images/nidhi-doshi.jpg",
+      "department": "Public Relations & Outreach"
+    },
+    {
+      "name": "Aarav Pandey",
+      "position": "HOD Finance",
+      "image": "/images/aarav-pandey.jpg",
+      "department": "Finance & Sponsorship"
+    },
+    {
+      "name": "Disha Tikone",
+      "position": "HOD Finance",
+      "image": "/images/glc-crest.png",
+      "department": "Finance & Sponsorship"
+    },
+    {
+      "name": "Sahil Angre",
+      "position": "HOD Logistics",
+      "image": "/images/sahil-angre.jpg",
+      "department": "Logistics & Operations"
+    },
+    {
+      "name": "Sumit Parbat",
+      "position": "HOD Logistics",
+      "image": "/images/sumit-parbat.jpg",
+      "department": "Logistics & Operations"
+    },
+    {
+      "name": "Riddhim Shrivastava",
+      "position": "Junior Core Member",
+      "image": "/images/riddhim-shrivastava.jpg",
+      "department": "Cell Operations"
+    }
+  ]
+}

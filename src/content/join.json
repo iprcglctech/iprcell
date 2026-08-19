@@ -1,0 +1,54 @@
+{
+  "whyJoin": {
+    "headline": "Why Join the GLC IPR Cell?",
+    "tagline": "Build competence, leadership, and professional networks in intellectual property.",
+    "intro": "Ever wondered who decides that a brand, a song, or an invention actually belongs to someone? That's what we do here. The IPR Cell at GLC Mumbai is for anyone curious about patents, copyrights, trademarks, and the newer frontier — AI, data, and digital rights that most classrooms haven't caught up to yet. You don't need prior mastery — just the ambition to learn and execute.",
+    "benefits": [
+      {
+        "title": "Unrivalled Substantive Depth",
+        "description": "Engage with patents, media copyrights, design protections, and algorithmic IP well beyond the standard curriculum."
+      },
+      {
+        "title": "Flagship Execution Experience",
+        "description": "Directly organise and manage India's premier Trademark Opposition Competition, National Certificate Courses, and Colloquiums."
+      },
+      {
+        "title": "Elite Professional Network",
+        "description": "Work shoulder-to-shoulder with senior partners from India's top law firms, senior advocates, and corporate counsel."
+      },
+      {
+        "title": "Publication & Research Profile",
+        "description": "Contribute to and edit the GLC IPR Journal in collaboration with leading legal databases like Manupatra."
+      },
+      {
+        "title": "Grassroots Pro Bono Impact",
+        "description": "Deliver actionable IP guidance to student creators and grassroots innovators through the IPR Clinic."
+      }
+    ]
+  },
+  "hierarchy": [
+    {
+      "tier": "Junior Members (JM)",
+      "badge": "Entry Tier",
+      "eligibility": "Students in Year V-I (5-Year BLS/LLB) or Year III-I (3-Year LLB) of Government Law College, Mumbai",
+      "responsibilities": "Active participation across research tasks, workshop logistics, competition drafting support, and committee initiatives."
+    },
+    {
+      "tier": "Junior Core Members (JC)",
+      "badge": "Department Heads & Leads",
+      "eligibility": "Elevated at the conclusion of the academic year based on demonstrated performance and commitment",
+      "responsibilities": "Lead specialized departments including Research, Creatives, IPR Clinic, Logistics, Finance, and Public Relations."
+    },
+    {
+      "tier": "Senior Core Members (SC)",
+      "badge": "Executive Board",
+      "eligibility": "Elevated from top-performing Junior Core members",
+      "responsibilities": "Define institutional strategy, mentor junior members, oversee national flagships, and manage faculty/bar relations."
+    }
+  ],
+  "selectionProcess": [
+    { "step": "01", "name": "Application Submission", "detail": "Fill out the formal application articulating your motivation, academic standing, and interest in IP law." },
+    { "step": "02", "name": "Shortlisting & Interview", "detail": "Interactive interview round assessing problem-solving approach, intellectual curiosity, and commitment." },
+    { "step": "03", "name": "Induction & Orientation", "detail": "Final selection announced followed by departmental orientation and project allocations." }
+  ]
+}
