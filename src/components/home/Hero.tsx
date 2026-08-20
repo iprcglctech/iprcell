@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import DepthCarousel, { CarouselItem } from "@/components/ui/DepthCarousel";
+import TypewriterHeroHeading from "@/components/home/TypewriterHeroHeading";
 
 export default function Hero() {
   const heroGallery: CarouselItem[] = [
@@ -45,10 +46,8 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Editorial Headline */}
           <div className="lg:col-span-7 space-y-6">
-            {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-normal tracking-tight text-white leading-[1.12]">
-              No Recreation Of <span className="italic text-electric-light">Creation.</span>
-            </h1>
+            {/* Animated Typographer Heading */}
+            <TypewriterHeroHeading />
 
             {/* Subtitle */}
             <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-sans font-normal">

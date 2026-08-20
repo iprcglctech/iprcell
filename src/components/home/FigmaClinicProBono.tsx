@@ -33,18 +33,9 @@ export default function FigmaClinicProBono() {
             </div>
           </div>
 
-          {/* Right Column: Deep Navy Quote Block with Subnav */}
+          {/* Right Column: Deep Navy Quote Block */}
           <div className="lg:col-span-6">
-            <div className="bg-navy-950 text-white rounded-xl p-8 sm:p-10 shadow-elevated border border-navy-800 space-y-8">
-              {/* Minimal Top Subnav Links */}
-              <div className="flex flex-wrap items-center justify-between gap-3 text-[10px] uppercase font-mono tracking-widest text-slate-400 border-b border-navy-800 pb-4">
-                <Link href="/about" className="hover:text-white transition-colors">ABOUT</Link>
-                <Link href="/events" className="hover:text-white transition-colors">EVENTS &amp; PROGRAMS</Link>
-                <Link href="/journal" className="hover:text-white transition-colors">JOURNAL</Link>
-                <Link href="/ipr-clinic" className="text-electric-light font-bold">IPR CLINIC</Link>
-                <Link href="/join" className="hover:text-white transition-colors">JOIN US</Link>
-                <Link href="/contact" className="hover:text-white transition-colors">CONTACT</Link>
-              </div>
+            <div className="bg-navy-950 text-white rounded-xl p-8 sm:p-10 shadow-elevated border border-navy-800 space-y-6">
 
               {/* Quotation */}
               <div className="space-y-4">

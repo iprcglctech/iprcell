@@ -32,7 +32,7 @@ export default function GlobalError({
           <div className="pt-2">
             <button
               onClick={() => reset()}
-              className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs uppercase font-bold tracking-wider px-6 py-3 rounded transition-all shadow-sm"
+              className="bg-[#2A54A7] hover:bg-[#1E3F80] text-white text-xs uppercase font-bold tracking-wider px-6 py-3 rounded transition-all shadow-sm"
             >
               Reload Application
             </button>
