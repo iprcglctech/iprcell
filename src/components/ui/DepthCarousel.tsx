@@ -55,7 +55,7 @@ export default function DepthCarousel({
 
   return (
     <div
-      className="relative w-full h-[380px] sm:h-[480px] md:h-[540px] lg:h-[600px] flex items-center justify-center select-none"
+      className="relative w-full h-[280px] sm:h-[360px] md:h-[420px] lg:h-[460px] flex items-center justify-center select-none"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -68,7 +68,7 @@ export default function DepthCarousel({
             <div
               key={item.image + index}
               onClick={() => setActiveIndex(index)}
-              className={`absolute w-[310px] sm:w-[480px] md:w-[620px] lg:w-[780px] h-[220px] sm:h-[330px] md:h-[410px] lg:h-[490px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer depth-carousel-card ${cardState} group`}
+              className={`absolute w-[290px] sm:w-[440px] md:w-[580px] lg:w-[700px] h-[190px] sm:h-[270px] md:h-[330px] lg:h-[370px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer depth-carousel-card ${cardState} group`}
             >
               {/* Image Frame */}
               <div className="relative w-full h-full bg-navy-950">
@@ -87,21 +87,21 @@ export default function DepthCarousel({
                   }`}
                 />
 
-                {/* Title reveal on hover (large prominent typography) */}
+                {/* Title reveal on hover */}
                 <div
-                  className={`absolute inset-x-0 bottom-0 z-20 p-6 sm:p-8 lg:p-10 transition-all duration-300 ${
+                  className={`absolute inset-x-0 bottom-0 z-20 p-4 sm:p-6 lg:p-7 transition-all duration-300 ${
                     isActive
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-4 pointer-events-none"
                   }`}
                 >
-                  <div className="space-y-1.5 max-w-2xl">
+                  <div className="space-y-1 max-w-2xl">
                     {item.subtitle && (
                       <p className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-slate-300 font-semibold drop-shadow-sm">
                         {item.subtitle}
                       </p>
                     )}
-                    <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-serif text-white font-normal leading-snug drop-shadow-md">
+                    <h3 className="text-xs sm:text-base md:text-lg lg:text-xl font-serif text-white font-normal leading-snug drop-shadow-md">
                       {item.title}
                     </h3>
                   </div>
@@ -113,16 +113,16 @@ export default function DepthCarousel({
       </div>
 
       {/* Subtle Progress Indicators */}
-      <div className="absolute bottom-2 sm:bottom-4 flex items-center space-x-2 z-30">
+      <div className="absolute bottom-1 sm:bottom-2 flex items-center space-x-2 z-30">
         {items.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setActiveIndex(idx)}
             aria-label={`Go to slide ${idx + 1}`}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
+            className={`transition-all duration-300 rounded-full ${
               idx === activeIndex
-                ? "w-8 bg-white"
-                : "w-2 bg-white/30 hover:bg-white/60"
+                ? "w-7 h-1.5 bg-electric-light"
+                : "w-1.5 h-1.5 bg-white/30 hover:bg-white/60"
             }`}
           />
         ))}

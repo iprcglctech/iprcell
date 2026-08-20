@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import AnimatedList, { AnimatedListItem } from "@/components/ui/AnimatedList";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
@@ -25,8 +26,19 @@ export default function FigmaJournalPlatform() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-cream-100 border-b border-cream-border overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center py-10 lg:py-16 bg-cream-100 border-b border-cream-border overflow-hidden">
+      {/* ── Antique Lady Justice Legal Engraving Watermark ── */}
+      <div className="absolute right-0 sm:right-6 lg:right-16 top-1/2 -translate-y-1/2 w-[280px] sm:w-[380px] lg:w-[500px] xl:w-[560px] pointer-events-none select-none z-0 opacity-[0.12] mix-blend-multiply transform translate-x-1/6 sm:translate-x-0">
+        <Image
+          src="/images/lady-justice-engraving.jpg"
+          alt="Lady Justice Antique Legal Engraving"
+          width={900}
+          height={1200}
+          className="w-full h-auto object-contain"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto relative z-10">
         <div className="max-w-3xl space-y-8">
           {/* Header Block with ScrollReveal */}
           <ScrollReveal delay={0.1} className="space-y-3">

@@ -1,13 +1,28 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import siteData from "@/content/site.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaAboutIntro() {
   return (
-    <section id="about-section" className="py-20 lg:py-28 bg-cream-100 border-b border-cream-border scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="about-section"
+      className="relative min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center py-10 lg:py-16 bg-cream-100 border-b border-cream-border scroll-mt-20 overflow-hidden"
+    >
+      {/* ── Antique Law Treatise, Pillar & Quill Engraving Watermark ── */}
+      <div className="absolute right-0 sm:right-8 lg:right-12 top-1/2 -translate-y-1/2 w-[260px] sm:w-[360px] lg:w-[460px] xl:w-[520px] pointer-events-none select-none z-0 opacity-[0.11] mix-blend-multiply transform translate-x-1/6 sm:translate-x-0">
+        <Image
+          src="/images/law-treatise-engraving.jpg"
+          alt="Antique Law Treatise, Column and Quill Engraving"
+          width={900}
+          height={1200}
+          className="w-full h-auto object-contain"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading with Staggered Reveal */}
           <ScrollReveal className="lg:col-span-6 space-y-3" delay={0.1}>
@@ -21,7 +36,7 @@ export default function FigmaAboutIntro() {
           </ScrollReveal>
 
           {/* Right Column: Narrative & Stats */}
-          <div className="lg:col-span-6 space-y-10">
+          <div className="lg:col-span-6 space-y-8">
             <ScrollReveal delay={0.2} className="space-y-4 text-slate-muted text-sm sm:text-base leading-relaxed font-sans font-normal">
               <p>
                 The IPR Cell of Government Law College, Mumbai exists to cultivate a culture of awareness, innovation, and practical learning in the field of intellectual property law.

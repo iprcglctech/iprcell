@@ -8,8 +8,8 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function JoinCta() {
   return (
-    <section className="py-20 bg-cream-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center py-10 lg:py-16 bg-cream-100 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
         <ScrollReveal
           delay={0.1}
           yOffset={32}
