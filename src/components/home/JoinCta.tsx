@@ -9,7 +9,7 @@ export default function JoinCta() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-navy-950 text-white rounded-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-elevated border border-navy-800">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
-            <div className="lg:col-span-8 space-y-5">
+            <div className="lg:col-span-8 space-y-6">
               <h2 className="text-3xl sm:text-4xl font-serif text-white font-normal tracking-tight">
                 {joinData.whyJoin.headline}
               </h2>
@@ -18,17 +18,19 @@ export default function JoinCta() {
                 {joinData.whyJoin.intro}
               </p>
 
-              {/* Three Tier Pathway summary */}
-              <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {joinData.hierarchy.map((tier) => (
+              {/* Three Tier Pathway as clean horizontal line rule */}
+              <div className="pt-6 border-t border-navy-800/80 flex flex-col sm:flex-row sm:items-center sm:divide-x divide-navy-800 gap-4 sm:gap-0">
+                {joinData.hierarchy.map((tier, idx) => (
                   <div
                     key={tier.tier}
-                    className="p-3 bg-navy-900/80 border border-navy-800 rounded text-xs"
+                    className={`${idx === 0 ? "sm:pr-8" : "sm:px-8"} space-y-0.5`}
                   >
-                    <div className="font-mono text-[10px] text-electric-light uppercase font-bold">
+                    <div className="font-mono text-[10px] text-electric-light uppercase font-bold tracking-wider">
                       {tier.badge}
                     </div>
-                    <div className="font-semibold text-white mt-0.5">{tier.tier}</div>
+                    <div className="font-sans text-xs sm:text-sm font-semibold text-slate-100">
+                      {tier.tier}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -37,7 +39,7 @@ export default function JoinCta() {
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
               <Link
                 href="/join"
-                className="inline-flex items-center justify-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs sm:text-sm uppercase tracking-wider font-bold px-6 py-4 rounded shadow-institutional transition-all"
+                className="inline-flex items-center justify-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs sm:text-sm uppercase tracking-wider font-bold px-6 py-4 rounded shadow-institutional transition-all hover:translate-y-[-1px]"
               >
                 <span>Apply for Induction</span>
                 <ArrowRight className="w-4 h-4" />
