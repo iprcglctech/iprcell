@@ -2,48 +2,15 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import DepthCarousel, { CarouselItem } from "@/components/ui/DepthCarousel";
 import TypewriterHeroHeading from "@/components/home/TypewriterHeroHeading";
 
 export default function Hero() {
-  const heroGallery: CarouselItem[] = [
-    {
-      image: "/images/hero/convocation-winners-inter-toc.jpg",
-      title: "Convocation of Winners — Inter-TOC 2025–26",
-      subtitle: "Flagship Moot Ceremony",
-    },
-    {
-      image: "/images/hero/javed-akhtar-panel.jpg",
-      title: "Artists' Rights in the Film Industry with Shri Javed Akhtar",
-      subtitle: "Eminent Guest Colloquium",
-    },
-    {
-      image: "/images/hero/in-conversation-priyanka-khimani.jpg",
-      title: "In Conversation with Ms. Priyanka Khimani",
-      subtitle: "Media, Entertainment & Music IP",
-    },
-    {
-      image: "/images/hero/inter-toc-proceedings.jpg",
-      title: "Inter-TOC 2025–26 Oral Advocacy Proceedings",
-      subtitle: "Procedural Trademark Moot",
-    },
-    {
-      image: "/images/hero/inter-toc-rounds.jpg",
-      title: "Inter-TOC Courtroom Advocacy & Opposition Rounds",
-      subtitle: "Procedural Advocacy",
-    },
-    {
-      image: "/images/hero/artists-rights-panel.jpg",
-      title: "Panel: Shri Javed Akhtar, Ms. Priyanka Khimani & Mr. Ameet Datta",
-      subtitle: "Industry Dialogue",
-    },
-  ];
-
   return (
-    <section className="relative bg-navy-950 text-white overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-navy-900">
+    <section className="relative bg-navy-950 text-white overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:items-start">
           {/* Left Column: Editorial Headline */}
           <div className="lg:col-span-7 space-y-6">
             {/* Animated Typographer Heading */}
@@ -66,13 +33,18 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: 3D DepthCarousel with Smooth Loop & Hover Reveals */}
-          <div className="lg:col-span-5 flex justify-center items-center">
-            <DepthCarousel
-              items={heroGallery}
-              intervalMs={2500}
-              autoPlay={true}
-            />
+          {/* Right Column: Dual Institutional Crest Emblem (Enlarged & Top-Aligned) */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center lg:items-start pt-0 lg:pt-1">
+            <div className="relative w-full max-w-[560px] lg:max-w-[680px] xl:max-w-[720px] flex items-center justify-center">
+              <Image
+                src="/images/glc-ipr-dual-crest.png"
+                alt="Government Law College Mumbai & IPR Cell Emblem — No Recreation of Creation"
+                width={1200}
+                height={600}
+                priority
+                className="w-full h-auto object-contain select-none pointer-events-none transform lg:-translate-y-3"
+              />
+            </div>
           </div>
         </div>
       </div>

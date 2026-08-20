@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "@/components/home/Hero";
 import FigmaAboutIntro from "@/components/home/FigmaAboutIntro";
+import FigmaEventsGallery from "@/components/home/FigmaEventsGallery";
 import FigmaWhatWeDo from "@/components/home/FigmaWhatWeDo";
 import FigmaFlagshipToc from "@/components/home/FigmaFlagshipToc";
 import FigmaClinicProBono from "@/components/home/FigmaClinicProBono";
@@ -13,6 +14,7 @@ export default function HomePage() {
     <>
       <Hero />
       <FigmaAboutIntro />
+      <FigmaEventsGallery />
       <FigmaWhatWeDo />
       <FigmaFlagshipToc />
       <FigmaClinicProBono />
