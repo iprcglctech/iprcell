@@ -6,8 +6,8 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaAboutIntro() {
   return (
-    <section id="about-section" className="py-20 lg:py-28 bg-cream-100 border-b border-cream-border scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about-section" className="min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center py-10 lg:py-16 bg-cream-100 border-b border-cream-border scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading with Staggered Reveal */}
           <ScrollReveal className="lg:col-span-6 space-y-3" delay={0.1}>
@@ -21,7 +21,7 @@ export default function FigmaAboutIntro() {
           </ScrollReveal>
 
           {/* Right Column: Narrative & Stats */}
-          <div className="lg:col-span-6 space-y-10">
+          <div className="lg:col-span-6 space-y-8">
             <ScrollReveal delay={0.2} className="space-y-4 text-slate-muted text-sm sm:text-base leading-relaxed font-sans font-normal">
               <p>
                 The IPR Cell of Government Law College, Mumbai exists to cultivate a culture of awareness, innovation, and practical learning in the field of intellectual property law.

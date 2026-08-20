@@ -67,14 +67,14 @@ export default function FigmaWhatWeDo() {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
   return (
-    <section className="py-20 lg:py-28 bg-navy-950 text-white border-b border-navy-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center py-8 sm:py-10 lg:py-12 bg-navy-950 text-white border-b border-navy-900 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 lg:space-y-8 w-full my-auto">
         {/* Section Header with ScrollReveal */}
-        <ScrollReveal delay={0.1} className="space-y-3">
+        <ScrollReveal delay={0.1} className="space-y-2">
           <div className="text-xs uppercase font-bold tracking-[0.2em] text-electric-light font-sans">
             WHAT WE DO
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-normal text-white tracking-tight">
             Four ways we advance intellectual property
           </h2>
         </ScrollReveal>
@@ -82,7 +82,7 @@ export default function FigmaWhatWeDo() {
         {/* ── Interactive Editorial Cards Row with ScrollReveal & Silky Smooth Spring Unfurling ── */}
         <ScrollReveal
           delay={0.2}
-          yOffset={30}
+          yOffset={24}
           className="rounded-2xl overflow-hidden border border-cream-border/20 shadow-2xl bg-white"
         >
           <div
@@ -108,7 +108,7 @@ export default function FigmaWhatWeDo() {
                   onClick={() => setActiveIdx(activeIdx === i ? null : i)}
                   className={cn(
                     pillar.bg,
-                    "p-8 sm:p-10 flex flex-col justify-between transition-colors duration-500 relative cursor-pointer group",
+                    "p-6 sm:p-7 lg:p-8 flex flex-col justify-between transition-colors duration-500 relative cursor-pointer group",
                     // Dynamic width distribution using flex
                     isActive
                       ? "lg:flex-[1.5] bg-white shadow-inner"
@@ -116,10 +116,10 @@ export default function FigmaWhatWeDo() {
                       ? "lg:flex-[0.83]"
                       : "lg:flex-1"
                   )}
-                  style={{ minHeight: "440px" }}
+                  style={{ minHeight: "360px" }}
                 >
                   {/* Top Block: Number, Title, Description */}
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-xs text-slate-400 font-semibold tracking-wider">
                         {pillar.number}
@@ -137,8 +137,8 @@ export default function FigmaWhatWeDo() {
                       </motion.div>
                     </div>
 
-                    <div className="space-y-3">
-                      <h3 className="text-2xl sm:text-3xl font-serif font-normal text-navy-950 group-hover:text-electric transition-colors duration-300">
+                    <div className="space-y-2">
+                      <h3 className="text-xl sm:text-2xl font-serif font-normal text-navy-950 group-hover:text-electric transition-colors duration-300">
                         {pillar.title}
                       </h3>
                       <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-sans font-normal">
@@ -148,13 +148,13 @@ export default function FigmaWhatWeDo() {
                   </div>
 
                   {/* Bottom Block: Linked Initiatives */}
-                  <div className="pt-8 border-t border-[#EAE3D5]/80 space-y-2.5">
+                  <div className="pt-6 border-t border-[#EAE3D5]/80 space-y-2">
                     {pillar.items.map((item) => (
                       <Link
                         key={item.label}
                         href={item.href}
                         onClick={(e) => e.stopPropagation()}
-                        className="flex items-center space-x-2 text-[11px] font-mono tracking-wider font-semibold text-slate-800 hover:text-electric transition-colors duration-200 group/link py-0.5"
+                        className="flex items-center space-x-2 text-[10px] sm:text-[11px] font-mono tracking-wider font-semibold text-slate-800 hover:text-electric transition-colors duration-200 group/link py-0.5"
                       >
                         <span className="text-slate-400 group-hover/link:text-electric transition-colors">
                           •
