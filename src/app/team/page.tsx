@@ -20,7 +20,6 @@ import MemberDepthCarousel, {
   CoreMemberItem,
 } from "@/components/ui/MemberDepthCarousel";
 import MemberCard from "@/components/ui/MemberCard";
-import MemberModal, { SelectedMemberData } from "@/components/ui/MemberModal";
 
 interface UnifiedMember {
   name: string;
@@ -40,8 +39,6 @@ interface UnifiedMember {
 export default function TeamPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [selectedMember, setSelectedMember] =
-    useState<SelectedMemberData | null>(null);
 
   // Normalize all members with unified format
   const allMembers: UnifiedMember[] = useMemo(() => {
@@ -197,7 +194,7 @@ export default function TeamPage() {
               </h2>
             </div>
             <p className="text-xs text-slate-500 font-mono">
-              Hover to tilt • Click active card to inspect dossier
+              Hover to tilt • Use navigation arrows to explore
             </p>
           </div>
 
@@ -207,20 +204,6 @@ export default function TeamPage() {
               members={executiveCarouselItems}
               autoPlay={true}
               intervalMs={4800}
-              onSelectMember={(item) => {
-                setSelectedMember({
-                  name: item.name,
-                  position: item.position,
-                  department: item.department,
-                  bio: item.bio,
-                  specialization: item.specialization,
-                  academicYear: item.academicYear,
-                  email: item.email,
-                  keyInitiatives: item.keyInitiatives,
-                  image: item.image,
-                  tier: "senior",
-                });
-              }}
             />
           </div>
         </section>
@@ -297,7 +280,7 @@ export default function TeamPage() {
           {/* Members Matrix (Grid of Dignified Editorial Cards) */}
           <motion.div
             layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 overflow-visible"
           >
             <AnimatePresence>
               {filteredMembers.map((member) => (
@@ -308,7 +291,7 @@ export default function TeamPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.2 }}
-                  className={member.tier === "faculty" ? "sm:col-span-2" : ""}
+                  className={member.tier === "faculty" ? "sm:col-span-2 relative" : "relative"}
                 >
                   <MemberCard
                     name={member.name}
@@ -322,7 +305,6 @@ export default function TeamPage() {
                     keyInitiatives={member.keyInitiatives}
                     image={member.image}
                     tier={member.tier}
-                    onSelect={() => setSelectedMember(member)}
                   />
                 </motion.div>
               ))}
@@ -405,12 +387,6 @@ export default function TeamPage() {
         </div>
 
       </div>
-
-      {/* Member Dossier Modal */}
-      <MemberModal
-        member={selectedMember}
-        onClose={() => setSelectedMember(null)}
-      />
     </div>
   );
 }

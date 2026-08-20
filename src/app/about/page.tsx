@@ -209,13 +209,16 @@ export default function AboutPage() {
           </div>
 
           {/* Professors In-Charge */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 overflow-visible">
             {teamData.professorsInCharge.map((prof) => (
               <MemberCard
                 key={prof.name}
                 name={prof.name}
                 designation={prof.designation}
                 department={prof.department}
+                specialization={prof.specialization}
+                keyInitiatives={prof.keyInitiatives}
+                bio={prof.bio}
                 image={prof.image}
                 tier="faculty"
               />
@@ -227,12 +230,16 @@ export default function AboutPage() {
             <h3 className="text-lg font-serif font-bold text-ink">
               Senior Core Executive Committee
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-visible">
               {teamData.seniorCore.map((member) => (
                 <MemberCard
                   key={member.name}
                   name={member.name}
                   position={member.position}
+                  department={member.department}
+                  academicYear={member.academicYear}
+                  specialization={member.specialization}
+                  keyInitiatives={member.keyInitiatives}
                   bio={member.bio}
                   image={member.image}
                   tier="senior"
@@ -246,13 +253,17 @@ export default function AboutPage() {
             <h3 className="text-lg font-serif font-bold text-ink">
               Departmental Heads &amp; Junior Core
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-visible">
               {teamData.juniorCore.map((member) => (
                 <MemberCard
                   key={member.name + member.position}
                   name={member.name}
                   position={member.position}
                   department={member.department}
+                  academicYear={member.academicYear}
+                  specialization={member.specialization}
+                  keyInitiatives={member.keyInitiatives}
+                  bio={member.bio}
                   image={member.image}
                   tier="junior"
                 />

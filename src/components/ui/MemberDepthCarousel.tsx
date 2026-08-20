@@ -22,14 +22,12 @@ interface MemberDepthCarouselProps {
   members: CoreMemberItem[];
   autoPlay?: boolean;
   intervalMs?: number;
-  onSelectMember?: (member: CoreMemberItem) => void;
 }
 
 export default function MemberDepthCarousel({
   members,
   autoPlay = true,
   intervalMs = 4500,
-  onSelectMember,
 }: MemberDepthCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -92,13 +90,7 @@ export default function MemberDepthCarousel({
           return (
             <div
               key={member.name + index}
-              onClick={() => {
-                if (isActive && onSelectMember) {
-                  onSelectMember(member);
-                } else {
-                  setActiveIndex(index);
-                }
-              }}
+              onClick={() => setActiveIndex(index)}
               className={`absolute w-[290px] sm:w-[350px] md:w-[400px] h-[410px] sm:h-[460px] md:h-[480px] rounded-xl cursor-pointer depth-carousel-card ${cardState} transition-all duration-700`}
             >
               {isActive ? (
@@ -168,11 +160,8 @@ export default function MemberDepthCarousel({
                       </div>
 
                       <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400 mt-2 pl-3">
+                        <span>Executive Board</span>
                         <span>AY 2024–2026</span>
-                        <span className="text-[#07162C] font-semibold flex items-center space-x-1 group-hover:text-[#2A54A7] transition-colors">
-                          <span>Inspect Dossier</span>
-                          <ArrowUpRight className="w-3.5 h-3.5" />
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -221,11 +210,10 @@ export default function MemberDepthCarousel({
               key={idx}
               onClick={() => setActiveIndex(idx)}
               aria-label={`Go to board member ${idx + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                idx === activeIndex
+              className={`h-1.5 rounded-full transition-all duration-300 ${idx === activeIndex
                   ? "w-7 bg-navy-950"
                   : "w-2 bg-slate-300 hover:bg-slate-400"
-              }`}
+                }`}
             />
           ))}
         </div>

@@ -6,7 +6,6 @@ import FigmaWhatWeDo from "@/components/home/FigmaWhatWeDo";
 import FigmaFlagshipToc from "@/components/home/FigmaFlagshipToc";
 import FigmaClinicProBono from "@/components/home/FigmaClinicProBono";
 import FigmaJournalPlatform from "@/components/home/FigmaJournalPlatform";
-import FigmaLeadership from "@/components/home/FigmaLeadership";
 import JoinCta from "@/components/home/JoinCta";
 
 export default function HomePage() {
@@ -19,7 +18,6 @@ export default function HomePage() {
       <FigmaFlagshipToc />
       <FigmaClinicProBono />
       <FigmaJournalPlatform />
-      <FigmaLeadership />
       <JoinCta />
     </>
   );
