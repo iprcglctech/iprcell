@@ -1,14 +1,26 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaClinicProBono() {
   return (
-    <section className="min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center py-10 lg:py-16 bg-cream-100 border-b border-cream-border overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
+    <section className="relative min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center py-10 lg:py-16 bg-cream-100 border-b border-cream-border overflow-hidden">
+      {/* ── Antique Pro Bono Legal Shield & Torch Engraving Watermark ── */}
+      <div className="absolute left-0 sm:left-4 lg:left-10 top-1/2 -translate-y-1/2 w-[260px] sm:w-[360px] lg:w-[480px] xl:w-[540px] pointer-events-none select-none z-0 opacity-[0.11] mix-blend-multiply transform -translate-x-1/6 sm:translate-x-0">
+        <Image
+          src="/images/pro-bono-shield-engraving.jpg"
+          alt="Antique Pro Bono Legal Protection and Innovation Shield Engraving"
+          width={900}
+          height={1200}
+          className="w-full h-auto object-contain"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Heading & Mission with ScrollReveal */}
           <ScrollReveal delay={0.1} className="lg:col-span-6 space-y-6">
