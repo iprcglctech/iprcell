@@ -127,7 +127,7 @@ export default function AboutPage() {
           <div className="bg-white border border-surface-border rounded-xl p-6 sm:p-8 flex flex-col justify-between">
             <div className="space-y-4">
               <div className="flex items-center space-x-4 border-b border-surface-border pb-4">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border border-slate-200">
+                <div className="relative w-24 h-24 rounded-full overflow-hidden shrink-0 border border-slate-200">
                   <Image
                     src={siteData.messages.principal.image}
                     alt={siteData.messages.principal.name}
@@ -160,7 +160,7 @@ export default function AboutPage() {
           <div className="bg-white border border-surface-border rounded-xl p-6 sm:p-8 flex flex-col justify-between">
             <div className="space-y-4">
               <div className="flex items-center space-x-4 border-b border-surface-border pb-4">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border border-slate-200">
+                <div className="relative w-24 h-24 rounded-full overflow-hidden shrink-0 border border-slate-200">
                   <Image
                     src={siteData.messages.founder.image}
                     alt={siteData.messages.founder.name}
@@ -203,7 +203,7 @@ export default function AboutPage() {
               href="/team"
               className="inline-flex items-center space-x-1.5 text-xs font-mono font-bold uppercase tracking-wider text-electric hover:text-electric-dark"
             >
-              <span>View Interactive 3D Roster</span>
+              <span>View Full Roster</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
