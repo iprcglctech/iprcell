@@ -40,7 +40,7 @@ export default function MemberCard({
 
   const imageAspect =
     tier === "faculty"
-      ? "aspect-[3/3.4]"
+      ? "aspect-[4/3]"
       : tier === "senior"
       ? "aspect-[3/3.4]"
       : "aspect-[3/3.2]";
@@ -51,7 +51,7 @@ export default function MemberCard({
       whileHover={{ scale: 1.07, zIndex: 30 }}
       transition={{ type: "spring", stiffness: 280, damping: 22 }}
     >
-      <TiltedCard maxTilt={6} scale={1.01} glareOpacity={0.07} className="w-full h-full">
+      <TiltedCard maxTilt={6} scale={1.01} glareOpacity={0} className="w-full h-full">
       <div className="relative bg-white border border-[#E7E0D2] rounded-2xl overflow-hidden shadow-subtle hover:shadow-institutional hover:border-[#B89B5E] transition-all duration-300 flex flex-col h-full group">
 
         {/* Image with hover overlay */}

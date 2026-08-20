@@ -291,7 +291,7 @@ export default function TeamPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.2 }}
-                  className={member.tier === "faculty" ? "sm:col-span-2 relative" : "relative"}
+                  className="relative"
                 >
                   <MemberCard
                     name={member.name}
