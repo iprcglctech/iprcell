@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import TiltedCard from "./TiltedCard";
 
 export interface MemberProps {
   name: string;
@@ -29,6 +28,7 @@ export default function MemberCard({
   image,
   tier,
 }: MemberProps) {
+  const [isHovered, setIsHovered] = useState(false);
   const displayRole = position || designation || "Committee Member";
 
   const tagLabel =
@@ -38,42 +38,60 @@ export default function MemberCard({
       ? "Senior Core"
       : department || "Junior Core";
 
-  const imageAspect =
-    tier === "faculty"
-      ? "aspect-[4/3]"
-      : tier === "senior"
-      ? "aspect-[3/3.4]"
-      : "aspect-[3/3.2]";
+  const imageAspect = "aspect-[3/3.4]";
 
   return (
     <motion.div
-      className="w-full h-full relative"
-      whileHover={{ scale: 1.07, zIndex: 30 }}
-      transition={{ type: "spring", stiffness: 280, damping: 22 }}
+      className="w-full h-full relative cursor-pointer select-none"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      animate={{
+        scale: isHovered ? 1.03 : 1,
+        zIndex: isHovered ? 25 : 1,
+      }}
+      transition={{ type: "spring", stiffness: 300, damping: 25 }}
     >
-      <TiltedCard maxTilt={6} scale={1.01} glareOpacity={0} className="w-full h-full">
-      <div className="relative bg-white border border-[#E7E0D2] rounded-2xl overflow-hidden shadow-subtle hover:shadow-institutional hover:border-[#B89B5E] transition-all duration-300 flex flex-col h-full group">
-
+      <div
+        className={`relative bg-white border rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 ${
+          isHovered
+            ? "border-[#B89B5E] shadow-elevated"
+            : "border-[#E7E0D2] shadow-subtle"
+        }`}
+      >
         {/* Image with hover overlay */}
         <div className={`relative w-full ${imageAspect} bg-slate-100 overflow-hidden shrink-0`}>
           <Image
             src={image}
             alt={name}
             fill
-            className="object-cover object-top transition-all duration-500 ease-out"
+            className={`object-cover object-top transition-transform duration-500 ease-out ${
+              isHovered ? "scale-105" : "scale-100"
+            }`}
           />
 
-          {/* Tag badge */}
-          <div className="absolute top-3 left-3 z-10">
-            <span className="px-2.5 py-1 rounded-md text-[9px] font-mono font-bold uppercase tracking-[0.2em] bg-[#07162C]/85 text-white backdrop-blur-md border border-white/10 shadow-xs">
+          {/* Tag badge — only displayed on hover */}
+          <div
+            className={`absolute top-3 left-3 z-20 pointer-events-none transition-all duration-300 ease-out ${
+              isHovered
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-1.5"
+            }`}
+          >
+            <span className="px-2.5 py-1 rounded-md text-[9px] font-mono font-bold uppercase tracking-[0.2em] bg-[#07162C]/90 text-white backdrop-blur-md border border-white/10 shadow-md">
               {tagLabel}
             </span>
           </div>
 
-          {/* Specialization overlay — fades + slides up on hover */}
+          {/* Specialization overlay — only displayed on hover */}
           {specialization && (
-            <div className="absolute inset-x-0 bottom-0 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out bg-gradient-to-t from-[#07162C]/95 via-[#07162C]/75 to-transparent px-4 pt-10 pb-4 z-10">
-              <p className="text-[12px] font-sans text-white leading-snug font-medium">
+            <div
+              className={`absolute inset-x-0 bottom-0 pointer-events-none transition-all duration-300 ease-out bg-gradient-to-t from-[#07162C]/95 via-[#07162C]/80 to-transparent px-4 pt-8 pb-3.5 z-20 ${
+                isHovered
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-3"
+              }`}
+            >
+              <p className="text-[11px] font-sans text-white/90 leading-snug font-normal">
                 {specialization}
               </p>
             </div>
@@ -92,9 +110,7 @@ export default function MemberCard({
             <p className="text-[10px] font-mono text-slate-400">{academicYear}</p>
           )}
         </div>
-
       </div>
-      </TiltedCard>
     </motion.div>
   );
 }
