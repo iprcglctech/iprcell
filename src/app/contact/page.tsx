@@ -121,20 +121,22 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Contact Inquiry Form */}
-          <div className="lg:col-span-7 bg-white border border-surface-border rounded-xl p-6 sm:p-8 shadow-subtle">
-            <h2 className="text-2xl font-serif font-bold text-ink mb-1">
-              Send an Institutional Inquiry
-            </h2>
-            <p className="text-xs text-slate-muted mb-6">
-              Inquire regarding the Trademark Opposition Competition, Certificate Courses, or Journal submissions.
-            </p>
+          <div className="lg:col-span-7 bg-white border border-surface-border rounded-xl p-6 sm:p-8 shadow-subtle space-y-5">
+            <div>
+              <h2 className="text-2xl font-serif font-bold text-ink">
+                Send an Institutional Inquiry
+              </h2>
+              <p className="text-xs text-slate-muted mt-1">
+                Inquire regarding the Trademark Opposition Competition, Certificate Courses, or Journal submissions.
+              </p>
+            </div>
 
             {formSent ? (
-              <div className="p-8 bg-electric/10 border border-electric/30 rounded-lg text-center space-y-3">
+              <div className="p-8 bg-electric/10 border border-electric/30 rounded-lg text-center space-y-3 font-sans">
                 <CheckCircle2 className="w-12 h-12 text-electric mx-auto" />
                 <h3 className="text-lg font-serif font-bold text-ink">Inquiry Submitted</h3>
                 <p className="text-xs text-slate-muted max-w-md mx-auto">
-                  Thank you, <strong>{formData.name}</strong>. Your message has been logged with the secretariat. A representative will get back to you shortly.
+                  Thank you, <strong className="text-ink">{formData.name}</strong>. Your message has been logged with the secretariat. A representative will get back to you shortly.
                 </p>
                 <button
                   onClick={() => setFormSent(false)}
@@ -144,52 +146,52 @@ export default function ContactPage() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 text-xs">
+              <form onSubmit={handleSubmit} className="space-y-4 text-xs font-sans">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block font-medium text-ink mb-1">Your Full Name</label>
+                    <label className="block font-medium text-ink mb-1.5">Your Full Name</label>
                     <input
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Adv. Rohit Verma"
-                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite"
+                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-medium text-ink mb-1">Your Email</label>
+                    <label className="block font-medium text-ink mb-1.5">Your Email</label>
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="rohit@example.com"
-                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite"
+                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block font-medium text-ink mb-1">Mobile / WhatsApp Number</label>
+                    <label className="block font-medium text-ink mb-1.5">Mobile / WhatsApp Number</label>
                     <input
                       type="tel"
                       required
                       value={formData.mobile}
                       onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
                       placeholder="+91 98765 43210"
-                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite"
+                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-medium text-ink mb-1">Subject Area</label>
+                    <label className="block font-medium text-ink mb-1.5">Subject Area</label>
                     <select
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite"
+                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink"
                     >
                       <option>Trademark Opposition Competition (TOC)</option>
                       <option>Certificate Course Inquiry</option>
@@ -201,20 +203,20 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block font-medium text-ink mb-1">Your Message</label>
+                  <label className="block font-medium text-ink mb-1.5">Your Message</label>
                   <textarea
                     rows={5}
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Provide details regarding your query or institutional collaboration request..."
-                    className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite"
+                    className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white font-semibold px-6 py-3 rounded shadow-sm transition-all"
+                  className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white font-semibold px-6 py-3 rounded shadow-sm transition-all font-sans"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Send Official Message</span>
