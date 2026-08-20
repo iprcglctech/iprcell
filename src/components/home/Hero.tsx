@@ -10,8 +10,8 @@ export default function Hero() {
   return (
     <section className="relative bg-navy-950 text-white overflow-hidden min-h-[92vh] sm:min-h-[94vh] lg:min-h-[96vh] flex flex-col justify-center py-12 sm:py-16 lg:py-24 border-b border-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full my-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
-          {/* Left Column: Editorial Headline */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          {/* Left Column: Editorial Headline & Actions */}
           <div className="lg:col-span-7 space-y-8">
             {/* Animated Typographer Heading */}
             <TypewriterHeroHeading />
@@ -33,16 +33,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Dual Institutional Crest Emblem (Enlarged & Prominent) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center">
-            <div className="relative w-full max-w-[580px] lg:max-w-[760px] xl:max-w-[840px] flex items-center justify-center">
+          {/* Right Column: Dual Institutional Crest Emblem (Top-aligned & Height-matched to Heading) */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-start pt-1 lg:pt-2">
+            <div className="relative w-full max-w-[480px] sm:max-w-[520px] lg:max-w-[580px] xl:max-w-[620px] flex items-center justify-center">
               <Image
                 src="/images/glc-ipr-dual-crest.png"
                 alt="Government Law College Mumbai & IPR Cell Emblem — No Recreation of Creation"
-                width={1400}
-                height={700}
+                width={1200}
+                height={600}
                 priority
-                className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-2xl"
+                className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-xl"
               />
             </div>
           </div>

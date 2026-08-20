@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import DepthCarousel, { CarouselItem } from "@/components/ui/DepthCarousel";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaEventsGallery() {
   const eventsGallery: CarouselItem[] = [
@@ -42,8 +43,8 @@ export default function FigmaEventsGallery() {
   return (
     <section className="py-20 lg:py-28 bg-navy-900 text-white border-b border-navy-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        {/* Section Header with ScrollReveal */}
+        <ScrollReveal delay={0.1} className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-3">
             <div className="text-xs uppercase font-bold tracking-[0.2em] text-electric-light font-sans">
               EVENTS &amp; FLAGSHIPS
@@ -65,16 +66,16 @@ export default function FigmaEventsGallery() {
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
 
-        {/* 3D Depth Carousel Showcase */}
-        <div className="pt-4 flex justify-center items-center">
+        {/* 3D Depth Carousel Showcase with ScrollReveal */}
+        <ScrollReveal delay={0.25} yOffset={32} className="pt-4 flex justify-center items-center">
           <DepthCarousel
             items={eventsGallery}
             intervalMs={2500}
             autoPlay={true}
           />
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

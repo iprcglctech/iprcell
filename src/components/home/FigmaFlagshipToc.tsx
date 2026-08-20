@@ -1,11 +1,14 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaFlagshipToc() {
   return (
-    <section className="bg-navy-900 border-b border-navy-800">
+    <section className="bg-navy-900 border-b border-navy-800 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[520px]">
         {/* Left Column: Courtroom / Moot Hall Image */}
         <div className="lg:col-span-7 relative h-72 lg:h-auto min-h-[320px] overflow-hidden">
@@ -25,8 +28,11 @@ export default function FigmaFlagshipToc() {
           </div>
         </div>
 
-        {/* Right Column: Deep Navy Information Card */}
-        <div className="lg:col-span-5 bg-navy-950 p-8 sm:p-12 lg:p-16 flex flex-col justify-center space-y-6 text-white border-t lg:border-t-0 lg:border-l border-navy-800">
+        {/* Right Column: Deep Navy Information Card with ScrollReveal */}
+        <ScrollReveal
+          delay={0.15}
+          className="lg:col-span-5 bg-navy-950 p-8 sm:p-12 lg:p-16 flex flex-col justify-center space-y-6 text-white border-t lg:border-t-0 lg:border-l border-navy-800"
+        >
           <div className="text-xs uppercase font-bold tracking-[0.2em] text-electric-light font-sans">
             FLAGSHIP INITIATIVE
           </div>
@@ -50,7 +56,7 @@ export default function FigmaFlagshipToc() {
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

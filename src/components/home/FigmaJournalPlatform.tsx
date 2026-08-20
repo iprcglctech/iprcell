@@ -2,6 +2,7 @@
 
 import React from "react";
 import AnimatedList, { AnimatedListItem } from "@/components/ui/AnimatedList";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaJournalPlatform() {
   const journalLinks: AnimatedListItem[] = [
@@ -24,11 +25,11 @@ export default function FigmaJournalPlatform() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-cream-100 border-b border-cream-border">
+    <section className="py-20 lg:py-28 bg-cream-100 border-b border-cream-border overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl space-y-8">
-          {/* Header Block */}
-          <div className="space-y-3">
+          {/* Header Block with ScrollReveal */}
+          <ScrollReveal delay={0.1} className="space-y-3">
             <div className="text-xs uppercase font-bold tracking-[0.2em] text-[#B89B5E] font-sans">
               IPR JOURNAL
             </div>
@@ -39,10 +40,10 @@ export default function FigmaJournalPlatform() {
             <p className="text-slate-muted text-xs sm:text-sm leading-relaxed max-w-2xl font-sans pt-2">
               The IPR Journal is an annual, peer-reviewed publication that encourages rigorous research and analysis on contemporary issues in intellectual property law and beyond.
             </p>
-          </div>
+          </ScrollReveal>
 
-          {/* 2x2 Feature Grid with Thin Hairlines */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6 pt-6 border-t border-cream-border">
+          {/* 2x2 Feature Grid with ScrollReveal */}
+          <ScrollReveal delay={0.2} className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6 pt-6 border-t border-cream-border">
             <div className="space-y-1">
               <div className="text-xs uppercase font-bold tracking-wider text-ink font-sans">
                 PEER REVIEWED
@@ -78,11 +79,11 @@ export default function FigmaJournalPlatform() {
                 Join a community of thoughtful legal minds
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* React Bits AnimatedList Component */}
           <div className="pt-2">
-            <AnimatedList items={journalLinks} delayStep={0.07} />
+            <AnimatedList items={journalLinks} delayStep={0.08} />
           </div>
         </div>
       </div>

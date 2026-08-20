@@ -1,14 +1,17 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaClinicProBono() {
   return (
-    <section className="py-20 lg:py-28 bg-cream-100 border-b border-cream-border">
+    <section className="py-20 lg:py-28 bg-cream-100 border-b border-cream-border overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Heading & Mission */}
-          <div className="lg:col-span-6 space-y-6">
+          {/* Left Column: Heading & Mission with ScrollReveal */}
+          <ScrollReveal delay={0.1} className="lg:col-span-6 space-y-6">
             <div className="eyebrow-tag">
               IPR CLINIC — PRO BONO
             </div>
@@ -31,12 +34,11 @@ export default function FigmaClinicProBono() {
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-          </div>
+          </ScrollReveal>
 
-          {/* Right Column: Deep Navy Quote Block */}
-          <div className="lg:col-span-6">
+          {/* Right Column: Deep Navy Quote Block with ScrollReveal */}
+          <ScrollReveal delay={0.25} yOffset={32} className="lg:col-span-6">
             <div className="bg-navy-950 text-white rounded-xl p-8 sm:p-10 shadow-elevated border border-navy-800 space-y-6">
-
               {/* Quotation */}
               <div className="space-y-4">
                 <blockquote className="text-base sm:text-lg lg:text-xl font-serif italic text-slate-200 leading-relaxed">
@@ -47,7 +49,7 @@ export default function FigmaClinicProBono() {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -1,13 +1,16 @@
+"use client";
+
 import React from "react";
 import siteData from "@/content/site.json";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaAboutIntro() {
   return (
     <section id="about-section" className="py-20 lg:py-28 bg-cream-100 border-b border-cream-border scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Heading */}
-          <div className="lg:col-span-6 space-y-3">
+          {/* Left Column: Heading with Staggered Reveal */}
+          <ScrollReveal className="lg:col-span-6 space-y-3" delay={0.1}>
             <div className="eyebrow-tag">
               ABOUT THE IPR CELL
             </div>
@@ -15,21 +18,21 @@ export default function FigmaAboutIntro() {
               Building IPR minds.<br />
               <span className="italic text-slate-800">Creating impact.</span>
             </h2>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Narrative & Stats */}
           <div className="lg:col-span-6 space-y-10">
-            <div className="space-y-4 text-slate-muted text-sm sm:text-base leading-relaxed font-sans font-normal">
+            <ScrollReveal delay={0.2} className="space-y-4 text-slate-muted text-sm sm:text-base leading-relaxed font-sans font-normal">
               <p>
                 The IPR Cell of Government Law College, Mumbai exists to cultivate a culture of awareness, innovation, and practical learning in the field of intellectual property law.
               </p>
               <p>
                 Through education, research, competitions, expert interaction and pro bono initiatives, we provide students with the tools to engage meaningfully with evolving legal and technological landscapes.
               </p>
-            </div>
+            </ScrollReveal>
 
             {/* 3 Stats Grid */}
-            <div className="pt-6 border-t border-cream-border grid grid-cols-3 gap-6">
+            <ScrollReveal delay={0.3} className="pt-6 border-t border-cream-border grid grid-cols-3 gap-6">
               <div>
                 <div className="text-2xl sm:text-3xl font-serif text-ink font-normal">
                   1000+
@@ -56,7 +59,7 @@ export default function FigmaAboutIntro() {
                   Building the IPR community at GLC
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>

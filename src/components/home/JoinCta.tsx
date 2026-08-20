@@ -1,13 +1,20 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import joinData from "@/content/join.json";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function JoinCta() {
   return (
-    <section className="py-20 bg-cream-100">
+    <section className="py-20 bg-cream-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-navy-950 text-white rounded-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-elevated border border-navy-800">
+        <ScrollReveal
+          delay={0.1}
+          yOffset={32}
+          className="bg-navy-950 text-white rounded-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-elevated border border-navy-800"
+        >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             <div className="lg:col-span-8 space-y-6">
               <h2 className="text-3xl sm:text-4xl font-serif text-white font-normal tracking-tight">
@@ -52,7 +59,7 @@ export default function JoinCta() {
               </Link>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

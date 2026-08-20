@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 interface PillarData {
   number: string;
@@ -68,22 +69,26 @@ export default function FigmaWhatWeDo() {
   return (
     <section className="py-20 lg:py-28 bg-navy-950 text-white border-b border-navy-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        {/* Section Header */}
-        <div className="space-y-3">
+        {/* Section Header with ScrollReveal */}
+        <ScrollReveal delay={0.1} className="space-y-3">
           <div className="text-xs uppercase font-bold tracking-[0.2em] text-electric-light font-sans">
             WHAT WE DO
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white tracking-tight">
             Four ways we advance intellectual property
           </h2>
-        </div>
+        </ScrollReveal>
 
-        {/* ── Interactive Editorial Cards Row with Silky Smooth Unfurling Transition ── */}
-        <div
-          onMouseLeave={() => setActiveIdx(null)}
+        {/* ── Interactive Editorial Cards Row with ScrollReveal & Silky Smooth Spring Unfurling ── */}
+        <ScrollReveal
+          delay={0.2}
+          yOffset={30}
           className="rounded-2xl overflow-hidden border border-cream-border/20 shadow-2xl bg-white"
         >
-          <div className="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-[#E7E0D2]">
+          <div
+            onMouseLeave={() => setActiveIdx(null)}
+            className="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-[#E7E0D2]"
+          >
             {PILLARS.map((pillar, i) => {
               const isActive = activeIdx === i;
               const isAnyActive = activeIdx !== null;
@@ -165,7 +170,7 @@ export default function FigmaWhatWeDo() {
               );
             })}
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
