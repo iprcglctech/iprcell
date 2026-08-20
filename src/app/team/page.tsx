@@ -16,9 +16,7 @@ import {
 } from "lucide-react";
 import teamData from "@/content/team.json";
 import siteData from "@/content/site.json";
-import MemberDepthCarousel, {
-  CoreMemberItem,
-} from "@/components/ui/MemberDepthCarousel";
+
 import MemberCard from "@/components/ui/MemberCard";
 
 interface UnifiedMember {
@@ -129,20 +127,7 @@ export default function TeamPage() {
     });
   }, [allMembers, selectedCategory, searchQuery]);
 
-  // Executive members for the 3D Depth Gallery
-  const executiveCarouselItems: CoreMemberItem[] = useMemo(() => {
-    return teamData.seniorCore.map((member) => ({
-      name: member.name,
-      position: member.position,
-      image: member.image,
-      bio: member.bio,
-      specialization: member.specialization,
-      academicYear: member.academicYear,
-      email: member.email,
-      keyInitiatives: member.keyInitiatives,
-      department: member.department || "Senior Core Executive",
-    }));
-  }, []);
+
 
   return (
     <div className="bg-[#FAF7F2] min-h-screen py-12 sm:py-18">
@@ -182,39 +167,15 @@ export default function TeamPage() {
           </div>
         </div>
 
-        {/* 2. Feature Spotlight: 3D Depth Exhibition for Senior Core Committee */}
-        <section className="space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-[#E7E0D2] pb-4">
-            <div>
-              <div className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#B89B5E] flex items-center space-x-2">
-                <span>01 / Executive Leadership Gallery</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-serif font-normal text-navy-950 mt-1">
-                Senior Core Board in 3D Perspective
-              </h2>
-            </div>
-            <p className="text-xs text-slate-500 font-mono">
-              Hover to tilt • Use navigation arrows to explore
-            </p>
-          </div>
 
-          {/* 3D Depth Exhibition Gallery */}
-          <div className="bg-white rounded-2xl border border-[#E7E0D2] p-4 sm:p-8 shadow-subtle">
-            <MemberDepthCarousel
-              members={executiveCarouselItems}
-              autoPlay={true}
-              intervalMs={4800}
-            />
-          </div>
-        </section>
 
-        {/* 3. Interactive Filter Tabs & Search Directory */}
+        {/* 2. Interactive Filter Tabs & Search Directory */}
         <section className="space-y-8 pt-4">
           <div className="space-y-4">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <div className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-slate-500">
-                  02 / Departmental Directory
+                  01 / Departmental Directory
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-serif font-normal text-navy-950 mt-1">
                   Full Committee Roster by Department
