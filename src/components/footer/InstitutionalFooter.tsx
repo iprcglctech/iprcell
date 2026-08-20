@@ -95,7 +95,7 @@ export default function InstitutionalFooter() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/team" className="hover:text-white transition-colors">
+                <Link href="/about#committee" className="hover:text-white transition-colors">
                   Faculty &amp; Core Committee
                 </Link>
               </li>

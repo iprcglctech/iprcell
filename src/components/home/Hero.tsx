@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -37,15 +37,8 @@ export default function Hero() {
                 href="/events"
                 className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs sm:text-sm uppercase tracking-wider font-bold px-6 py-3.5 rounded shadow-sm transition-all hover:translate-y-[-1px]"
               >
-                <span>Explore Flagships</span>
+                <span>Explore Our Initiatives</span>
                 <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/journal"
-                className="inline-flex items-center space-x-2 bg-navy-900 hover:bg-navy-850 text-slate-200 hover:text-white border border-navy-700 text-xs sm:text-sm uppercase tracking-wider font-semibold px-5 py-3.5 rounded transition-all"
-              >
-                <BookOpen className="w-4 h-4 text-electric-soft" />
-                <span>IPR Journal Vol. I</span>
               </Link>
             </div>
 

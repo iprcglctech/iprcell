@@ -20,7 +20,7 @@ export default function FigmaLeadership() {
             </h2>
           </div>
           <Link
-            href="/team"
+            href="/about#committee"
             className="inline-flex items-center space-x-1.5 text-xs uppercase tracking-widest font-bold text-ink hover:text-electric transition-colors shrink-0 group"
           >
             <span>VIEW FULL COMMITTEE</span>

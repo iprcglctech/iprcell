@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Building2, GraduationCap, Award, ShieldCheck, Scale, ArrowRight, UserCheck } from "lucide-react";
+import { Building2, GraduationCap, Award, ShieldCheck, Scale, ArrowRight, UserCheck, Users } from "lucide-react";
 import siteData from "@/content/site.json";
+import teamData from "@/content/team.json";
 
 export default function AboutPage() {
   return (
@@ -11,13 +12,13 @@ export default function AboutPage() {
         {/* Page Header */}
         <div className="border-b border-surface-border pb-8">
           <div className="text-xs font-mono font-bold uppercase tracking-wider text-electric mb-2">
-            Institutional Legacy & Profile
+            Institutional Legacy &amp; Profile
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-ink font-normal tracking-tight">
-            About Government Law College & The IPR Cell
+            About Government Law College &amp; The IPR Cell
           </h1>
           <p className="text-slate-muted text-sm sm:text-base mt-3 max-w-3xl leading-relaxed">
-            Discover the 170-year institutional legacy of Government Law College, Mumbai and the founding mandate of its Intellectual Property Rights Cell.
+            Discover the 170-year institutional legacy of Government Law College, Mumbai, the founding mandate of its Intellectual Property Rights Cell, and its faculty &amp; executive governance.
           </p>
         </div>
 
@@ -83,7 +84,7 @@ export default function AboutPage() {
               <span>INAUGURATED AY 2023–2024</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-serif text-ink font-bold">
-              The Genesis & Mission of the IPR Cell
+              The Genesis &amp; Mission of the IPR Cell
             </h2>
             <div className="space-y-4 text-slate-muted text-sm sm:text-base leading-relaxed">
               <p>
@@ -109,11 +110,11 @@ export default function AboutPage() {
               </li>
               <li className="flex items-start space-x-2">
                 <ShieldCheck className="w-4 h-4 text-electric shrink-0 mt-0.5" />
-                <span>Executive leadership governed by Senior Core & Departmental Junior Core.</span>
+                <span>Executive leadership governed by Senior Core &amp; Departmental Junior Core.</span>
               </li>
               <li className="flex items-start space-x-2">
                 <ShieldCheck className="w-4 h-4 text-electric shrink-0 mt-0.5" />
-                <span>Direct collaborations with top IP law firms, practitioners & publishing bodies.</span>
+                <span>Direct collaborations with top IP law firms, practitioners &amp; publishing bodies.</span>
               </li>
             </ul>
           </div>
@@ -188,19 +189,130 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Section 4: Faculty & Core Committee */}
+        <div id="committee" className="space-y-8 pt-6">
+          <div className="border-b border-surface-border pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div className="eyebrow-tag mb-1">GOVERNANCE &amp; TEAM</div>
+              <h2 className="text-2xl sm:text-3xl font-serif text-ink font-bold">
+                Faculty In-Charge &amp; Core Committee
+              </h2>
+            </div>
+            <div className="text-xs font-mono text-slate-muted">
+              Academic Year 2026–2027
+            </div>
+          </div>
+
+          {/* Professors In-Charge */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {teamData.professorsInCharge.map((prof) => (
+              <div
+                key={prof.name}
+                className="bg-white border border-surface-border p-6 rounded-lg flex items-center space-x-5 shadow-subtle hover:border-electric transition-colors"
+              >
+                <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0 border border-slate-200 bg-cream-100">
+                  <Image
+                    src={prof.image}
+                    alt={prof.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-serif font-bold text-ink">
+                    {prof.name}
+                  </h3>
+                  <p className="text-xs text-electric font-mono uppercase font-bold mt-0.5">
+                    {prof.designation}
+                  </p>
+                  <p className="text-[11px] text-slate-muted mt-1">
+                    {prof.department}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Senior Core */}
+          <div className="space-y-4 pt-4">
+            <h3 className="text-lg font-serif font-bold text-ink">
+              Senior Core Executive Committee
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {teamData.seniorCore.map((member) => (
+                <div
+                  key={member.name}
+                  className="bg-white border border-surface-border rounded-lg p-5 text-center flex flex-col items-center hover:border-electric transition-all shadow-subtle group"
+                >
+                  <div className="relative w-32 h-32 rounded-lg overflow-hidden mb-4 border border-surface-border shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="text-base font-serif font-bold text-ink">
+                    {member.name}
+                  </h4>
+                  <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-wider text-electric bg-electric/10 px-2 py-0.5 rounded mt-1">
+                    {member.position}
+                  </span>
+                  <p className="text-xs text-slate-muted mt-2.5 line-clamp-3 leading-relaxed">
+                    {member.bio}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Junior Core */}
+          <div className="space-y-4 pt-4">
+            <h3 className="text-lg font-serif font-bold text-ink">
+              Departmental Heads &amp; Junior Core
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {teamData.juniorCore.map((member) => (
+                <div
+                  key={member.name + member.position}
+                  className="bg-white border border-surface-border rounded-lg p-3 text-center flex flex-col items-center hover:border-electric transition-all shadow-subtle"
+                >
+                  <div className="relative w-20 h-20 rounded-md overflow-hidden mb-2 border border-surface-border">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="text-xs font-serif font-bold text-ink line-clamp-1">
+                    {member.name}
+                  </h4>
+                  <span className="text-[10px] font-mono text-electric mt-0.5 line-clamp-1 font-semibold">
+                    {member.position}
+                  </span>
+                  <span className="text-[9px] text-slate-muted line-clamp-1">
+                    {member.department}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="p-8 bg-navy-950 text-white rounded-xl flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-xl font-serif font-bold">Connect with Our Leadership Team</h3>
+            <h3 className="text-xl font-serif font-bold">Join the Intellectual Property Rights Cell</h3>
             <p className="text-xs sm:text-sm text-slate-300 mt-1">
-              Explore our core committee members and student department heads.
+              Participate in annual inductions and contribute to India&apos;s leading student-run IP initiatives.
             </p>
           </div>
           <Link
-            href="/team"
-            className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs font-semibold px-5 py-3 rounded transition-all shrink-0"
+            href="/join"
+            className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs uppercase font-bold tracking-wider px-6 py-3.5 rounded transition-all shrink-0"
           >
-            <span>View Core Committee</span>
+            <span>Apply for Induction</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

@@ -43,7 +43,6 @@ export default function Navbar() {
     },
     { name: "Journal", href: "/journal" },
     { name: "IPR Clinic", href: "/ipr-clinic" },
-    { name: "Team", href: "/team" },
     { name: "Join Us", href: "/join" },
     { name: "Contact", href: "/contact" },
   ];
@@ -60,26 +59,21 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Institutional Brand */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded bg-white/10 p-1 border border-white/20 flex items-center justify-center transition-transform group-hover:scale-105">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded bg-white/10 p-1 border border-white/20 flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
               <Image
                 src="/images/glc-crest.png"
                 alt="Government Law College Crest"
-                width={36}
-                height={36}
+                width={40}
+                height={40}
                 className="object-contain"
               />
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center space-x-2">
-                <span className="text-white font-serif font-medium tracking-wide text-sm sm:text-base">
-                  GLC MUMBAI
-                </span>
-                <span className="text-[10px] uppercase tracking-widest text-electric-light font-mono font-bold">
-                  IPR CELL
-                </span>
-              </div>
-              <span className="text-slate-400 text-[10px] font-sans tracking-tight">
-                Government Law College • Estd. 1855
+              <span className="text-white font-serif font-bold tracking-wider text-base sm:text-lg leading-tight uppercase">
+                IPR CELL
+              </span>
+              <span className="text-slate-400 text-[10px] sm:text-[11px] font-sans tracking-tight mt-0.5">
+                Government Law College, Mumbai • Estd. 1855
               </span>
             </div>
           </Link>
