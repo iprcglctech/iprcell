@@ -25,7 +25,10 @@
     height: auto;
   }
 
-  h1, h2, h3, .font-editorial {
+  h1,
+  h2,
+  h3,
+  .font-editorial {
     font-family: var(--font-serif), Georgia, serif;
     letter-spacing: -0.015em;
   }
@@ -73,7 +76,8 @@
 }
 
 /* Focus styles */
-a:focus-visible, button:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid #B89B5E;
   outline-offset: 2px;
 }
@@ -83,13 +87,16 @@ a:focus-visible, button:focus-visible {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #FAF7F2;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #D5CDBD;
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #B89B5E;
 }
