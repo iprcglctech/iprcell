@@ -60,16 +60,6 @@ export default function DualEmblem({ className = "" }: DualEmblemProps) {
 
       {/* Center Divider: Morphing Straight Line (|) to Cross (✕) */}
       <div className="relative flex items-center justify-center shrink-0 w-8 sm:w-12 h-44 sm:h-52 md:h-60 lg:h-64 cursor-pointer">
-        {/* Subtle background glow circle on hover/active */}
-        <motion.div
-          animate={{
-            scale: activeCross ? 1.1 : 0.8,
-            opacity: activeCross ? 0.25 : 0.1,
-          }}
-          transition={{ duration: 0.5 }}
-          className="absolute w-12 h-12 rounded-full bg-electric-light blur-md pointer-events-none"
-        />
-
         {/* Morphing Line / X container */}
         <div className="relative w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
           {/* First Bar: 
@@ -80,11 +70,8 @@ export default function DualEmblem({ className = "" }: DualEmblemProps) {
             animate={{
               rotate: activeCross ? 45 : 0,
               height: activeCross ? 28 : 160,
-              width: activeCross ? 2.5 : 1.5,
-              backgroundColor: activeCross ? "#60a5fa" : "#ffffff",
-              boxShadow: activeCross
-                ? "0 0 12px rgba(96, 165, 250, 0.8), 0 0 2px rgba(255, 255, 255, 0.9)"
-                : "0 0 8px rgba(255, 255, 255, 0.4)",
+              width: activeCross ? 2 : 1.5,
+              backgroundColor: "#ffffff",
             }}
             transition={{
               type: "spring",
@@ -92,23 +79,20 @@ export default function DualEmblem({ className = "" }: DualEmblemProps) {
               damping: 20,
               mass: 0.8,
             }}
-            className="absolute rounded-full origin-center transition-colors"
+            className="absolute rounded-full origin-center"
           />
 
           {/* Second Bar: 
-              In 'line' state: vertical (0deg), height ~ 160px, opacity 0 or 1 overlapping perfectly
+              In 'line' state: vertical (0deg), height ~ 160px, opacity 0
               In 'cross' state: rotated (-45deg), height ~ 28px, opacity 1
           */}
           <motion.span
             animate={{
               rotate: activeCross ? -45 : 0,
               height: activeCross ? 28 : 160,
-              width: activeCross ? 2.5 : 1.5,
+              width: activeCross ? 2 : 1.5,
               opacity: activeCross ? 1 : 0,
-              backgroundColor: activeCross ? "#60a5fa" : "#ffffff",
-              boxShadow: activeCross
-                ? "0 0 12px rgba(96, 165, 250, 0.8), 0 0 2px rgba(255, 255, 255, 0.9)"
-                : "0 0 8px rgba(255, 255, 255, 0.4)",
+              backgroundColor: "#ffffff",
             }}
             transition={{
               type: "spring",
@@ -116,7 +100,7 @@ export default function DualEmblem({ className = "" }: DualEmblemProps) {
               damping: 20,
               mass: 0.8,
             }}
-            className="absolute rounded-full origin-center transition-colors"
+            className="absolute rounded-full origin-center"
           />
         </div>
       </div>
