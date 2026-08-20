@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import TiltedCard from "./TiltedCard";
 
 export interface MemberProps {
   name: string;
@@ -39,7 +40,7 @@ export default function MemberCard({
 
   const imageAspect =
     tier === "faculty"
-      ? "aspect-[4/3.4] sm:aspect-[4/3.2]"
+      ? "aspect-[4/3]"
       : tier === "senior"
       ? "aspect-[3/3.4]"
       : "aspect-[3/3.2]";
@@ -50,6 +51,7 @@ export default function MemberCard({
       whileHover={{ scale: 1.07, zIndex: 30 }}
       transition={{ type: "spring", stiffness: 280, damping: 22 }}
     >
+      <TiltedCard maxTilt={6} scale={1.01} glareOpacity={0} className="w-full h-full">
       <div className="relative bg-white border border-[#E7E0D2] rounded-2xl overflow-hidden shadow-subtle hover:shadow-institutional hover:border-[#B89B5E] transition-all duration-300 flex flex-col h-full group">
 
         {/* Image with hover overlay */}
@@ -70,10 +72,7 @@ export default function MemberCard({
 
           {/* Specialization overlay — fades + slides up on hover */}
           {specialization && (
-            <div className="absolute inset-x-0 bottom-0 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out bg-[#07162C]/90 px-4 pt-5 pb-4 z-10">
-              <p className="text-[9px] font-mono font-bold uppercase tracking-[0.18em] text-[#B89B5E] mb-1">
-                Specialization
-              </p>
+            <div className="absolute inset-x-0 bottom-0 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out bg-gradient-to-t from-[#07162C]/95 via-[#07162C]/75 to-transparent px-4 pt-10 pb-4 z-10">
               <p className="text-[12px] font-sans text-white leading-snug font-medium">
                 {specialization}
               </p>
@@ -86,7 +85,7 @@ export default function MemberCard({
           <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#B89B5E]">
             {displayRole}
           </p>
-          <h3 className="text-base sm:text-lg font-serif font-normal text-[#07162C] leading-snug group-hover:text-[#2A54A7] transition-colors">
+          <h3 className="text-base sm:text-lg font-serif font-normal text-[#07162C] leading-snug">
             {name}
           </h3>
           {academicYear && (
@@ -95,6 +94,7 @@ export default function MemberCard({
         </div>
 
       </div>
+      </TiltedCard>
     </motion.div>
   );
 }
