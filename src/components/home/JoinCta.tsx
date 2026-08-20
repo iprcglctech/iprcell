@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import joinData from "@/content/join.json";
@@ -8,12 +9,25 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function JoinCta() {
   return (
-    <section className="min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center py-10 lg:py-16 bg-cream-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
+    <section className="relative min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center py-10 lg:py-16 bg-cream-100 overflow-hidden">
+      {/* ── Antique Legal Heritage Wide Panorama Background Watermark on Off-White Canvas (High Visibility) ── */}
+      <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 w-full h-[550px] sm:h-[680px] lg:h-[820px] pointer-events-none select-none z-0 opacity-[0.38] mix-blend-multiply">
+        <Image
+          src="/images/legal-heritage-panorama.jpg"
+          alt="Neoclassical Legal Heritage Panorama Engraving"
+          fill
+          className="object-cover object-center"
+        />
+        {/* Soft edge gradients to seamlessly dissolve into the cream background */}
+        <div className="absolute inset-0 bg-gradient-to-t from-cream-100/90 via-transparent to-cream-100/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream-100/90 via-transparent to-cream-100/90" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto relative z-10">
         <ScrollReveal
           delay={0.1}
           yOffset={32}
-          className="bg-navy-950 text-white rounded-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-elevated border border-navy-800"
+          className="bg-navy-950 text-white rounded-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl border border-navy-800"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             <div className="lg:col-span-8 space-y-6">

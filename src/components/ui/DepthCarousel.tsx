@@ -55,11 +55,11 @@ export default function DepthCarousel({
 
   return (
     <div
-      className="relative w-full h-[280px] sm:h-[360px] md:h-[420px] lg:h-[460px] flex items-center justify-center select-none"
+      className="relative w-full h-[240px] sm:h-[290px] md:h-[330px] lg:h-[360px] flex items-center justify-center select-none"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative w-full max-w-6xl h-full flex items-center justify-center depth-carousel-container">
+      <div className="relative w-full max-w-5xl h-full flex items-center justify-center depth-carousel-container">
         {items.map((item, index) => {
           const cardState = getCardClass(index);
           const isActive = cardState === "active";
@@ -68,7 +68,7 @@ export default function DepthCarousel({
             <div
               key={item.image + index}
               onClick={() => setActiveIndex(index)}
-              className={`absolute w-[290px] sm:w-[440px] md:w-[580px] lg:w-[700px] h-[190px] sm:h-[270px] md:h-[330px] lg:h-[370px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer depth-carousel-card ${cardState} group`}
+              className={`absolute w-[280px] sm:w-[400px] md:w-[500px] lg:w-[600px] h-[170px] sm:h-[220px] md:h-[260px] lg:h-[290px] rounded-xl overflow-hidden shadow-2xl cursor-pointer depth-carousel-card ${cardState} group`}
             >
               {/* Image Frame */}
               <div className="relative w-full h-full bg-navy-950">
@@ -82,26 +82,26 @@ export default function DepthCarousel({
 
                 {/* Soft natural gradient on bottom for text readability */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 ${
+                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent transition-opacity duration-300 ${
                     isActive ? "opacity-100" : "opacity-50"
                   }`}
                 />
 
-                {/* Title reveal on hover */}
+                {/* Title reveal on hover / active */}
                 <div
-                  className={`absolute inset-x-0 bottom-0 z-20 p-4 sm:p-6 lg:p-7 transition-all duration-300 ${
+                  className={`absolute inset-x-0 bottom-0 z-20 p-3 sm:p-4 lg:p-5 transition-all duration-300 ${
                     isActive
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-4 pointer-events-none"
                   }`}
                 >
-                  <div className="space-y-1 max-w-2xl">
+                  <div className="space-y-0.5 sm:space-y-1 max-w-xl">
                     {item.subtitle && (
-                      <p className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-slate-300 font-semibold drop-shadow-sm">
+                      <p className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-slate-300 font-semibold drop-shadow-sm">
                         {item.subtitle}
                       </p>
                     )}
-                    <h3 className="text-xs sm:text-base md:text-lg lg:text-xl font-serif text-white font-normal leading-snug drop-shadow-md">
+                    <h3 className="text-xs sm:text-sm md:text-base lg:text-lg font-serif text-white font-normal leading-snug drop-shadow-md">
                       {item.title}
                     </h3>
                   </div>
@@ -113,7 +113,7 @@ export default function DepthCarousel({
       </div>
 
       {/* Subtle Progress Indicators */}
-      <div className="absolute bottom-1 sm:bottom-2 flex items-center space-x-2 z-30">
+      <div className="absolute -bottom-1 sm:bottom-0 flex items-center space-x-2 z-30">
         {items.map((_, idx) => (
           <button
             key={idx}
@@ -121,7 +121,7 @@ export default function DepthCarousel({
             aria-label={`Go to slide ${idx + 1}`}
             className={`transition-all duration-300 rounded-full ${
               idx === activeIndex
-                ? "w-7 h-1.5 bg-electric-light"
+                ? "w-6 h-1.5 bg-electric-light"
                 : "w-1.5 h-1.5 bg-white/30 hover:bg-white/60"
             }`}
           />
