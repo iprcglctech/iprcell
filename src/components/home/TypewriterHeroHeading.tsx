@@ -88,7 +88,7 @@ export default function TypewriterHeroHeading() {
       return (
         <>
           <span>{part1}</span>
-          <span className="italic text-electric-light">{part2}</span>
+          <span className="italic text-electric-light whitespace-nowrap">{part2}</span>
         </>
       );
     }
@@ -110,7 +110,7 @@ export default function TypewriterHeroHeading() {
       return (
         <>
           <span className="text-slate-200">{t1}</span>
-          <span className="font-semibold text-white">{t2}</span>
+          <span className="font-semibold text-white whitespace-nowrap">{t2}</span>
         </>
       );
     } else {
@@ -120,7 +120,7 @@ export default function TypewriterHeroHeading() {
       return (
         <>
           <span className="text-slate-200">{t1}</span>
-          <span className="font-semibold text-white">{t2}</span>
+          <span className="font-semibold text-white whitespace-nowrap">{t2}</span>
           <br className="hidden sm:inline" />
           <span className="italic text-electric-light font-normal drop-shadow-sm">{t3}</span>
         </>
@@ -129,10 +129,10 @@ export default function TypewriterHeroHeading() {
   };
 
   return (
-    <div className="min-h-[110px] sm:min-h-[140px] lg:min-h-[160px] flex items-center">
+    <div className="min-h-[130px] sm:min-h-[150px] lg:min-h-[180px] flex items-center">
       <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-normal tracking-tight text-white leading-[1.14]">
         {renderFormattedText()}
-        <span className="inline-block w-[3px] h-[0.85em] bg-electric ml-1 align-baseline animate-pulse" />
+        <span className="inline-block w-[3.5px] h-[0.85em] bg-electric ml-1.5 align-baseline animate-pulse" />
       </h1>
     </div>
   );
