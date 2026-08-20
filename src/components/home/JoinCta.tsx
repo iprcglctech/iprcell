@@ -8,9 +8,6 @@ export default function JoinCta() {
     <section className="py-20 bg-cream-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-navy-950 text-white rounded-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-elevated border border-navy-800">
-          {/* Subtle Background Accent */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-electric/10 rounded-full blur-3xl pointer-events-none" />
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             <div className="lg:col-span-8 space-y-5">
               <h2 className="text-3xl sm:text-4xl font-serif text-white font-normal tracking-tight">

@@ -10,8 +10,8 @@ export default function FigmaFlagshipToc() {
         {/* Left Column: Courtroom / Moot Hall Image */}
         <div className="lg:col-span-7 relative h-72 lg:h-auto min-h-[320px] overflow-hidden">
           <Image
-            src="/images/glc-hall.jpg"
-            alt="Historic Courtroom and Simulation Hall at GLC Mumbai"
+            src="/images/hero/inter-toc-rounds.jpg"
+            alt="Inter-TOC Trademark Opposition Courtroom Proceedings at GLC Mumbai"
             fill
             className="object-cover"
           />

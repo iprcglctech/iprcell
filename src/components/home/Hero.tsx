@@ -2,15 +2,45 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import DepthCarousel, { CarouselItem } from "@/components/ui/DepthCarousel";
 
 export default function Hero() {
+  const heroGallery: CarouselItem[] = [
+    {
+      image: "/images/hero/convocation-winners-inter-toc.jpg",
+      title: "Convocation of Winners — Inter-TOC 2025–26",
+      subtitle: "Flagship Moot Ceremony",
+    },
+    {
+      image: "/images/hero/javed-akhtar-panel.jpg",
+      title: "Artists' Rights in the Film Industry with Shri Javed Akhtar",
+      subtitle: "Eminent Guest Colloquium",
+    },
+    {
+      image: "/images/hero/in-conversation-priyanka-khimani.jpg",
+      title: "In Conversation with Ms. Priyanka Khimani",
+      subtitle: "Media, Entertainment & Music IP",
+    },
+    {
+      image: "/images/hero/inter-toc-proceedings.jpg",
+      title: "Inter-TOC 2025–26 Oral Advocacy Proceedings",
+      subtitle: "Procedural Trademark Moot",
+    },
+    {
+      image: "/images/hero/inter-toc-rounds.jpg",
+      title: "Inter-TOC Courtroom Advocacy & Opposition Rounds",
+      subtitle: "Procedural Advocacy",
+    },
+    {
+      image: "/images/hero/artists-rights-panel.jpg",
+      title: "Panel: Shri Javed Akhtar, Ms. Priyanka Khimani & Mr. Ameet Datta",
+      subtitle: "Industry Dialogue",
+    },
+  ];
+
   return (
     <section className="relative bg-navy-950 text-white overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-navy-900">
-      {/* Background radial highlight */}
-      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-electric/10 rounded-full blur-3xl pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Editorial Headline */}
@@ -35,50 +65,15 @@ export default function Hero() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-
-            {/* Institutional Footprint Stats */}
-            <div className="pt-8 border-t border-navy-900 grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div>
-                <div className="text-2xl font-serif text-white">1855</div>
-                <div className="text-[10px] text-slate-400 font-mono uppercase tracking-widest mt-0.5">GLC Established</div>
-              </div>
-              <div>
-                <div className="text-2xl font-serif text-electric-light">2023</div>
-                <div className="text-[10px] text-slate-400 font-mono uppercase tracking-widest mt-0.5">Cell Inception</div>
-              </div>
-              <div>
-                <div className="text-2xl font-serif text-white">1st in India</div>
-                <div className="text-[10px] text-slate-400 font-mono uppercase tracking-widest mt-0.5">Procedural TOC Moot</div>
-              </div>
-              <div>
-                <div className="text-2xl font-serif text-electric-light">Peer-Reviewed</div>
-                <div className="text-[10px] text-slate-400 font-mono uppercase tracking-widest mt-0.5">Manupatra Partner</div>
-              </div>
-            </div>
           </div>
 
-          {/* Right Column: Architectural Heritage Image Frame */}
-          <div className="lg:col-span-5">
-            <div className="bg-navy-900 border border-navy-700 rounded-lg p-2.5 shadow-elevated">
-              <div className="relative h-64 sm:h-80 w-full rounded overflow-hidden">
-                <Image
-                  src="/images/glc-campus-main.png"
-                  alt="Government Law College Mumbai Campus"
-                  fill
-                  priority
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 bg-navy-950/90 backdrop-blur-sm p-3 rounded border border-navy-800">
-                  <div className="text-xs font-serif font-bold text-white">
-                    Government Law College, Mumbai
-                  </div>
-                  <div className="text-[11px] text-slate-400">
-                    &lsquo;A&rsquo; Road, Churchgate • Estd. 1855
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Right Column: 3D DepthCarousel with Smooth Loop & Hover Reveals */}
+          <div className="lg:col-span-5 flex justify-center items-center">
+            <DepthCarousel
+              items={heroGallery}
+              intervalMs={2500}
+              autoPlay={true}
+            />
           </div>
         </div>
       </div>

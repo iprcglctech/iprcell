@@ -6,7 +6,7 @@ export default function FigmaWhatWeDo() {
     {
       number: "01",
       title: "Educate",
-      theme: "dark",
+      theme: "cream",
       description: "Structured learning pathways led by practitioners and academics at the frontier of IP law.",
       links: [
         { label: "CERTIFICATE COURSES", href: "/events/certificate-course" },
@@ -30,14 +30,14 @@ export default function FigmaWhatWeDo() {
       description: "Peer-reviewed publication and scholarship that contributes to the IP discourse.",
       links: [
         { label: "IPR JOURNAL", href: "/journal" },
-        { label: "CALL FOR PAPERS", href: "/journal#cfp" },
+        { label: "GUIDELINES FOR SUBMISSIONS", href: "/journal#cfp" },
         { label: "ACADEMIC RESEARCH", href: "/journal" },
       ],
     },
     {
       number: "04",
       title: "Serve",
-      theme: "dark",
+      theme: "white",
       description: "Applying IP knowledge where it matters most — to help those who need it.",
       links: [
         { label: "IPR CLINIC", href: "/ipr-clinic" },
@@ -47,7 +47,7 @@ export default function FigmaWhatWeDo() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-navy-900 text-white border-b border-navy-800">
+    <section className="py-20 lg:py-28 bg-navy-950 text-white border-b border-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="space-y-3">
@@ -59,42 +59,29 @@ export default function FigmaWhatWeDo() {
           </h2>
         </div>
 
-        {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-navy-700/80 overflow-hidden rounded-lg">
+        {/* 4 Light Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-stone-300/80 overflow-hidden rounded-xl shadow-elevated">
           {cards.map((card) => {
             const isWhite = card.theme === "white";
-            const isCream = card.theme === "cream";
 
-            let bgClass = "bg-navy-950 text-white";
-            let numClass = "text-slate-400";
-            let linkClass = "text-slate-300 hover:text-electric-light";
-            let borderClass = "border-navy-800";
-
-            if (isWhite) {
-              bgClass = "bg-white text-ink";
-              numClass = "text-slate-400";
-              linkClass = "text-slate-700 hover:text-electric font-semibold";
-              borderClass = "border-slate-200";
-            } else if (isCream) {
-              bgClass = "bg-cream-200 text-ink";
-              numClass = "text-slate-400";
-              linkClass = "text-slate-700 hover:text-electric font-semibold";
-              borderClass = "border-cream-border";
-            }
+            const bgClass = isWhite ? "bg-white text-ink" : "bg-cream-200 text-ink";
+            const numClass = "text-slate-400";
+            const linkClass = "text-slate-700 hover:text-electric font-semibold";
+            const borderClass = isWhite ? "border-slate-200" : "border-cream-border";
 
             return (
               <div
                 key={card.number}
-                className={`${bgClass} p-8 flex flex-col justify-between border-b lg:border-b-0 lg:border-r last:border-r-0 border-navy-700/80 min-h-[380px] transition-all`}
+                className={`${bgClass} p-8 flex flex-col justify-between border-b lg:border-b-0 lg:border-r last:border-r-0 border-stone-300/70 min-h-[380px] transition-all`}
               >
                 <div>
                   <div className={`text-xs font-mono mb-6 ${numClass}`}>
                     {card.number}
                   </div>
-                  <h3 className="text-2xl font-serif font-normal mb-4">
+                  <h3 className="text-2xl font-serif font-normal mb-4 text-ink">
                     {card.title}
                   </h3>
-                  <p className="text-xs sm:text-sm leading-relaxed opacity-85">
+                  <p className="text-xs sm:text-sm leading-relaxed text-slate-700">
                     {card.description}
                   </p>
                 </div>

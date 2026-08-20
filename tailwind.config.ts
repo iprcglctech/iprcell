@@ -9,22 +9,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Original Warm Cream Editorial Palette
         cream: {
           50: "#FCFAF7",
-          100: "#FAF7F2", // Main Figma Warm Editorial Background
+          100: "#FAF7F2", // Main Warm Editorial Background
           200: "#F4EFE6",
           300: "#EAE3D5",
           border: "#E7E0D2",
         },
+        cool: {
+          50: "#FCFAF7",
+          100: "#FAF7F2",
+          200: "#F4EFE6",
+          300: "#EAE3D5",
+          border: "#E7E0D2",
+        },
+        // Original Deep Navy
         navy: {
           950: "#07162C", // Deepest background
-          900: "#0B1B32", // Figma Dark Section Navy
+          900: "#0B1B32", // Institutional Navy
           850: "#0F223F",
           800: "#132D52",
           700: "#1E3E6B",
         },
+        // Heritage Gold Accents
+        gold: {
+          DEFAULT: "#B89B5E",
+          dark: "#9E834B",
+          light: "#CEB681",
+          soft: "#F8F5EE",
+        },
+        accent: {
+          DEFAULT: "#B89B5E",
+          hover: "#9E834B",
+          light: "#CEB681",
+          soft: "#F8F5EE",
+        },
+        // Original Electric Blue for crisp primary actions
         electric: {
-          DEFAULT: "#2563EB", // Primary Complimentary Accent
+          DEFAULT: "#2563EB",
           dark: "#1D4ED8",
           light: "#3B82F6",
           soft: "#DBEAFE",
