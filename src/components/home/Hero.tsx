@@ -15,12 +15,6 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Editorial Headline */}
           <div className="lg:col-span-7 space-y-6">
-            {/* Institutional Eyebrow */}
-            <div className="inline-flex items-center space-x-2 text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-electric-soft bg-navy-900 border border-navy-700 px-3 py-1 rounded">
-              <span className="w-1.5 h-1.5 rounded-full bg-electric animate-pulse" />
-              <span>GOVERNMENT LAW COLLEGE, MUMBAI • ESTD. 1855</span>
-            </div>
-
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-normal tracking-tight text-white leading-[1.12]">
               Advancing Legal Scholarship &amp; <span className="italic text-electric-light">Practice</span> in Intellectual Property.
