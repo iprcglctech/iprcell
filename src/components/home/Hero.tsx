@@ -2,9 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import TypewriterHeroHeading from "@/components/home/TypewriterHeroHeading";
+
+import DualEmblem from "@/components/home/DualEmblem";
 
 export default function Hero() {
   return (
@@ -33,18 +34,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Dual Institutional Crest Emblem (Top-aligned & Height-matched to Heading) */}
+          {/* Right Column: Dual Institutional Crest Emblem with Animated | to ✕ Transition */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end items-start pt-1 lg:pt-2">
-            <div className="relative w-full max-w-[480px] sm:max-w-[520px] lg:max-w-[580px] xl:max-w-[620px] flex items-center justify-center">
-              <Image
-                src="/images/glc-ipr-dual-crest.png"
-                alt="Government Law College Mumbai & IPR Cell Emblem — No Recreation of Creation"
-                width={1200}
-                height={600}
-                priority
-                className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-xl"
-              />
-            </div>
+            <DualEmblem />
           </div>
         </div>
       </div>
