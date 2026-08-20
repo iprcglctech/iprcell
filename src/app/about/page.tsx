@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Building2, GraduationCap, Award, ShieldCheck, Scale, ArrowRight, UserCheck, Users } from "lucide-react";
 import siteData from "@/content/site.json";
 import teamData from "@/content/team.json";
+import MemberCard from "@/components/ui/MemberCard";
 
 export default function AboutPage() {
   return (
@@ -198,38 +199,29 @@ export default function AboutPage() {
                 Faculty In-Charge &amp; Core Committee
               </h2>
             </div>
-            <div className="text-xs font-mono text-slate-muted">
-              Academic Year 2026–2027
-            </div>
+            <Link
+              href="/team"
+              className="inline-flex items-center space-x-1.5 text-xs font-mono font-bold uppercase tracking-wider text-electric hover:text-electric-dark"
+            >
+              <span>View Interactive 3D Roster</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
 
           {/* Professors In-Charge */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 overflow-visible">
             {teamData.professorsInCharge.map((prof) => (
-              <div
+              <MemberCard
                 key={prof.name}
-                className="bg-white border border-surface-border p-6 rounded-lg flex items-center space-x-5 shadow-subtle hover:border-electric transition-colors"
-              >
-                <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0 border border-slate-200 bg-cream-100">
-                  <Image
-                    src={prof.image}
-                    alt={prof.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-serif font-bold text-ink">
-                    {prof.name}
-                  </h3>
-                  <p className="text-xs text-electric font-mono uppercase font-bold mt-0.5">
-                    {prof.designation}
-                  </p>
-                  <p className="text-[11px] text-slate-muted mt-1">
-                    {prof.department}
-                  </p>
-                </div>
-              </div>
+                name={prof.name}
+                designation={prof.designation}
+                department={prof.department}
+                specialization={prof.specialization}
+                keyInitiatives={prof.keyInitiatives}
+                bio={prof.bio}
+                image={prof.image}
+                tier="faculty"
+              />
             ))}
           </div>
 
@@ -238,30 +230,20 @@ export default function AboutPage() {
             <h3 className="text-lg font-serif font-bold text-ink">
               Senior Core Executive Committee
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-visible">
               {teamData.seniorCore.map((member) => (
-                <div
+                <MemberCard
                   key={member.name}
-                  className="bg-white border border-surface-border rounded-lg p-5 text-center flex flex-col items-center hover:border-electric transition-all shadow-subtle group"
-                >
-                  <div className="relative w-32 h-32 rounded-lg overflow-hidden mb-4 border border-surface-border shadow-sm group-hover:scale-105 transition-transform duration-300">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <h4 className="text-base font-serif font-bold text-ink">
-                    {member.name}
-                  </h4>
-                  <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-wider text-electric bg-electric/10 px-2 py-0.5 rounded mt-1">
-                    {member.position}
-                  </span>
-                  <p className="text-xs text-slate-muted mt-2.5 line-clamp-3 leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
+                  name={member.name}
+                  position={member.position}
+                  department={member.department}
+                  academicYear={member.academicYear}
+                  specialization={member.specialization}
+                  keyInitiatives={member.keyInitiatives}
+                  bio={member.bio}
+                  image={member.image}
+                  tier="senior"
+                />
               ))}
             </div>
           </div>
@@ -271,30 +253,20 @@ export default function AboutPage() {
             <h3 className="text-lg font-serif font-bold text-ink">
               Departmental Heads &amp; Junior Core
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-visible">
               {teamData.juniorCore.map((member) => (
-                <div
+                <MemberCard
                   key={member.name + member.position}
-                  className="bg-white border border-surface-border rounded-lg p-3 text-center flex flex-col items-center hover:border-electric transition-all shadow-subtle"
-                >
-                  <div className="relative w-20 h-20 rounded-md overflow-hidden mb-2 border border-surface-border">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <h4 className="text-xs font-serif font-bold text-ink line-clamp-1">
-                    {member.name}
-                  </h4>
-                  <span className="text-[10px] font-mono text-electric mt-0.5 line-clamp-1 font-semibold">
-                    {member.position}
-                  </span>
-                  <span className="text-[9px] text-slate-muted line-clamp-1">
-                    {member.department}
-                  </span>
-                </div>
+                  name={member.name}
+                  position={member.position}
+                  department={member.department}
+                  academicYear={member.academicYear}
+                  specialization={member.specialization}
+                  keyInitiatives={member.keyInitiatives}
+                  bio={member.bio}
+                  image={member.image}
+                  tier="junior"
+                />
               ))}
             </div>
           </div>

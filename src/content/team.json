@@ -2,109 +2,194 @@
   "professorsInCharge": [
     {
       "name": "Mr. Rahul Dhoble",
-      "designation": "Professor In-Charge",
-      "department": "Faculty of Law, Government Law College, Mumbai",
-      "image": "/images/rahul-dhoble.jpg"
+      "designation": "Professor In-Charge & Faculty Advisor",
+      "department": "Department of Law, Government Law College, Mumbai",
+      "specialization": "Intellectual Property Law, Constitutional Law & Jurisprudence",
+      "academicYear": "Faculty Member",
+      "email": "rahul.dhoble@glcmumbai.com",
+      "keyInitiatives": "Academic governance, national symposium curation, review board direction",
+      "image": "/images/rahul-dhoble.jpg",
+      "bio": "Mr. Rahul Dhoble provides overarching academic stewardship, curriculum integration, and institutional governance to the IPR Cell. He actively mentors student researchers in patent litigation frameworks and guides the Cell's publication and seminar standards."
     },
     {
       "name": "Ms. Krutika Tembhurnikar",
-      "designation": "Professor In-Charge",
-      "department": "Faculty of Law, Government Law College, Mumbai",
-      "image": "/images/glc-crest.png"
+      "designation": "Professor In-Charge & Faculty Co-Convenor",
+      "department": "Department of Law, Government Law College, Mumbai",
+      "specialization": "Commercial Laws, Trademarks & Media Regulations",
+      "academicYear": "Faculty Member",
+      "email": "krutika.tembhurnikar@glcmumbai.com",
+      "keyInitiatives": "Student research oversight, moot court IP benches, inter-collegiate liaison",
+      "image": "/images/glc-crest.png",
+      "bio": "Ms. Krutika Tembhurnikar oversees the Cell's student development, legal clinic operations, and academic colloquia. Her guidance anchors the Cell's community legal aid programs and student publication ethics."
     }
   ],
   "seniorCore": [
     {
       "name": "Awanti Bhandarwar",
       "position": "Chief Advisor",
+      "department": "Executive Advisory Board",
+      "specialization": "Patent Strategy, Trade Secrets & Technology Law",
+      "academicYear": "5th Year, B.L.S./LL.B. (Batch of 2025)",
+      "email": "awanti.bhandarwar@glcmumbai.com",
+      "keyInitiatives": "Long-term institutional partnerships, strategic alumni mentoring & policy research",
       "image": "/images/awanti-bhandarwar.jpg",
-      "bio": "Guiding the strategic and institutional vision of the IPR Cell, overseeing key initiatives and academic collaborations."
+      "bio": "Awanti stewards the Cell's multi-year strategic roadmap, institutional partnerships with Tier-1 law firms, and the flagship annual intellectual property colloquium."
     },
     {
       "name": "Ishita Dawda",
       "position": "President",
+      "department": "Executive Leadership & Secretariat",
+      "specialization": "Copyright In Digital Age, AI & Fair Dealing",
+      "academicYear": "4th Year, B.L.S./LL.B. (Batch of 2026)",
+      "email": "ishita.dawda@glcmumbai.com",
+      "keyInitiatives": "Overall cell administration, national conference convening, faculty liaison",
       "image": "/images/ishita-dawda.jpg",
-      "bio": "Leading executive governance, external liaisons, and overall cell administration across all academic and competitive tracks."
+      "bio": "Ishita leads the overall executive administration, heading cross-departmental operations, external institutional representation, and flagship academic conferences."
     },
     {
       "name": "Shivam Pawar",
       "position": "Vice-President",
+      "department": "Executive Leadership & Operations",
+      "specialization": "Trademarks Prosecution & Commercial Licensing",
+      "academicYear": "4th Year, B.L.S./LL.B. (Batch of 2026)",
+      "email": "shivam.pawar@glcmumbai.com",
+      "keyInitiatives": "Flagship events execution, cross-wing workflow tracking, external speaker curation",
       "image": "/images/shivam-pawar.png",
-      "bio": "Managing operational execution, departmental coordination, and flagship event implementations."
+      "bio": "Shivam directs operations across all functional wings, managing resource allocation, keynote guest relations, and high-impact campus seminars."
     },
     {
       "name": "Kritika Parkale",
       "position": "Secretary",
+      "department": "Executive Secretariat & Communications",
+      "specialization": "Geographical Indications, Traditional Knowledge & Bio-Patents",
+      "academicYear": "3rd Year, B.L.S./LL.B. (Batch of 2027)",
+      "email": "kritika.parkale@glcmumbai.com",
+      "keyInitiatives": "Official administrative correspondence, legal records management, member inductions",
       "image": "/images/kritika-parkale.jpg",
-      "bio": "Overseeing secretariat functions, formal communications, institutional correspondence, and records."
+      "bio": "Kritika oversees official institutional documentation, university liaisons, committee minutes, and the administrative backbone of the Cell's annual initiatives."
     }
   ],
   "juniorCore": [
     {
       "name": "Jacob D'souza",
       "position": "HOD Research",
+      "department": "Research & Publications Wing",
+      "specialization": "Patent Opposition, Standard-Essential Patents (SEPs) & FRAND Licensing",
+      "academicYear": "3rd Year, B.L.S./LL.B.",
+      "email": "jacob.dsouza@glcmumbai.com",
+      "keyInitiatives": "Managing Editor for GLC IPR Law Review & peer-reviewed student journals",
       "image": "/images/jacob-dsouza.jpg",
-      "department": "Research & Publications"
+      "bio": "Jacob directs academic inquiry, peer-review editorial boards, and the publication of quarterly research commentaries on cutting-edge IP jurisprudence."
     },
     {
       "name": "Hussein Burhanpurwala",
       "position": "HOD Research",
+      "department": "Research & Publications Wing",
+      "specialization": "Copyright Infringement in Generative AI Models & Data Mining",
+      "academicYear": "3rd Year, B.L.S./LL.B.",
+      "email": "hussein.b@glcmumbai.com",
+      "keyInitiatives": "National Article Writing Competitions & legislative policy whitepapers",
       "image": "/images/hussein-burhanpurwala.jpg",
-      "department": "Research & Publications"
+      "bio": "Hussein leads policy research submissions, legislative analysis for government consultations, and student essay competitions on emerging tech IP."
     },
     {
       "name": "Hitakshi Pardhi",
       "position": "HOD Creatives",
+      "department": "Creatives & Editorial Wing",
+      "specialization": "Legal Design, Visual Typography & Publication Layouts",
+      "academicYear": "2nd Year, B.L.S./LL.B.",
+      "email": "hitakshi.pardhi@glcmumbai.com",
+      "keyInitiatives": "Annual Journal layout formatting, monograph aesthetics, symposium branding",
       "image": "/images/hitakshi-pardhi.jpg",
-      "department": "Creatives & Design"
+      "bio": "Hitakshi conceptualizes the visual identity, editorial typesetting, and digital assets for all scholarly publications and institutional releases."
     },
     {
       "name": "Sanika Kanse",
       "position": "HOD Creatives",
+      "department": "Creatives & Editorial Wing",
+      "specialization": "Digital Media Design, Infographics & Legal Infotainment",
+      "academicYear": "2nd Year, B.L.S./LL.B.",
+      "email": "sanika.kanse@glcmumbai.com",
+      "keyInitiatives": "Case-law summary carousels, event brochures, web portal aesthetics",
       "image": "/images/sanika-kanse.jpg",
-      "department": "Creatives & Design"
+      "bio": "Sanika translates complex IP case precedents and landmark judgments into compelling visual infographics and public legal education assets."
     },
     {
       "name": "Tarushi Gupta",
       "position": "HOD IPR Clinic",
+      "department": "IPR Clinic & Pro Bono Wing",
+      "specialization": "MSME Trademark Filings, Grassroots Artisans & Copyright Assistance",
+      "academicYear": "3rd Year, B.L.S./LL.B.",
+      "email": "tarushi.gupta@glcmumbai.com",
+      "keyInitiatives": "Pro bono IP advisory desk, startup counseling camps, GI awareness drives",
       "image": "/images/tarushi-gupta.jpg",
-      "department": "IPR Clinic & Pro Bono"
+      "bio": "Tarushi heads the GLC Pro Bono IPR Clinic, organizing pro-bono consultation clinics for independent innovators, local artisans, and early-stage student founders."
     },
     {
       "name": "Nidhi Doshi",
       "position": "HOD Public Relations",
+      "department": "Public Relations & Outreach Wing",
+      "specialization": "Media Communications, Corporate Law Firm Outreach & Press Relations",
+      "academicYear": "2nd Year, B.L.S./LL.B.",
+      "email": "nidhi.doshi@glcmumbai.com",
+      "keyInitiatives": "Press releases, legal portal features, keynote dignitary hospitality",
       "image": "/images/nidhi-doshi.jpg",
-      "department": "Public Relations & Outreach"
+      "bio": "Nidhi drives external institutional relations, coordinating with leading IP law chambers, bar councils, media houses, and keynote judicial guests."
     },
     {
       "name": "Aarav Pandey",
       "position": "HOD Finance",
+      "department": "Finance & Sponsorship Wing",
+      "specialization": "Event Budgeting, Corporate Sponsorship Procurement & Audit Compliances",
+      "academicYear": "3rd Year, B.L.S./LL.B.",
+      "email": "aarav.pandey@glcmumbai.com",
+      "keyInitiatives": "Symposium corporate sponsorships, annual cell balance sheets, vendor management",
       "image": "/images/aarav-pandey.jpg",
-      "department": "Finance & Sponsorship"
+      "bio": "Aarav manages financial planning, sponsor pitch packages, grant applications, and fiscal compliance for national-level conferences and publications."
     },
     {
       "name": "Disha Tikone",
       "position": "HOD Finance",
+      "department": "Finance & Sponsorship Wing",
+      "specialization": "Institutional Grants, Delegate Registrations & Financial Reporting",
+      "academicYear": "2nd Year, B.L.S./LL.B.",
+      "email": "disha.tikone@glcmumbai.com",
+      "keyInitiatives": "Delegate accounting, prize pool administration, institutional invoicing",
       "image": "/images/glc-crest.png",
-      "department": "Finance & Sponsorship"
+      "bio": "Disha co-manages the financial accounts, tracking registration revenue, student prize disbursements, and logistics fund governance."
     },
     {
       "name": "Sahil Angre",
       "position": "HOD Logistics",
+      "department": "Logistics & Operations Wing",
+      "specialization": "Auditorium Stage Operations, Security Protocol & Technical Infrastructure",
+      "academicYear": "3rd Year, B.L.S./LL.B.",
+      "email": "sahil.angre@glcmumbai.com",
+      "keyInitiatives": "Venue management, audiovisual stage setups, live streaming infrastructure",
       "image": "/images/sahil-angre.jpg",
-      "department": "Logistics & Operations"
+      "bio": "Sahil oversees venue setup, hardware technology setups, on-ground crowd management, and seamless offline execution for major national events."
     },
     {
       "name": "Sumit Parbat",
       "position": "HOD Logistics",
+      "department": "Logistics & Operations Wing",
+      "specialization": "Hospitality Protocol, Dignitary Escorts & Travel Logistics",
+      "academicYear": "2nd Year, B.L.S./LL.B.",
+      "email": "sumit.parbat@glcmumbai.com",
+      "keyInitiatives": "Speaker transport arrangements, ceremonial mementos, attendee kit logistics",
       "image": "/images/sumit-parbat.jpg",
-      "department": "Logistics & Operations"
+      "bio": "Sumit coordinates travel, hospitality protocols for High Court judges and senior advocates, and operational logistics for delegate teams."
     },
     {
       "name": "Riddhim Shrivastava",
       "position": "Junior Core Member",
+      "department": "Cell Operations & Inductions Wing",
+      "specialization": "Student Welfare, Induction Coordination & Task Delegation",
+      "academicYear": "2nd Year, B.L.S./LL.B.",
+      "email": "riddhim.s@glcmumbai.com",
+      "keyInitiatives": "Volunteer cohort management, inter-wing task scheduling, internal notices",
       "image": "/images/riddhim-shrivastava.jpg",
-      "department": "Cell Operations"
+      "bio": "Riddhim assists the executive board in volunteer mobilization, membership tracking, on-ground support, and internal cell administrative workflows."
     }
   ]
 }
