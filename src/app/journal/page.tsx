@@ -59,14 +59,14 @@ export default function JournalPage() {
           </div>
         </div>
 
-        {/* Call For Papers (CFP 2026-27) */}
-        <div id="cfp" className="bg-white border-2 border-electric/40 rounded-xl p-6 sm:p-10 shadow-institutional space-y-8">
+        {/* Guidelines for Submissions */}
+        <div id="cfp" className="bg-white border border-surface-border rounded-xl p-6 sm:p-10 shadow-institutional space-y-8">
           <div className="border-b border-surface-border pb-6">
             <span className="text-xs font-mono font-bold uppercase tracking-wider bg-electric text-white px-3 py-1 rounded">
               {cfp.edition}
             </span>
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-ink mt-3">
-              Theme: {cfp.theme}
+              {cfp.title || "Guidelines for Submissions"}
             </h2>
             <p className="text-xs sm:text-sm text-slate-muted mt-2">
               <span className="font-semibold text-ink">Eligibility:</span> {cfp.eligibility}

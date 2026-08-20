@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, UserPlus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import joinData from "@/content/join.json";
 
 export default function JoinCta() {
@@ -13,11 +13,6 @@ export default function JoinCta() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             <div className="lg:col-span-8 space-y-5">
-              <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-electric-soft bg-electric/20 border border-electric/40 px-3 py-1 rounded-full">
-                <UserPlus className="w-3.5 h-3.5" />
-                <span>Student Recruitment &amp; Induction</span>
-              </div>
-
               <h2 className="text-3xl sm:text-4xl font-serif text-white font-normal tracking-tight">
                 {joinData.whyJoin.headline}
               </h2>

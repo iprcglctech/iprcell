@@ -22,31 +22,17 @@ export default function InstitutionalFooter() {
                 />
               </div>
               <div>
-                <h3 className="text-white font-serif font-bold tracking-wide text-base">
-                  GLC MUMBAI IPR CELL
+                <h3 className="text-white font-serif font-bold tracking-wider text-base uppercase">
+                  IPR CELL
                 </h3>
-                <p className="text-slate-400 text-xs">
-                  Government Law College, Mumbai
-                </p>
-                <p className="text-electric-light text-[10px] font-mono uppercase tracking-widest mt-0.5">
-                  Asia&apos;s Oldest Law College • Estd. 1855
+                <p className="text-slate-400 text-xs mt-0.5">
+                  Government Law College, Mumbai • Estd. 1855
                 </p>
               </div>
             </div>
             <p className="text-slate-400 text-xs leading-relaxed max-w-md pt-2">
               Established to foster advanced legal scholarship, practical trademark simulations, and pro bono innovation advisory under the aegis of Government Law College, Mumbai.
             </p>
-            <div className="pt-2 flex flex-wrap gap-2">
-              <span className="inline-flex items-center text-[10px] font-mono uppercase tracking-wider bg-navy-900 border border-navy-800 text-slate-300 px-2.5 py-1 rounded">
-                Manupatra Partner
-              </span>
-              <span className="inline-flex items-center text-[10px] font-mono uppercase tracking-wider bg-navy-900 border border-navy-800 text-slate-300 px-2.5 py-1 rounded">
-                CaseMine Partner
-              </span>
-              <span className="inline-flex items-center text-[10px] font-mono uppercase tracking-wider bg-navy-900 border border-navy-800 text-slate-300 px-2.5 py-1 rounded">
-                Double-Blind Peer Review
-              </span>
-            </div>
           </div>
 
           {/* Col 2: Navigation & Academics */}

@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function FigmaClinicProBono() {
@@ -14,29 +13,13 @@ export default function FigmaClinicProBono() {
               IPR CLINIC — PRO BONO
             </div>
 
-            {/* Small Crest & Title */}
-            <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 rounded bg-navy-950 p-1 flex items-center justify-center">
-                <Image
-                  src="/images/glc-crest.png"
-                  alt="GLC Crest"
-                  width={24}
-                  height={24}
-                  className="object-contain"
-                />
-              </div>
-              <span className="text-[11px] font-mono uppercase tracking-widest text-slate-muted">
-                GLC MUMBAI IPR CELL
-              </span>
-            </div>
-
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-ink font-normal leading-[1.12]">
-              Knowledge should not<br />
-              <span className="italic text-slate-800">stop in the classroom.</span>
+              Applying legal expertise<br />
+              <span className="italic text-slate-800">where it matters most.</span>
             </h2>
 
             <p className="text-slate-muted text-xs sm:text-sm leading-relaxed font-sans max-w-lg">
-              The IPR Clinic and pro bono initiative is the Cell&apos;s commitment to applying legal knowledge where it matters most. It represents the Serve dimension of our work — extending IP awareness and assistance beyond the classroom.
+              The IPR Clinic&apos;s pro bono initiative reflects the Cell&apos;s commitment to applying legal expertise where it matters most, offering free assistance with trademark, copyright, and design registration applications.
             </p>
 
             <div className="pt-2">

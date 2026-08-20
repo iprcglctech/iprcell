@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-6">
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-normal tracking-tight text-white leading-[1.12]">
-              Advancing Legal Scholarship &amp; <span className="italic text-electric-light">Practice</span> in Intellectual Property.
+              No Recreation Of <span className="italic text-electric-light">Creation.</span>
             </h1>
 
             {/* Subtitle */}
