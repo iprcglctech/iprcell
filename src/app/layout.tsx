@@ -40,8 +40,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/images/glc-crest.png",
-    apple: "/images/glc-crest.png",
+    icon: [
+      { url: "/images/favicon-tab.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/images/favicon-tab.png",
+    shortcut: "/images/favicon-tab.png",
   },
 };
 

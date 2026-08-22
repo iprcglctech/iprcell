@@ -11,22 +11,22 @@ export default function InstitutionalFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-navy-900">
           {/* Col 1: Institutional Authority */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-11 h-11 bg-white/10 rounded p-1.5 border border-white/20 flex items-center justify-center">
+            <div className="flex items-center space-x-3.5">
+              <div className="relative w-11 h-11 flex items-center justify-center shrink-0">
                 <Image
-                  src="/images/glc-crest.png"
-                  alt="GLC Crest"
-                  width={40}
-                  height={40}
-                  className="object-contain"
+                  src="/images/ipr-cell-emblem.png"
+                  alt="Intellectual Property Rights Cell Emblem"
+                  fill
+                  sizes="48px"
+                  className="object-contain drop-shadow-sm"
                 />
               </div>
               <div>
-                <h3 className="text-white font-serif font-bold tracking-wider text-base uppercase">
-                  IPR CELL
+                <h3 className="text-white font-serif font-semibold tracking-tight text-base sm:text-lg">
+                  IPR Cell
                 </h3>
-                <p className="text-slate-400 text-xs mt-0.5">
-                  Government Law College, Mumbai • Estd. 1855
+                <p className="text-slate-400 text-[11px] sm:text-xs mt-0.5 font-sans">
+                  Government Law College, Mumbai
                 </p>
               </div>
             </div>

@@ -1,8 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2, Building2, User } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Mail, Phone, MapPin, Send, CheckCircle2, Building2, User, ArrowRight, Clock } from "lucide-react";
 import siteData from "@/content/site.json";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ContactPage() {
   const { contact } = siteData;
@@ -11,7 +14,8 @@ export default function ContactPage() {
     name: "",
     email: "",
     mobile: "",
-    subject: "General Inquiry",
+    department: "General Secretariat Inquiry",
+    subject: "",
     message: "",
   });
 
@@ -21,211 +25,299 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-surface-offwhite py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        {/* Header */}
-        <div className="border-b border-surface-border pb-8">
-          <div className="text-xs font-mono font-bold uppercase tracking-wider text-electric mb-2">
-            Institutional Registry & Inquiries
-          </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-ink font-normal tracking-tight">
-            Contact the IPR Cell
-          </h1>
-          <p className="text-slate-muted text-sm sm:text-base mt-3 max-w-3xl leading-relaxed">
-            Reach out to our student office bearers, secretariat, or visit the historic Government Law College campus at Churchgate, Mumbai.
-          </p>
+    <div className="bg-cream-100 text-ink min-h-screen">
+      {/* ── Page Hero: Deep Institutional Navy Banner ── */}
+      <section className="relative bg-navy-950 text-white pt-28 pb-16 lg:pb-24 border-b border-navy-800 overflow-hidden">
+        {/* Contact Registry Engraving Watermark */}
+        <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
+          <Image
+            src="/images/contact-registry-engraving.jpg"
+            alt="Classical Legal Registry Office"
+            fill
+            className="object-cover object-center opacity-[0.14] filter invert contrast-125 select-none"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/95" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-transparent to-navy-950" />
         </div>
 
-        {/* Contact Info & Interactive Form Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Left Column: Official Contact Registry */}
-          <div className="lg:col-span-5 space-y-6">
-            {/* Campus Address Card */}
-            <div className="bg-white border border-surface-border rounded-xl p-6 shadow-subtle space-y-4">
-              <div className="flex items-center space-x-2 text-xs font-mono font-bold uppercase text-electric">
-                <Building2 className="w-4 h-4" />
-                <span>Campus Location</span>
-              </div>
-              <div>
-                <h3 className="font-serif font-bold text-lg text-ink">
-                  Government Law College, Mumbai
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollReveal delay={0.1} className="max-w-3xl space-y-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-normal tracking-tight leading-[1.12]">
+              Institutional Registry <br />
+              <span className="italic text-slate-300">&amp; Communications</span>
+            </h1>
+
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-sans font-normal pt-2">
+              Connect with our student secretariat, competition convenors, and editorial board at Asia&apos;s oldest law school. We welcome institutional collaborations, student queries, and academic partnerships.
+            </p>
+
+            <div className="pt-4 flex flex-wrap items-center gap-3">
+              <a
+                href="#inquiry"
+                className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs uppercase font-bold tracking-wider px-5 py-3 rounded shadow-institutional transition-all hover:-translate-y-0.5"
+              >
+                <span>Send Institutional Message</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href="#roster"
+                className="inline-flex items-center space-x-2 bg-navy-900 hover:bg-navy-850 border border-navy-700 text-slate-200 text-xs uppercase font-bold tracking-wider px-5 py-3 rounded transition-all"
+              >
+                <span>Office Bearers</span>
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── Section 1: Contact Registry & Interactive Form Grid (Warm Cream Canvas) ── */}
+      <section id="inquiry" className="relative py-16 lg:py-24 border-b border-cream-border overflow-hidden bg-cream-100">
+        {/* Registry Engraving Watermark on Cream */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[340px] lg:w-[500px] pointer-events-none select-none z-0 opacity-[0.12] mix-blend-multiply">
+          <Image
+            src="/images/contact-registry-engraving.jpg"
+            alt="Classical Legal Registry Office"
+            width={1200}
+            height={800}
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            {/* Left Column: Campus Registry & Officer Directory */}
+            <div className="lg:col-span-5 space-y-6">
+              {/* Campus Location Card */}
+              <ScrollReveal
+                delay={0.1}
+                yOffset={20}
+                className="bg-white border border-cream-border rounded-2xl p-8 shadow-card space-y-4"
+              >
+                <div className="text-xs font-mono font-bold text-electric uppercase tracking-wider">
+                  INSTITUTIONAL CAMPUS
+                </div>
+
+                <h3 className="font-serif font-normal text-2xl text-ink">
+                  Government Law College
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-muted mt-1 leading-relaxed">
+
+                <p className="text-xs sm:text-sm text-slate-muted leading-relaxed font-sans">
                   &lsquo;A&rsquo; Road, Churchgate, Mumbai, Maharashtra, India — 400020
                 </p>
-              </div>
-              <div className="pt-2 border-t border-slate-100 flex items-center space-x-2 text-xs text-slate-muted">
-                <Phone className="w-3.5 h-3.5 text-electric shrink-0" />
-                <span>GLC Office: 022-22041707</span>
-              </div>
-              <div className="flex items-center space-x-2 text-xs text-slate-muted">
-                <Mail className="w-3.5 h-3.5 text-electric shrink-0" />
-                <a href={`mailto:${contact.email}`} className="text-electric hover:underline">
-                  {contact.email}
-                </a>
-              </div>
-            </div>
 
-            {/* Student Office Bearers Contact */}
-            <div className="bg-white border border-surface-border rounded-xl p-6 shadow-subtle space-y-4">
-              <div className="flex items-center space-x-2 text-xs font-mono font-bold uppercase text-slate-light">
-                <User className="w-4 h-4 text-electric" />
-                <span>Student Office Bearers</span>
-              </div>
-
-              <div className="space-y-3">
-                {contact.studentOfficeBearers.map((officer) => (
-                  <div
-                    key={officer.name}
-                    className="p-3 bg-surface-offwhite border border-surface-border rounded-lg flex items-center justify-between text-xs"
-                  >
-                    <div>
-                      <div className="font-bold text-ink">{officer.name}</div>
-                      <div className="text-[11px] text-electric">{officer.role}</div>
-                    </div>
-                    <a
-                      href={`tel:${officer.phone.replace(/[^0-9+]/g, "")}`}
-                      className="font-mono text-slate-muted hover:text-ink font-medium"
-                    >
-                      {officer.phone}
+                <div className="space-y-2 pt-2 border-t border-cream-border text-xs text-slate-700 font-sans">
+                  <div className="flex items-center space-x-2.5">
+                    <Phone className="w-4 h-4 text-electric shrink-0" />
+                    <span>GLC Office: 022-22041707</span>
+                  </div>
+                  <div className="flex items-center space-x-2.5">
+                    <Mail className="w-4 h-4 text-electric shrink-0" />
+                    <a href={`mailto:${contact.email}`} className="text-electric hover:underline font-mono">
+                      {contact.email}
                     </a>
                   </div>
-                ))}
-              </div>
+                  <div className="flex items-center space-x-2.5 text-slate-500 pt-1">
+                    <Clock className="w-4 h-4 text-slate-400 shrink-0" />
+                    <span>Academic Hours: 10:00 AM – 5:00 PM IST</span>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Student Office Bearers Contact */}
+              <ScrollReveal
+                id="roster"
+                delay={0.2}
+                yOffset={20}
+                className="bg-white border border-cream-border rounded-2xl p-8 shadow-card space-y-5"
+              >
+                <div>
+                  <div className="text-xs font-mono font-bold text-electric uppercase tracking-wider">
+                    STUDENT SECRETARIAT
+                  </div>
+                  <h3 className="font-serif font-normal text-xl text-ink mt-1">
+                    Direct Point of Contact
+                  </h3>
+                </div>
+
+                <div className="space-y-3 font-sans">
+                  {contact.studentOfficeBearers.map((officer) => (
+                    <div
+                      key={officer.name}
+                      className="p-4 bg-surface-offwhite border border-cream-border rounded-xl flex items-center justify-between shadow-xs hover:border-electric transition-colors"
+                    >
+                      <div>
+                        <div className="font-semibold text-ink text-sm">{officer.name}</div>
+                        <div className="text-xs text-slate-muted mt-0.5">{officer.role}</div>
+                      </div>
+                      <a
+                        href={`tel:${officer.phone.replace(/[^0-9+]/g, "")}`}
+                        className="font-mono text-xs text-electric hover:text-electric-dark font-medium bg-white px-3 py-1.5 rounded-lg border border-cream-border shadow-xs"
+                      >
+                        {officer.phone}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+
+              {/* Digital Channels */}
+              <ScrollReveal
+                delay={0.3}
+                className="bg-navy-950 text-white rounded-2xl p-6 border border-navy-800 space-y-3 shadow-md"
+              >
+                <div className="text-xs font-mono uppercase tracking-wider text-electric-light">
+                  Official Channels
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-sans">
+                  <a
+                    href={contact.socials.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white transition-colors flex items-center space-x-1.5"
+                  >
+                    <span>LinkedIn: IPR Cell GLC Mumbai</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                  <a
+                    href={contact.socials.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white transition-colors flex items-center space-x-1.5"
+                  >
+                    <span>Instagram: @iprcell.glc</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </ScrollReveal>
             </div>
 
-            {/* Social Channels */}
-            <div className="bg-navy-950 text-white rounded-xl p-6 border border-navy-800 space-y-3">
-              <div className="text-xs font-mono uppercase tracking-wider text-electric-soft">
-                Digital Presence
-              </div>
-              <div className="flex items-center space-x-4 text-xs">
-                <a
-                  href={contact.socials.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-electric-soft transition-colors"
-                >
-                  LinkedIn: IPR Cell GLC Mumbai &rarr;
-                </a>
-                <a
-                  href={contact.socials.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-electric-soft transition-colors"
-                >
-                  Instagram: @iprcell.glc &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Contact Inquiry Form */}
-          <div className="lg:col-span-7 bg-white border border-surface-border rounded-xl p-6 sm:p-8 shadow-subtle space-y-5">
-            <div>
-              <h2 className="text-2xl font-serif font-bold text-ink">
-                Send an Institutional Inquiry
-              </h2>
-              <p className="text-xs text-slate-muted mt-1">
-                Inquire regarding the Trademark Opposition Competition, Certificate Courses, or Journal submissions.
-              </p>
-            </div>
-
-            {formSent ? (
-              <div className="p-8 bg-electric/10 border border-electric/30 rounded-lg text-center space-y-3 font-sans">
-                <CheckCircle2 className="w-12 h-12 text-electric mx-auto" />
-                <h3 className="text-lg font-serif font-bold text-ink">Inquiry Submitted</h3>
-                <p className="text-xs text-slate-muted max-w-md mx-auto">
-                  Thank you, <strong className="text-ink">{formData.name}</strong>. Your message has been logged with the secretariat. A representative will get back to you shortly.
+            {/* Right Column: Institutional Inquiry Form */}
+            <ScrollReveal
+              delay={0.15}
+              yOffset={24}
+              className="lg:col-span-7 bg-white border border-cream-border rounded-2xl p-8 sm:p-10 shadow-card space-y-6"
+            >
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-serif font-normal text-ink">
+                  Institutional Dispatch &amp; Inquiries
+                </h2>
+                <p className="text-xs sm:text-sm text-slate-muted mt-1.5 font-sans leading-relaxed">
+                  Submit communications regarding the Trademark Opposition Competition, Executive Certificate Courses, Journal Submissions, or IPR Clinic assistance.
                 </p>
-                <button
-                  onClick={() => setFormSent(false)}
-                  className="text-xs font-semibold text-electric underline pt-2 block mx-auto"
-                >
-                  Send another message
-                </button>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 text-xs font-sans">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+              {formSent ? (
+                <div className="p-8 bg-electric/10 border border-electric/30 rounded-2xl text-center space-y-4 font-sans">
+                  <CheckCircle2 className="w-12 h-12 text-electric mx-auto" />
+                  <h3 className="text-xl font-serif font-normal text-ink">
+                    Communication Logged
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-muted max-w-md mx-auto leading-relaxed">
+                    Thank you, <strong className="text-ink">{formData.name}</strong>. Your message has been routed to the <strong className="text-ink">{formData.department}</strong> desk. A student representative will respond shortly.
+                  </p>
+                  <button
+                    onClick={() => setFormSent(false)}
+                    className="text-xs font-mono font-bold text-electric uppercase tracking-wider underline pt-2 block mx-auto"
+                  >
+                    Send another dispatch
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4 text-xs font-sans">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block font-medium text-ink mb-1.5 text-xs">Your Full Name</label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder="e.g. Adv. Siddharth Mehta"
+                        className="w-full p-3 rounded-xl border border-cream-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400 shadow-xs"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block font-medium text-ink mb-1.5 text-xs">Email Address</label>
+                      <input
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder="siddharth@example.com"
+                        className="w-full p-3 rounded-xl border border-cream-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400 shadow-xs"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block font-medium text-ink mb-1.5 text-xs">Contact Number</label>
+                      <input
+                        type="tel"
+                        value={formData.mobile}
+                        onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                        placeholder="+91 98765 43210"
+                        className="w-full p-3 rounded-xl border border-cream-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400 shadow-xs"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block font-medium text-ink mb-1.5 text-xs">Department / Desk</label>
+                      <select
+                        value={formData.department}
+                        onChange={(e) => setFormData({ ...formData, department: e.target.value })}
+                        className="w-full p-3 rounded-xl border border-cream-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink shadow-xs"
+                      >
+                        <option>General Secretariat Inquiry</option>
+                        <option>Trademark Opposition Competition (TOC)</option>
+                        <option>Executive Certificate Course Cohorts</option>
+                        <option>Journal of IPR Editorial Submissions</option>
+                        <option>IPR Clinic Pro Bono Assistance</option>
+                        <option>Guest Lecture &amp; Colloquium Proposals</option>
+                      </select>
+                    </div>
+                  </div>
+
                   <div>
-                    <label className="block font-medium text-ink mb-1.5">Your Full Name</label>
+                    <label className="block font-medium text-ink mb-1.5 text-xs">Subject</label>
                     <input
                       type="text"
                       required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Adv. Rohit Verma"
-                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block font-medium text-ink mb-1.5">Your Email</label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="rohit@example.com"
-                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block font-medium text-ink mb-1.5">Mobile / WhatsApp Number</label>
-                    <input
-                      type="tel"
-                      required
-                      value={formData.mobile}
-                      onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                      placeholder="+91 98765 43210"
-                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block font-medium text-ink mb-1.5">Subject Area</label>
-                    <select
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink"
-                    >
-                      <option>Trademark Opposition Competition (TOC)</option>
-                      <option>Certificate Course Inquiry</option>
-                      <option>IPR Journal & CFP Query</option>
-                      <option>IPR Clinic Advisory Request</option>
-                      <option>General Institutional Communication</option>
-                    </select>
+                      placeholder="e.g. Inquiry regarding TOC 2026 Inter-Collegiate Registration"
+                      className="w-full p-3 rounded-xl border border-cream-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400 shadow-xs"
+                    />
                   </div>
-                </div>
 
-                <div>
-                  <label className="block font-medium text-ink mb-1.5">Your Message</label>
-                  <textarea
-                    rows={5}
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Provide details regarding your query or institutional collaboration request..."
-                    className="w-full p-2.5 rounded border border-surface-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400"
-                  />
-                </div>
+                  <div>
+                    <label className="block font-medium text-ink mb-1.5 text-xs">
+                      Communication Message
+                    </label>
+                    <textarea
+                      rows={5}
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder="Please elaborate on your inquiry or institutional request..."
+                      className="w-full p-3 rounded-xl border border-cream-border focus:border-electric focus:outline-none bg-surface-offwhite font-sans text-xs text-ink placeholder:text-slate-400 shadow-xs"
+                    />
+                  </div>
 
-                <button
-                  type="submit"
-                  className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white font-semibold px-6 py-3 rounded shadow-sm transition-all font-sans"
-                >
-                  <Send className="w-3.5 h-3.5" />
-                  <span>Send Official Message</span>
-                </button>
-              </form>
-            )}
+                  <button
+                    type="submit"
+                    className="w-full inline-flex items-center justify-center space-x-2 bg-electric hover:bg-electric-dark text-white font-mono uppercase font-bold tracking-wider text-xs py-4 rounded-xl shadow-institutional transition-all hover:-translate-y-0.5"
+                  >
+                    <Send className="w-3.5 h-3.5" />
+                    <span>Dispatch Communication</span>
+                  </button>
+                </form>
+              )}
+            </ScrollReveal>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

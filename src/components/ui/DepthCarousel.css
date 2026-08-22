@@ -1,5 +1,5 @@
 .depth-carousel-container {
-  perspective: 1600px;
+  perspective: 1800px;
   transform-style: preserve-3d;
 }
 
@@ -18,31 +18,31 @@
 }
 
 .depth-carousel-card.prev {
-  transform: translate3d(-42%, 0, -160px) scale(0.85) rotateY(15deg);
-  opacity: 0.55;
+  transform: translate3d(-38%, 0, -140px) scale(0.88) rotateY(12deg);
+  opacity: 0.6;
   z-index: 20;
-  filter: blur(1.5px) brightness(0.65);
+  filter: blur(1.2px) brightness(0.7);
 }
 
 .depth-carousel-card.next {
-  transform: translate3d(42%, 0, -160px) scale(0.85) rotateY(-15deg);
-  opacity: 0.55;
+  transform: translate3d(38%, 0, -140px) scale(0.88) rotateY(-12deg);
+  opacity: 0.6;
   z-index: 20;
-  filter: blur(1.5px) brightness(0.65);
+  filter: blur(1.2px) brightness(0.7);
 }
 
 .depth-carousel-card.far-prev {
-  transform: translate3d(-72%, 0, -320px) scale(0.7) rotateY(26deg);
-  opacity: 0.18;
+  transform: translate3d(-68%, 0, -300px) scale(0.72) rotateY(22deg);
+  opacity: 0.22;
   z-index: 10;
-  filter: blur(3px) brightness(0.35);
+  filter: blur(3px) brightness(0.4);
 }
 
 .depth-carousel-card.far-next {
-  transform: translate3d(72%, 0, -320px) scale(0.7) rotateY(-26deg);
-  opacity: 0.18;
+  transform: translate3d(68%, 0, -300px) scale(0.72) rotateY(-22deg);
+  opacity: 0.22;
   z-index: 10;
-  filter: blur(3px) brightness(0.35);
+  filter: blur(3px) brightness(0.4);
 }
 
 .depth-carousel-card.hidden-card {
