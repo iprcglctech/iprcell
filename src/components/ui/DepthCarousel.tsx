@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./DepthCarousel.css";
 
 export interface CarouselItem {
@@ -18,19 +19,50 @@ interface DepthCarouselProps {
 
 export default function DepthCarousel({
   items,
-  intervalMs = 2800,
+  intervalMs = 3800,
   autoPlay = true,
 }: DepthCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Touch Swipe Handling for Mobile
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const minSwipeDistance = 45;
+
   const nextSlide = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % items.length);
   }, [items.length]);
 
+  const prevSlide = useCallback(() => {
+    setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
+  }, [items.length]);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = null;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
   useEffect(() => {
-    if (!autoPlay) return;
+    if (!autoPlay || isHovered) return;
 
     timerRef.current = setInterval(() => {
       nextSlide();
@@ -39,7 +71,7 @@ export default function DepthCarousel({
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [autoPlay, intervalMs, nextSlide]);
+  }, [autoPlay, isHovered, intervalMs, nextSlide]);
 
   const getCardClass = (index: number) => {
     const total = items.length;
@@ -55,10 +87,39 @@ export default function DepthCarousel({
 
   return (
     <div
-      className="relative w-full h-[280px] sm:h-[380px] md:h-[460px] lg:h-[510px] xl:h-[540px] flex items-center justify-center select-none"
+      className="relative w-full h-[260px] sm:h-[360px] md:h-[440px] lg:h-[500px] xl:h-[530px] flex items-center justify-center select-none group/carousel overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
     >
+      {/* Navigation Buttons: Previous */}
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          prevSlide();
+        }}
+        aria-label="Previous slide"
+        className="absolute left-1 sm:left-4 md:left-8 z-40 p-2 sm:p-2.5 rounded-full bg-navy-950/80 hover:bg-navy-900 text-white/90 hover:text-white border border-white/15 hover:border-electric-light/50 backdrop-blur-md shadow-xl transition-all hover:scale-110 active:scale-95"
+      >
+        <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+      </button>
+
+      {/* Navigation Buttons: Next */}
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          nextSlide();
+        }}
+        aria-label="Next slide"
+        className="absolute right-1 sm:right-4 md:right-8 z-40 p-2 sm:p-2.5 rounded-full bg-navy-950/80 hover:bg-navy-900 text-white/90 hover:text-white border border-white/15 hover:border-electric-light/50 backdrop-blur-md shadow-xl transition-all hover:scale-110 active:scale-95"
+      >
+        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+      </button>
+
       <div className="relative w-full max-w-6xl h-full flex items-center justify-center depth-carousel-container">
         {items.map((item, index) => {
           const cardState = getCardClass(index);
@@ -68,7 +129,7 @@ export default function DepthCarousel({
             <div
               key={item.image + index}
               onClick={() => setActiveIndex(index)}
-              className={`absolute w-[300px] sm:w-[500px] md:w-[680px] lg:w-[840px] xl:w-[920px] h-[190px] sm:h-[300px] md:h-[380px] lg:h-[440px] xl:h-[470px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer depth-carousel-card ${cardState} group`}
+              className={`absolute w-[82vw] max-w-[320px] sm:w-[500px] sm:max-w-none md:w-[680px] lg:w-[840px] xl:w-[920px] h-[180px] sm:h-[290px] md:h-[370px] lg:h-[430px] xl:h-[460px] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl cursor-pointer depth-carousel-card ${cardState} group`}
             >
               {/* Image Frame */}
               <div className="relative w-full h-full bg-navy-950">
@@ -82,26 +143,26 @@ export default function DepthCarousel({
 
                 {/* Soft natural gradient on bottom for text readability */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent transition-opacity duration-300 ${
+                  className={`absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-transparent transition-opacity duration-300 ${
                     isActive ? "opacity-100" : "opacity-60"
                   }`}
                 />
 
-                {/* Title and Subheading overlay — larger, dignified, high-contrast */}
+                {/* Title and Subheading overlay */}
                 <div
-                  className={`absolute inset-x-0 bottom-0 z-20 p-4 sm:p-6 lg:p-8 transition-all duration-300 ${
+                  className={`absolute inset-x-0 bottom-0 z-20 p-3 sm:p-6 lg:p-8 transition-all duration-300 ${
                     isActive
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-4 pointer-events-none"
                   }`}
                 >
-                  <div className="space-y-1 sm:space-y-1.5 max-w-3xl">
+                  <div className="space-y-0.5 sm:space-y-1.5 max-w-3xl">
                     {item.subtitle && (
-                      <p className="text-[11px] sm:text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-electric-light font-bold drop-shadow-md">
+                      <p className="text-[10px] sm:text-xs md:text-sm font-mono uppercase tracking-wider sm:tracking-[0.2em] text-electric-light font-bold drop-shadow-md line-clamp-1">
                         {item.subtitle}
                       </p>
                     )}
-                    <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-serif text-white font-normal leading-snug drop-shadow-lg">
+                    <h3 className="text-xs sm:text-lg md:text-xl lg:text-2xl font-serif text-white font-normal leading-snug drop-shadow-lg line-clamp-2">
                       {item.title}
                     </h3>
                   </div>
@@ -113,7 +174,7 @@ export default function DepthCarousel({
       </div>
 
       {/* Subtle Progress Indicators */}
-      <div className="absolute bottom-1 sm:bottom-2 flex items-center space-x-2 z-30">
+      <div className="absolute bottom-0.5 sm:bottom-2 flex items-center space-x-1.5 sm:space-x-2 z-30">
         {items.map((_, idx) => (
           <button
             key={idx}
@@ -121,8 +182,8 @@ export default function DepthCarousel({
             aria-label={`Go to slide ${idx + 1}`}
             className={`transition-all duration-300 rounded-full ${
               idx === activeIndex
-                ? "w-7 h-1.5 bg-electric-light"
-                : "w-1.5 h-1.5 bg-white/30 hover:bg-white/60"
+                ? "w-5 sm:w-7 h-1 sm:h-1.5 bg-electric-light"
+                : "w-1 sm:w-1.5 h-1 sm:h-1.5 bg-white/30 hover:bg-white/60"
             }`}
           />
         ))}

@@ -82,23 +82,19 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* Custom scrollbars */
+/* Completely hide scrollbars across all browsers */
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #FAF7F2;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #D5CDBD;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #B89B5E;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

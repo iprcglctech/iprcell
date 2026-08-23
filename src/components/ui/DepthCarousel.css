@@ -51,3 +51,27 @@
   z-index: 0;
   pointer-events: none;
 }
+
+/* Mobile Narrow Viewport Adjustments (< 640px) */
+@media (max-width: 640px) {
+  .depth-carousel-container {
+    perspective: 1200px;
+  }
+
+  .depth-carousel-card.prev {
+    transform: translate3d(-24%, 0, -80px) scale(0.9) rotateY(8deg);
+    opacity: 0.45;
+  }
+
+  .depth-carousel-card.next {
+    transform: translate3d(24%, 0, -80px) scale(0.9) rotateY(-8deg);
+    opacity: 0.45;
+  }
+
+  .depth-carousel-card.far-prev,
+  .depth-carousel-card.far-next {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+

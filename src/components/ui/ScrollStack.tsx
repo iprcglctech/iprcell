@@ -24,8 +24,8 @@ export function ScrollStackItem({
   index = 0,
   total = 7,
   className,
-  topOffset = 72, // Clears the sticky Navbar height
-  scaleFactor = 0.03,
+  topOffset = 72,
+  scaleFactor = 0.04,
   dimOnStack = true,
 }: ScrollStackItemProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -35,29 +35,28 @@ export function ScrollStackItem({
     offset: ["start start", "end start"],
   });
 
-  // When scrolling past this card, smoothly scale it down slightly
+  // Scale down smoothly as subsequent cards slide over it
   const scale = useTransform(
     scrollYProgress,
     [0, 1],
-    [1, 1 - Math.min(scaleFactor * 1.2, 0.05)]
+    [1, 1 - scaleFactor]
   );
 
-  // Subtle brightness/opacity dimming as subsequent cards stack on top
+  // Subtle dimming as the next card stacks over
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.85, 1],
-    [1, 0.95, 0.75]
+    [0, 0.7, 1],
+    [1, 1, 0.85]
   );
 
   return (
     <div
       ref={containerRef}
       className={cn(
-        "sticky top-0 w-full min-h-[calc(100vh-72px)] min-h-[calc(100svh-72px)] flex flex-col justify-center",
+        "sticky top-16 md:top-[72px] w-full min-h-[calc(100dvh-64px)] md:min-h-[calc(100vh-72px)] flex flex-col justify-center",
         className
       )}
       style={{
-        top: `${topOffset}px`,
         zIndex: index + 1,
       }}
     >
@@ -67,7 +66,7 @@ export function ScrollStackItem({
           opacity: dimOnStack ? opacity : 1,
           transformOrigin: "top center",
         }}
-        className="w-full transition-shadow duration-300 shadow-2xl overflow-hidden"
+        className="w-full transition-shadow duration-300 shadow-2xl"
       >
         {children}
       </motion.div>

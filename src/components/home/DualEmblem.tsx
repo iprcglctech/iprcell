@@ -46,12 +46,12 @@ export default function DualEmblem({ className = "" }: DualEmblemProps) {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="flex-1 flex justify-center items-center relative group/left"
       >
-        <div className="relative w-full max-w-[150px] sm:max-w-[180px] md:max-w-[210px] lg:max-w-[230px] aspect-[380/412] transition-transform duration-500 group-hover/left:scale-105">
+        <div className="relative w-full max-w-[110px] sm:max-w-[170px] md:max-w-[210px] lg:max-w-[230px] aspect-[380/412] transition-transform duration-500 group-hover/left:scale-105">
           <Image
             src="/images/glc-crest-white.png"
             alt="Government Law College Mumbai Crest - Estd. 1855"
             fill
-            sizes="(max-width: 640px) 150px, (max-width: 1024px) 200px, 240px"
+            sizes="(max-width: 640px) 110px, (max-width: 1024px) 200px, 240px"
             priority
             className="object-contain drop-shadow-[0_4px_16px_rgba(255,255,255,0.12)] filter"
           />
@@ -59,9 +59,9 @@ export default function DualEmblem({ className = "" }: DualEmblemProps) {
       </motion.div>
 
       {/* Center Divider: Morphing Straight Line (|) to Cross (✕) */}
-      <div className="relative flex items-center justify-center shrink-0 w-8 sm:w-12 h-44 sm:h-52 md:h-60 lg:h-64 cursor-pointer">
+      <div className="relative flex items-center justify-center shrink-0 w-6 sm:w-12 h-28 sm:h-52 md:h-60 lg:h-64 cursor-pointer">
         {/* Morphing Line / X container */}
-        <div className="relative w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
+        <div className="relative w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center">
           {/* First Bar: 
               In 'line' state: vertical (0deg), height ~ 160px
               In 'cross' state: rotated (45deg), height ~ 28px
@@ -69,7 +69,7 @@ export default function DualEmblem({ className = "" }: DualEmblemProps) {
           <motion.span
             animate={{
               rotate: activeCross ? 45 : 0,
-              height: activeCross ? 28 : 160,
+              height: activeCross ? (typeof window !== "undefined" && window.innerWidth < 640 ? 20 : 28) : (typeof window !== "undefined" && window.innerWidth < 640 ? 90 : 160),
               width: activeCross ? 2 : 1.5,
               backgroundColor: "#ffffff",
             }}
@@ -89,7 +89,7 @@ export default function DualEmblem({ className = "" }: DualEmblemProps) {
           <motion.span
             animate={{
               rotate: activeCross ? -45 : 0,
-              height: activeCross ? 28 : 160,
+              height: activeCross ? (typeof window !== "undefined" && window.innerWidth < 640 ? 20 : 28) : (typeof window !== "undefined" && window.innerWidth < 640 ? 90 : 160),
               width: activeCross ? 2 : 1.5,
               opacity: activeCross ? 1 : 0,
               backgroundColor: "#ffffff",
@@ -112,12 +112,12 @@ export default function DualEmblem({ className = "" }: DualEmblemProps) {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="flex-1 flex justify-center items-center relative group/right"
       >
-        <div className="relative w-full max-w-[145px] sm:max-w-[175px] md:max-w-[205px] lg:max-w-[225px] aspect-[389/378] transition-transform duration-500 group-hover/right:scale-105">
+        <div className="relative w-full max-w-[105px] sm:max-w-[165px] md:max-w-[205px] lg:max-w-[225px] aspect-[389/378] transition-transform duration-500 group-hover/right:scale-105">
           <Image
             src="/images/ipr-seal-white.png"
             alt="IPR Cell Seal - No Recreation of Creation"
             fill
-            sizes="(max-width: 640px) 145px, (max-width: 1024px) 195px, 235px"
+            sizes="(max-width: 640px) 105px, (max-width: 1024px) 195px, 235px"
             priority
             className="object-contain drop-shadow-[0_4px_16px_rgba(255,255,255,0.12)] filter"
           />
