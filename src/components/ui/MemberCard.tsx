@@ -16,6 +16,7 @@ export interface MemberProps {
   keyInitiatives?: string;
   image: string;
   tier: "faculty" | "senior" | "junior";
+  compactOnMobile?: boolean;
 }
 
 export default function MemberCard({
@@ -27,6 +28,7 @@ export default function MemberCard({
   academicYear,
   image,
   tier,
+  compactOnMobile = false,
 }: MemberProps) {
   const [isHovered, setIsHovered] = useState(false);
   const displayRole = position || designation || "Committee Member";
@@ -38,7 +40,12 @@ export default function MemberCard({
       ? "Senior Core"
       : department || "Junior Core";
 
-  const imageAspect = "aspect-[3/3.4]";
+  const imageAspect = compactOnMobile
+    ? "w-20 h-20 sm:w-full sm:h-auto sm:aspect-[3/3.4] rounded-xl sm:rounded-none m-4 sm:m-0"
+    : "w-full aspect-[3/3.4]";
+  const cardLayout = compactOnMobile
+    ? "flex-row items-center sm:flex-col sm:items-stretch"
+    : "flex-col";
 
   return (
     <motion.div
@@ -52,14 +59,14 @@ export default function MemberCard({
       transition={{ type: "spring", stiffness: 300, damping: 25 }}
     >
       <div
-        className={`relative bg-white border rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 ${
+        className={`relative bg-white border rounded-2xl overflow-hidden flex ${cardLayout} h-full transition-all duration-300 ${
           isHovered
             ? "border-[#B89B5E] shadow-elevated"
             : "border-[#E7E0D2] shadow-subtle"
         }`}
       >
         {/* Image with hover overlay */}
-        <div className={`relative w-full ${imageAspect} bg-slate-100 overflow-hidden shrink-0`}>
+        <div className={`relative ${imageAspect} bg-slate-100 overflow-hidden shrink-0`}>
           <Image
             src={image}
             alt={name}
@@ -75,7 +82,7 @@ export default function MemberCard({
               isHovered
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-1.5"
-            }`}
+            } ${compactOnMobile ? "hidden sm:block" : ""}`}
           >
             <span className="px-2.5 py-1 rounded-md text-[9px] font-mono font-bold uppercase tracking-[0.2em] bg-[#07162C]/90 text-white backdrop-blur-md border border-white/10 shadow-md">
               {tagLabel}
@@ -89,7 +96,7 @@ export default function MemberCard({
                 isHovered
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-3"
-              }`}
+              } ${compactOnMobile ? "hidden lg:block" : ""}`}
             >
               <p className="text-[11px] font-sans text-white/90 leading-snug font-normal">
                 {specialization}
@@ -99,7 +106,7 @@ export default function MemberCard({
         </div>
 
         {/* Name & Designation — always visible */}
-        <div className="p-4 sm:p-5 flex flex-col gap-1 bg-white z-10">
+        <div className={`${compactOnMobile ? "py-4 pr-4 pl-0 sm:p-5" : "p-4 sm:p-5"} flex flex-col gap-1 bg-white z-10 min-w-0`}>
           <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#B89B5E]">
             {displayRole}
           </p>

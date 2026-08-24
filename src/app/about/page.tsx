@@ -287,7 +287,7 @@ export default function AboutPage() {
             <h3 className="text-xl font-serif font-normal text-ink">
               Professors In-Charge
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
               {teamData.professorsInCharge.map((prof) => (
                 <MemberCard
                   key={prof.name}
@@ -299,6 +299,7 @@ export default function AboutPage() {
                   bio={prof.bio}
                   image={prof.image}
                   tier="faculty"
+                  compactOnMobile
                 />
               ))}
             </div>
@@ -309,7 +310,7 @@ export default function AboutPage() {
             <h3 className="text-xl font-serif font-normal text-ink">
               Senior Core Executive Committee
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
               {teamData.seniorCore.map((member) => (
                 <MemberCard
                   key={member.name}
@@ -322,6 +323,7 @@ export default function AboutPage() {
                   bio={member.bio}
                   image={member.image}
                   tier="senior"
+                  compactOnMobile
                 />
               ))}
             </div>
@@ -332,7 +334,7 @@ export default function AboutPage() {
             <h3 className="text-xl font-serif font-normal text-ink">
               Departmental Heads &amp; Junior Core
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5">
               {teamData.juniorCore.map((member) => (
                 <MemberCard
                   key={member.name + member.position}
@@ -345,6 +347,7 @@ export default function AboutPage() {
                   bio={member.bio}
                   image={member.image}
                   tier="junior"
+                  compactOnMobile
                 />
               ))}
             </div>
