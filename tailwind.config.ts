@@ -69,9 +69,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ["Playfair Display", "Newsreader", "Georgia", "serif"],
-        sans: ["Inter", "Plus Jakarta Sans", "system-ui", "-apple-system", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        serif: ["var(--font-serif)", "Playfair Display", "Newsreader", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "Inter", "Plus Jakarta Sans", "system-ui", "-apple-system", "sans-serif"],
+        mono: ["var(--font-mono)", "JetBrains Mono", "monospace"],
       },
       boxShadow: {
         institutional: "0 4px 20px -2px rgba(11, 27, 50, 0.06), 0 2px 6px -1px rgba(11, 27, 50, 0.04)",
