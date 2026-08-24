@@ -8,7 +8,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaClinicProBono() {
   return (
-    <section className="relative min-h-[calc(100dvh-64px)] md:min-h-[calc(100vh-72px)] flex flex-col justify-center py-6 sm:py-10 lg:py-16 bg-cream-100 border-b border-cream-border overflow-hidden">
+    <section className="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-6 sm:py-10 lg:py-16 bg-cream-100 border-b border-cream-border overflow-hidden">
       {/* ── Antique Pro Bono Legal Shield & Torch Engraving Watermark ── */}
       <div className="absolute left-0 sm:left-4 lg:left-10 top-1/2 -translate-y-1/2 w-[220px] sm:w-[360px] lg:w-[480px] xl:w-[540px] pointer-events-none select-none z-0 opacity-[0.08] sm:opacity-[0.11] mix-blend-multiply transform -translate-x-1/6 sm:translate-x-0">
         <Image

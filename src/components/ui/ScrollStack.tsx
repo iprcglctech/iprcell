@@ -24,7 +24,7 @@ export function ScrollStackItem({
   index = 0,
   total = 7,
   className,
-  topOffset = 72,
+  topOffset = 0,
   scaleFactor = 0.04,
   dimOnStack = true,
 }: ScrollStackItemProps) {
@@ -53,7 +53,7 @@ export function ScrollStackItem({
     <div
       ref={containerRef}
       className={cn(
-        "sticky top-16 md:top-[72px] w-full min-h-[calc(100dvh-64px)] md:min-h-[calc(100vh-72px)] flex flex-col justify-center",
+        "sticky top-0 w-full min-h-screen min-h-[100dvh] flex flex-col justify-center",
         className
       )}
       style={{

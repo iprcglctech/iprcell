@@ -41,7 +41,7 @@ export default function FigmaEventsGallery() {
   ];
 
   return (
-    <section className="min-h-[calc(100dvh-64px)] md:min-h-[calc(100vh-72px)] flex flex-col justify-center py-4 sm:py-6 lg:py-8 bg-navy-900 text-white border-b border-navy-800 overflow-hidden">
+    <section className="min-h-screen min-h-[100dvh] flex flex-col justify-center py-4 sm:py-6 lg:py-8 bg-navy-900 text-white border-b border-navy-800 overflow-hidden">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-3 sm:space-y-4 w-full my-auto">
         {/* Streamlined Sleek Header */}
         <ScrollReveal delay={0.1} className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-4 border-b border-navy-800/80 pb-2.5 sm:pb-3">

@@ -9,7 +9,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function JoinCta() {
   return (
-    <section className="relative min-h-[calc(100dvh-64px)] md:min-h-[calc(100vh-72px)] flex flex-col justify-center py-6 sm:py-10 lg:py-16 bg-cream-100 overflow-hidden">
+    <section className="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-6 sm:py-10 lg:py-16 bg-cream-100 overflow-hidden">
       {/* ── Antique Legal Heritage Wide Panorama Background Watermark on Off-White Canvas (High Visibility) ── */}
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 w-full h-[450px] sm:h-[680px] lg:h-[820px] pointer-events-none select-none z-0 opacity-[0.25] sm:opacity-[0.38] mix-blend-multiply">
         <Image

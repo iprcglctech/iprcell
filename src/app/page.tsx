@@ -31,7 +31,6 @@ export default function HomePage() {
             key={sec.id}
             index={idx}
             total={sections.length}
-            topOffset={72}
           >
             {sec.component}
           </ScrollStackItem>

@@ -9,7 +9,7 @@ export default function FigmaAboutIntro() {
   return (
     <section
       id="about-section"
-      className="relative min-h-[calc(100dvh-64px)] md:min-h-[calc(100vh-72px)] flex flex-col justify-center py-6 sm:py-10 lg:py-16 bg-cream-100 border-b border-cream-border scroll-mt-20 overflow-hidden"
+      className="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-6 sm:py-10 lg:py-16 bg-cream-100 border-b border-cream-border scroll-mt-20 overflow-hidden"
     >
       {/* ── Antique Law Treatise, Pillar & Quill Engraving Watermark ── */}
       <div className="absolute right-0 sm:right-8 lg:right-12 top-1/2 -translate-y-1/2 w-[220px] sm:w-[360px] lg:w-[460px] xl:w-[520px] pointer-events-none select-none z-0 opacity-[0.08] sm:opacity-[0.11] mix-blend-multiply transform translate-x-1/6 sm:translate-x-0">

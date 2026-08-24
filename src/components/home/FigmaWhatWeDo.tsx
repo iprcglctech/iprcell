@@ -67,7 +67,7 @@ export default function FigmaWhatWeDo() {
   const [activeIdx, setActiveIdx] = useState<number | null>(0);
 
   return (
-    <section className="min-h-[calc(100dvh-64px)] md:min-h-[calc(100vh-72px)] flex flex-col justify-center py-6 sm:py-10 lg:py-12 bg-navy-950 text-white border-b border-navy-900 overflow-hidden">
+    <section className="min-h-screen min-h-[100dvh] flex flex-col justify-center py-6 sm:py-10 lg:py-12 bg-navy-950 text-white border-b border-navy-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6 lg:space-y-8 w-full my-auto">
         {/* Section Header with ScrollReveal */}
         <ScrollReveal delay={0.1} className="space-y-1.5 sm:space-y-2">

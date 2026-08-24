@@ -1,0 +1,218 @@
+backend:
+  name: github
+  repo: Anicantcode/iprcell
+  branch: main
+  base_url: https://iprcellglc.in
+
+# Enable local backend proxy when running 'npx decap-server' during local development
+local_backend: true
+
+media_folder: "public/images"
+public_folder: "/images"
+
+display_url: "https://iprcellglc.in"
+logo_url: "/images/favicon-tab.png"
+
+collections:
+  - name: "team"
+    label: "Team & Leadership"
+    files:
+      - file: "src/content/team.json"
+        label: "Team Roster & Faculty"
+        name: "team_roster"
+        fields:
+          - label: "Professors In-Charge & Faculty Advisors"
+            name: "professorsInCharge"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.designation}}"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Designation / Role", name: "designation", widget: "string" }
+              - { label: "Department / Affiliation", name: "department", widget: "string" }
+              - { label: "Specialization", name: "specialization", widget: "string" }
+              - { label: "Academic Year / Tag", name: "academicYear", widget: "string" }
+              - { label: "Official Email", name: "email", widget: "string" }
+              - { label: "Key Initiatives", name: "keyInitiatives", widget: "string" }
+              - { label: "Profile Photo", name: "image", widget: "image", default: "/images/glc-crest.png" }
+              - { label: "Biographical Profile", name: "bio", widget: "text" }
+
+          - label: "Senior Core & Executive Board"
+            name: "seniorCore"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.position}} [{{fields.academicYear}}]"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Position (e.g. Chief Advisor, President, Vice President, Secretary)", name: "position", widget: "string" }
+              - { label: "Department / Wing", name: "department", widget: "string" }
+              - { label: "Specialization", name: "specialization", widget: "string" }
+              - { label: "Academic Year & Batch (e.g. V-III (Batch of 2029))", name: "academicYear", widget: "string" }
+              - { label: "Email Address", name: "email", widget: "string" }
+              - { label: "Key Initiatives", name: "keyInitiatives", widget: "string" }
+              - { label: "Member Photo", name: "image", widget: "image" }
+              - { label: "Bio / Responsibilities", name: "bio", widget: "text" }
+
+          - label: "Junior Core & Department Heads (HODs)"
+            name: "juniorCore"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.position}} [{{fields.academicYear}}]"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Position (e.g. HOD Research, HOD Creatives, HOD Finance)", name: "position", widget: "string" }
+              - { label: "Department (Research, Creatives, Clinic, PR, Finance, Logistics)", name: "department", widget: "string" }
+              - { label: "Specialization", name: "specialization", widget: "string" }
+              - { label: "Academic Year & Batch (e.g. V-II (Batch of 2030))", name: "academicYear", widget: "string" }
+              - { label: "Email Address", name: "email", widget: "string" }
+              - { label: "Key Initiatives", name: "keyInitiatives", widget: "string" }
+              - { label: "Member Photo", name: "image", widget: "image" }
+              - { label: "Bio / Scope of Work", name: "bio", widget: "text" }
+
+  - name: "events"
+    label: "Events & Competitions"
+    files:
+      - file: "src/content/events.json"
+        label: "Events, TOC & Certificate Courses"
+        name: "events_data"
+        fields:
+          - label: "Certificate Courses Editions"
+            name: "certificateCourses"
+            widget: "list"
+            summary: "{{fields.year}} — {{fields.title}} ({{fields.status}})"
+            fields:
+              - { label: "Course ID", name: "id", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Course Title", name: "title", widget: "string" }
+              - { label: "Scheduled Dates", name: "dates", widget: "string" }
+              - { label: "Status (e.g. Upcoming, Completed, Inaugural Edition)", name: "status", widget: "string" }
+              - { label: "Delivery Mode", name: "mode", widget: "string" }
+              - { label: "Description & Syllabus", name: "description", widget: "text" }
+              - label: "Featured Faculty & Expert Speakers"
+                name: "featuredExperts"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Expert Name", name: "name", widget: "string" }
+                  - { label: "Title / Firm / Chamber", name: "role", widget: "string" }
+
+          - label: "Trademark Opposition Competition (TOC)"
+            name: "trademarkOppositionCompetition"
+            widget: "object"
+            fields:
+              - { label: "Competition Title", name: "title", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - label: "Commemoration Tribute"
+                name: "commemoration"
+                widget: "object"
+                fields:
+                  - { label: "Commemorated Dignitary Name", name: "name", widget: "string" }
+                  - { label: "Dignitary Portrait", name: "image", widget: "image" }
+                  - { label: "Tribute Narrative", name: "text", widget: "text" }
+              - { label: "Competition Overview", name: "overview", widget: "text" }
+              - label: "Competition Tracks (Inter-TOC / Intra-TOC)"
+                name: "tracks"
+                widget: "list"
+                fields:
+                  - { label: "Track Name", name: "type", widget: "string" }
+                  - { label: "Eligibility", name: "eligibility", widget: "string" }
+                  - { label: "Procedural Format & Rules", name: "format", widget: "text" }
+                  - { label: "Skills Tested", name: "skillsTested", widget: "string" }
+                  - label: "Photo Gallery"
+                    name: "gallery"
+                    widget: "list"
+                    field: { label: "Photo", name: "image", widget: "image" }
+
+          - label: "Distinguished Guest Lectures & Colloquia"
+            name: "guestLectures"
+            widget: "list"
+            summary: "{{fields.speaker}} — {{fields.topic}} ({{fields.date}})"
+            fields:
+              - { label: "Lecture ID", name: "id", widget: "string" }
+              - { label: "Speaker Name", name: "speaker", widget: "string" }
+              - { label: "Speaker Designation", name: "designation", widget: "string" }
+              - { label: "Topic / Panel Title", name: "topic", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Key Themes", name: "keyThemes", widget: "string" }
+              - { label: "Narrative Overview", name: "narrative", widget: "text" }
+              - { label: "Speaker Headshot", name: "speakerImage", widget: "image", required: false }
+              - label: "Event Photos"
+                name: "photos"
+                widget: "list"
+                required: false
+                field: { label: "Photo", name: "image", widget: "image" }
+
+  - name: "journal"
+    label: "IPR Journal & CFP"
+    files:
+      - file: "src/content/journal.json"
+        label: "Journal Publications & Call for Papers"
+        name: "journal_data"
+        fields:
+          - { label: "Journal Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Overview & Mission", name: "overview", widget: "text" }
+          - label: "Knowledge Partners"
+            name: "partners"
+            widget: "list"
+            fields:
+              - { label: "Partner Name", name: "name", widget: "string" }
+              - { label: "Role & Partnership Scope", name: "role", widget: "string" }
+          - label: "Call for Papers (Current Volume)"
+            name: "callForPapers"
+            widget: "object"
+            fields:
+              - { label: "Volume & CFP Title", name: "title", widget: "string" }
+              - { label: "Submission Deadline", name: "submissionDeadline", widget: "string" }
+              - { label: "Scope & Academic Themes", name: "theme", widget: "text" }
+              - { label: "Submission Portal URL / Email", name: "submissionEmail", widget: "string" }
+              - label: "Acceptable Manuscript Categories"
+                name: "categories"
+                widget: "list"
+                fields:
+                  - { label: "Category Name", name: "type", widget: "string" }
+                  - { label: "Word Count Limit", name: "wordLimit", widget: "string" }
+                  - { label: "Category Scope", name: "description", widget: "string" }
+
+  - name: "site_settings"
+    label: "Site Settings & Leadership Messages"
+    files:
+      - file: "src/content/site.json"
+        label: "Contact, Principal & Founder Quotes"
+        name: "site_info"
+        fields:
+          - label: "Principal's Official Message"
+            name: "principal"
+            widget: "object"
+            fields:
+              - { label: "Principal Name", name: "name", widget: "string" }
+              - { label: "Designation", name: "designation", widget: "string" }
+              - { label: "Official Address / Quote", name: "quote", widget: "text" }
+              - { label: "Principal Portrait", name: "image", widget: "image" }
+
+          - label: "Founder's Vision"
+            name: "founder"
+            widget: "object"
+            fields:
+              - { label: "Founder Name", name: "name", widget: "string" }
+              - { label: "Designation", name: "designation", widget: "string" }
+              - { label: "Founding Note / Quote", name: "quote", widget: "text" }
+              - { label: "Founder Portrait", name: "image", widget: "image" }
+
+          - label: "Institutional Contact Details"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Campus Address", name: "address", widget: "string" }
+              - { label: "Telephone Number", name: "phone", widget: "string" }
+              - { label: "Official Inquiry Email", name: "email", widget: "string" }
+              - label: "Student Office Bearers & Emergency Dials"
+                name: "studentOfficeBearers"
+                widget: "list"
+                fields:
+                  - { label: "Officer Name", name: "name", widget: "string" }
+                  - { label: "Role / Position", name: "role", widget: "string" }
+                  - { label: "Contact Phone Number", name: "phone", widget: "string" }
+              - label: "Social Media Channels"
+                name: "socials"
+                widget: "object"
+                fields:
+                  - { label: "LinkedIn Page URL", name: "linkedin", widget: "string" }
+                  - { label: "Instagram Handle URL", name: "instagram", widget: "string" }

@@ -8,8 +8,8 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FigmaFlagshipToc() {
   return (
-    <section className="bg-navy-900 border-b border-navy-800 overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[480px] lg:min-h-[520px]">
+    <section className="bg-navy-900 border-b border-navy-800 overflow-hidden min-h-screen min-h-[100dvh] flex flex-col justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[480px] lg:min-h-[520px] my-auto">
         {/* Left Column: Courtroom / Moot Hall Image */}
         <div className="lg:col-span-7 relative h-56 sm:h-72 lg:h-auto min-h-[240px] sm:min-h-[320px] overflow-hidden">
           <Image
