@@ -58,29 +58,18 @@ export default function JournalClient() {
             </p>
 
             <div className="pt-4 flex flex-wrap items-center gap-3">
-              {volume1.downloadUrl && (
-                <a
-                  href={volume1.downloadUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-[#B89B5E] hover:bg-[#A5884B] text-navy-950 font-bold text-xs uppercase tracking-wider px-5 py-3 rounded shadow-institutional transition-all hover:-translate-y-0.5"
-                >
-                  <Download className="w-4 h-4" />
-                  <span>Download Journal (PDF)</span>
-                </a>
-              )}
               <a
-                href="#cfp"
+                href="#vol1"
                 className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs uppercase font-bold tracking-wider px-5 py-3 rounded shadow-institutional transition-all hover:-translate-y-0.5"
               >
-                <span>Call for Papers</span>
+                <span>Explore Volume I</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
               <a
-                href="#vol1"
+                href="#cfp"
                 className="inline-flex items-center space-x-2 bg-navy-900 hover:bg-navy-850 border border-navy-700 text-slate-200 text-xs uppercase font-bold tracking-wider px-5 py-3 rounded transition-all"
               >
-                <span>Read Volume I</span>
+                <span>Call for Papers</span>
               </a>
             </div>
           </ScrollReveal>

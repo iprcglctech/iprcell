@@ -100,8 +100,8 @@ export default function GuestLecturesPage() {
                 yOffset={24}
                 className="bg-white border border-cream-border rounded-2xl p-8 sm:p-10 shadow-card hover:border-electric transition-all space-y-6"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                  <div className="lg:col-span-7 space-y-4">
+                <div className={`grid grid-cols-1 ${item.images && item.images.length > 0 ? "lg:grid-cols-12" : ""} gap-8 items-start`}>
+                  <div className={`${item.images && item.images.length > 0 ? "lg:col-span-7" : "max-w-4xl"} space-y-4`}>
                     <div className="flex items-center space-x-2.5">
                       <span className="text-xs font-mono font-bold uppercase text-electric bg-electric/10 px-2.5 py-1 rounded">
                         {item.category}
@@ -126,13 +126,15 @@ export default function GuestLecturesPage() {
                   </div>
 
                   {/* Event Photo Carousel */}
-                  <div className="lg:col-span-5 w-full">
-                    <EventImageCarousel
-                      images={item.images}
-                      alt={item.title}
-                      className="relative h-64 sm:h-72 lg:h-80 w-full rounded-2xl overflow-hidden border border-cream-border shadow-md"
-                    />
-                  </div>
+                  {item.images && item.images.length > 0 && (
+                    <div className="lg:col-span-5 w-full">
+                      <EventImageCarousel
+                        images={item.images}
+                        alt={item.title}
+                        className="relative h-64 sm:h-72 lg:h-80 w-full rounded-2xl overflow-hidden border border-cream-border shadow-md"
+                      />
+                    </div>
+                  )}
                 </div>
               </ScrollReveal>
             ))}
