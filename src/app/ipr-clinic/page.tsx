@@ -44,10 +44,10 @@ export default function IPRClinicPage() {
             src="/images/clinic-forum-panorama.jpg"
             alt="Classical Legal Clinic and Academy Panorama"
             fill
-            className="object-cover object-center opacity-[0.14] filter invert contrast-125 select-none"
+            className="object-cover object-center opacity-[0.22] filter invert contrast-110 select-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/95" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-transparent to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/40 to-navy-950/80" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

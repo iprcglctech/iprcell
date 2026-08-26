@@ -120,15 +120,6 @@
           "role": "Advocate, Bombay High Court"
         }
       ]
-    },
-    {
-      "id": "cc-2027",
-      "year": "2027",
-      "title": "Certificate Course in Advanced IP Jurisprudence & Frontier Technologies",
-      "dates": "Academic Year 2026–27",
-      "status": "Upcoming",
-      "mode": "In the Works",
-      "description": "The 2027 edition is currently in development with leading international practitioners and corporate general counsels. Stay tuned for dates, curriculum release, and registration announcements."
     }
   ],
   "trademarkOppositionCompetition": {
@@ -225,7 +216,9 @@
       "speaker": "Purnima Thacker, Rutwik Kishan Rao, and Shailendra Bhandare",
       "description": "Commemorating World Intellectual Property Day with a deep dive into media contracts, broadcasting rights, and the nascent impacts of generative AI on creative industries.",
       "images": [
-        "/images/events/toc-24-1.jpg"
+        "/images/events/panel-discussion-1.jpg",
+        "/images/events/panel-discussion-2.jpg",
+        "/images/events/panel-discussion-3.jpg"
       ]
     }
   ]

@@ -40,10 +40,10 @@ export default function JournalClient() {
             src="/images/legal-heritage-panorama.jpg"
             alt="GLC Legal Heritage Panorama"
             fill
-            className="object-cover object-center opacity-[0.14] filter invert contrast-125 select-none"
+            className="object-cover object-center opacity-[0.22] filter invert contrast-110 select-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/95" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-transparent to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/40 to-navy-950/80" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -58,11 +58,22 @@ export default function JournalClient() {
             </p>
 
             <div className="pt-4 flex flex-wrap items-center gap-3">
+              {volume1.downloadUrl && (
+                <a
+                  href={volume1.downloadUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-[#B89B5E] hover:bg-[#A5884B] text-navy-950 font-bold text-xs uppercase tracking-wider px-5 py-3 rounded shadow-institutional transition-all hover:-translate-y-0.5"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Download Journal (PDF)</span>
+                </a>
+              )}
               <a
                 href="#cfp"
                 className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs uppercase font-bold tracking-wider px-5 py-3 rounded shadow-institutional transition-all hover:-translate-y-0.5"
               >
-                <span>Call for Papers &amp; Guidelines</span>
+                <span>Call for Papers</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
               <a
@@ -216,7 +227,7 @@ export default function JournalClient() {
       {/* ── Section 3: Published Archive — Volume I (Dark Navy Institutional) ── */}
       <section id="vol1" className="relative py-16 lg:py-24 bg-navy-950 text-white border-b border-navy-800 overflow-hidden">
         {/* Law Treatise Watermark Background */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[340px] lg:w-[500px] pointer-events-none select-none z-0 opacity-[0.10] filter invert contrast-125">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[340px] lg:w-[500px] pointer-events-none select-none z-0 opacity-[0.18] filter invert contrast-110">
           <Image
             src="/images/law-treatise-engraving.jpg"
             alt="Law Treatise Antique Engraving"
@@ -241,10 +252,57 @@ export default function JournalClient() {
               </p>
             </div>
 
-            <div className="text-xs font-mono bg-navy-900 border border-navy-700 px-3.5 py-2 rounded-lg text-slate-300 self-start md:self-auto">
-              License: {volume1.license}
+            <div className="flex flex-wrap items-center gap-3 self-start md:self-auto">
+              <div className="text-xs font-mono bg-navy-900 border border-navy-700 px-3.5 py-2 rounded-lg text-slate-300">
+                License: {volume1.license}
+              </div>
+              {volume1.downloadUrl && (
+                <a
+                  href={volume1.downloadUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-[#B89B5E] hover:bg-[#A5884B] text-navy-950 text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-lg shadow-md transition-all hover:scale-105"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download PDF</span>
+                </a>
+              )}
             </div>
           </ScrollReveal>
+
+          {/* Compendium PDF Download Action Banner */}
+          {volume1.downloadUrl && (
+            <div className="bg-gradient-to-r from-navy-900 via-navy-850 to-navy-900 border border-[#B89B5E]/40 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-xl">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-[#B89B5E]/15 border border-[#B89B5E]/30 flex items-center justify-center shrink-0 text-[#B89B5E]">
+                  <FileText className="w-6 h-6" />
+                </div>
+                <div className="space-y-1">
+                  <div className="flex items-center space-x-2 text-[10px] font-mono font-bold uppercase tracking-widest text-[#B89B5E]">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Official Publication Compendium</span>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-serif text-white font-normal">
+                    Download Full Volume I Issue (PDF)
+                  </h3>
+                  <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
+                    Access the complete peer-reviewed academic edition including all 10 scholarly research papers, editorial forewords, and citation indices.
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href={volume1.downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center space-x-2 bg-[#B89B5E] hover:bg-[#A5884B] text-navy-950 text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-institutional transition-all hover:scale-105 shrink-0"
+              >
+                <Download className="w-4 h-4 text-navy-950" />
+                <span>Download Journal</span>
+                <ExternalLink className="w-3.5 h-3.5 text-navy-950/70" />
+              </a>
+            </div>
+          )}
 
           {/* Search Papers */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">

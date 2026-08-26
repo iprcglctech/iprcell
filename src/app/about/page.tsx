@@ -34,10 +34,10 @@ export default function AboutPage() {
             src="/images/legal-heritage-panorama.jpg"
             alt="GLC Legal Heritage Panorama"
             fill
-            className="object-cover object-center opacity-[0.14] filter invert contrast-125 select-none"
+            className="object-cover object-center opacity-[0.22] filter invert contrast-110 select-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/95" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-transparent to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/40 to-navy-950/80" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -122,7 +122,7 @@ export default function AboutPage() {
       {/* ── Section 2: Genesis & Mandate of the IPR Cell ── */}
       <section className="relative py-16 lg:py-24 bg-navy-950 text-white border-b border-navy-800 overflow-hidden">
         {/* Pro Bono Shield Engraving Background */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[340px] lg:w-[520px] pointer-events-none select-none z-0 opacity-[0.12] filter invert contrast-125">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[340px] lg:w-[520px] pointer-events-none select-none z-0 opacity-[0.18] filter invert contrast-110">
           <Image
             src="/images/pro-bono-shield-engraving.jpg"
             alt="Pro Bono Protection Shield Engraving"

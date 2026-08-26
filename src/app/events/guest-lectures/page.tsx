@@ -5,6 +5,7 @@ import Image from "next/image";
 import { User, ArrowRight } from "lucide-react";
 import eventsData from "@/content/events.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import EventImageCarousel from "@/components/events/EventImageCarousel";
 
 export const metadata: Metadata = {
   title: "Guest Lectures, Colloquiums & Webinars",
@@ -32,10 +33,10 @@ export default function GuestLecturesPage() {
             src="/images/clinic-forum-panorama.jpg"
             alt="Classical Academic Forum"
             fill
-            className="object-cover object-center opacity-[0.14] filter invert contrast-125 select-none"
+            className="object-cover object-center opacity-[0.22] filter invert contrast-110 select-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/95" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-transparent to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/40 to-navy-950/80" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -124,23 +125,13 @@ export default function GuestLecturesPage() {
                     </p>
                   </div>
 
-                  {/* Event Photo Grid */}
-                  <div className="lg:col-span-5 grid grid-cols-2 gap-3">
-                    {item.images.map((img, i) => (
-                      <div
-                        key={i}
-                        className={`relative rounded-xl overflow-hidden border border-cream-border shadow-xs group ${
-                          i === 0 ? "col-span-2 h-52" : "h-32"
-                        }`}
-                      >
-                        <Image
-                          src={img}
-                          alt={item.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      </div>
-                    ))}
+                  {/* Event Photo Carousel */}
+                  <div className="lg:col-span-5 w-full">
+                    <EventImageCarousel
+                      images={item.images}
+                      alt={item.title}
+                      className="relative h-64 sm:h-72 lg:h-80 w-full rounded-2xl overflow-hidden border border-cream-border shadow-md"
+                    />
                   </div>
                 </div>
               </ScrollReveal>
