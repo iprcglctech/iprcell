@@ -40,7 +40,7 @@ export default function IprClinicPage() {
           <ScrollReveal delay={0.1} className="max-w-3xl space-y-4">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-normal tracking-tight leading-[1.12]">
               Government Law College <br />
-              <span className="italic text-slate-300">IPR Clinic</span>
+              IPR Clinic
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-sans font-normal pt-2">
@@ -84,7 +84,7 @@ export default function IprClinicPage() {
             <ScrollReveal delay={0.1} className="space-y-6">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-ink font-normal leading-snug">
                 Demystifying Intellectual Property <br />
-                <span className="italic text-slate-800">for Creators &amp; Grassroots Founders</span>
+                for Creators &amp; Grassroots Founders
               </h2>
 
               <div className="space-y-4 text-slate-muted text-sm sm:text-base leading-relaxed font-sans font-normal">

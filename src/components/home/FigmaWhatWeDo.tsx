@@ -34,7 +34,6 @@ const PILLARS: PillarData[] = [
       "Simulated proceedings that build real drafting, research, and oral advocacy skills.",
     bg: "bg-[#FFFFFF]", // Pure White
     items: [
-      { label: "TRADEMARK OPPOSITION COMPETITION", href: "/events/toc" },
       { label: "INTER-TOC / INTRA-TOC", href: "/events/toc" },
     ],
   },
@@ -47,7 +46,6 @@ const PILLARS: PillarData[] = [
     items: [
       { label: "IPR JOURNAL", href: "/journal" },
       { label: "GUIDELINES FOR SUBMISSIONS", href: "/journal#cfp" },
-      { label: "ACADEMIC RESEARCH", href: "/journal" },
     ],
   },
   {
@@ -58,7 +56,6 @@ const PILLARS: PillarData[] = [
     bg: "bg-[#FFFFFF]", // Pure White
     items: [
       { label: "IPR CLINIC", href: "/ipr-clinic" },
-      { label: "PRO BONO INITIATIVES", href: "/ipr-clinic" },
     ],
   },
 ];

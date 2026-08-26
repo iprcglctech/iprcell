@@ -58,7 +58,7 @@ export default function Navbar() {
       subItems: [
         { name: "Events Overview", href: "/events", desc: "All academic flagships & initiatives" },
         { name: "Certificate Course", href: "/events/certificate-course", desc: "Practitioner-led weekend certificate program" },
-        { name: "Trademark Opposition (TOC)", href: "/events/toc", desc: "Prof. Tehemtan Daruwalla Competition" },
+        { name: "Trademark Opposition (TOC)", href: "/events/toc", desc: "National Opposition Simulation" },
         { name: "Guest Lectures & Webinars", href: "/events/guest-lectures", desc: "AI vs Artist, Media Law & INTA series" },
       ],
     },

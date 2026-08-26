@@ -12,23 +12,24 @@ export default function EventsOverviewPage() {
     <div className="bg-cream-100 text-ink min-h-screen">
       {/* ── Page Hero: Deep Institutional Navy Banner ── */}
       <section className="relative bg-navy-950 text-white pt-28 pb-16 lg:pb-24 border-b border-navy-800 overflow-hidden">
-        {/* Panoramic Legal Heritage Engraving Watermark */}
+        {/* Victorian Courtroom Engraving Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
           <Image
-            src="/images/legal-heritage-panorama.jpg"
-            alt="Legal Heritage Panorama"
+            src="/images/victorian-courtroom-engraving.jpg"
+            alt="Victorian Courtroom Engraving"
             fill
-            className="object-cover object-center opacity-[0.14] filter invert contrast-125 select-none"
+            priority
+            className="object-cover object-center opacity-[0.20] filter invert contrast-125 select-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/95" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-transparent to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-transparent to-navy-950/90" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal delay={0.1} className="max-w-3xl space-y-4">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-normal tracking-tight leading-[1.12]">
               Academic Flagships <br />
-              <span className="italic text-slate-300">&amp; Initiatives</span>
+              &amp; Initiatives
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-sans font-normal pt-2">
@@ -126,10 +127,10 @@ export default function EventsOverviewPage() {
                   02 • NATIONAL MOOT SIMULATION
                 </div>
                 <h3 className="text-xl sm:text-2xl font-serif font-normal text-ink group-hover:text-navy-950 transition-colors">
-                  Prof. Tehemtan Daruwalla TOC
+                  Trademark Opposition Competition
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-muted leading-relaxed font-sans">
-                  India&apos;s first-of-its-kind Trademark Opposition Competition simulating Section 21 proceedings and Rules 42–50 of the Trade Marks Rules, 2017 with Inter (National) and Intra (Institutional) oral advocacy rounds.
+                  India&apos;s first-of-its-kind Trademark Opposition Competition simulating opposition proceedings under Section 21 of the Trade Marks Act, 1999 read with Rule 42 to Rule 50 of the Trade Marks Rules, 2017 in two phases, Inter (National) and Intra (Institutional) level competition.
                 </p>
                 <div className="space-y-1 text-xs text-slate-700 bg-surface-offwhite p-4 rounded-xl border border-cream-border font-sans">
                   <div className="font-semibold text-ink font-mono text-[11px] uppercase tracking-wider mb-1">

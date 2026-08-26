@@ -34,13 +34,6 @@ export default function MemberCard({
   const [isHovered, setIsHovered] = useState(false);
   const displayRole = position || designation || "Committee Member";
 
-  const tagLabel =
-    tier === "faculty"
-      ? "Faculty In-Charge"
-      : tier === "senior"
-      ? "Senior Core"
-      : department || "Junior Core";
-
   const imageAspect = compactOnMobile
     ? "w-20 h-20 sm:w-full sm:h-auto sm:aspect-[3/3.4] rounded-xl sm:rounded-none m-4 sm:m-0"
     : "w-full aspect-[3/3.4]";
@@ -69,19 +62,6 @@ export default function MemberCard({
               isHovered ? "scale-105" : "scale-100"
             }`}
           />
-
-          {/* Tag badge — only displayed on hover */}
-          <div
-            className={`absolute top-3 left-3 z-20 pointer-events-none transition-all duration-300 ease-out ${
-              isHovered
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 -translate-y-1.5"
-            } ${compactOnMobile ? "hidden sm:block" : ""}`}
-          >
-            <span className="px-2.5 py-1 rounded-md text-[9px] font-mono font-bold uppercase tracking-[0.2em] bg-[#07162C]/90 text-white backdrop-blur-md border border-white/10 shadow-md">
-              {tagLabel}
-            </span>
-          </div>
 
           {/* LinkedIn hover overlay on image (desktop only) */}
           {linkedin && (

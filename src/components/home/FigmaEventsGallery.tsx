@@ -10,12 +10,12 @@ export default function FigmaEventsGallery() {
   const eventsGallery: CarouselItem[] = [
     {
       image: "/images/hero/convocation-winners-inter-toc.jpg",
-      title: "Convocation of Winners — Inter-TOC 2025–26",
+      title: "Convocation of Winners — Intra-TOC 2025–26",
       subtitle: "Flagship Moot Ceremony",
     },
     {
       image: "/images/hero/javed-akhtar-panel.jpg",
-      title: "Artists' Rights in the Film Industry with Shri Javed Akhtar",
+      title: "Artists' Rights in the Film Industry with Shri Javed Akhtar, Ms. Priyanka Khimani & Mr. Ameet Datta",
       subtitle: "Eminent Guest Colloquium",
     },
     {
@@ -25,12 +25,12 @@ export default function FigmaEventsGallery() {
     },
     {
       image: "/images/hero/inter-toc-proceedings.jpg",
-      title: "Inter-TOC 2025–26 Oral Advocacy Proceedings",
+      title: "Intra-TOC 2025–26",
       subtitle: "Procedural Trademark Moot",
     },
     {
       image: "/images/hero/inter-toc-rounds.jpg",
-      title: "Inter-TOC Courtroom Advocacy & Opposition Rounds",
+      title: "Inter-TOC 2025–26 Final Rounds",
       subtitle: "Procedural Advocacy",
     },
     {

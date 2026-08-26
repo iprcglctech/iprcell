@@ -47,7 +47,7 @@ export default function FigmaJournalPlatform() {
             </div>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif text-ink font-normal leading-[1.15] tracking-tight">
               A platform for<br />
-              <span className="italic text-slate-800">thought leadership</span>
+              thought leadership
             </h2>
             <p className="text-slate-muted text-xs sm:text-sm leading-relaxed max-w-2xl font-sans pt-1 sm:pt-2">
               The IPR Journal is an annual, peer-reviewed publication that encourages rigorous research and analysis on contemporary issues in intellectual property law and beyond.

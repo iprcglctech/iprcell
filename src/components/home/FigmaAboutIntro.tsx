@@ -31,7 +31,7 @@ export default function FigmaAboutIntro() {
             </div>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif text-ink font-normal leading-[1.15]">
               Building IPR minds.<br />
-              <span className="italic text-slate-800">Creating impact.</span>
+              Creating impact.
             </h2>
           </ScrollReveal>
 

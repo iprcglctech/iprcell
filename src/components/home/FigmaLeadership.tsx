@@ -91,8 +91,7 @@ export default function FigmaLeadership() {
               <span>Faculty Guidance &amp; Executive Board</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#07162C] font-normal tracking-tight">
-              Institutional Leadership &amp;{" "}
-              <span className="italic text-slate-600">Governance</span>
+              Institutional Leadership &amp; Governance
             </h2>
             <p className="text-sm text-slate-500 font-sans max-w-2xl leading-relaxed">
               Supervised under the Faculty of Law, Government Law College Mumbai.

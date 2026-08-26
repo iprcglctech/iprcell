@@ -30,7 +30,7 @@ export default function JoinPage() {
           <ScrollReveal delay={0.1} className="max-w-3xl space-y-4">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-normal tracking-tight leading-[1.12]">
               Student Induction <br />
-              <span className="italic text-slate-300">&amp; Membership Pathway</span>
+              &amp; Membership Pathway
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-sans font-normal pt-2">
@@ -73,7 +73,7 @@ export default function JoinPage() {
           <ScrollReveal delay={0.1} className="max-w-3xl space-y-4">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-ink font-normal leading-snug">
               A Platform for Curious Minds <br />
-              <span className="italic text-slate-800">in Intellectual Property Law</span>
+              in Intellectual Property Law
             </h2>
             <p className="text-slate-muted text-sm sm:text-base leading-relaxed font-sans font-normal">
               {whyJoin.intro}

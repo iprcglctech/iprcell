@@ -30,7 +30,7 @@ export default function FigmaClinicProBono() {
 
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif text-ink font-normal leading-[1.15]">
               Applying legal expertise<br />
-              <span className="italic text-slate-800">where it matters most.</span>
+              where it matters most.
             </h2>
 
             <p className="text-slate-muted text-xs sm:text-sm leading-relaxed font-sans max-w-lg">

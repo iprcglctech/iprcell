@@ -40,7 +40,7 @@ export default function FigmaFlagshipToc() {
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-normal leading-[1.15]">
             Trademark<br />
             Opposition<br />
-            <span className="italic text-electric-soft">Competition</span>
+            Competition
           </h2>
 
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md font-sans">

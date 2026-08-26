@@ -28,7 +28,7 @@ export default function CertificateCoursePage() {
           <ScrollReveal delay={0.1} className="max-w-3xl space-y-4">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-normal tracking-tight leading-[1.12]">
               Executive Certificate <br />
-              <span className="italic text-slate-300">Course Series</span>
+              Course Series
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-sans font-normal pt-2">
