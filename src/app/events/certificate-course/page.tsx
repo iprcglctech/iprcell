@@ -1,11 +1,25 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import eventsData from "@/content/events.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Executive Certificate Course Series in IP Law",
+  description:
+    "Intensive weekend executive certificate courses in intellectual property law instructed by senior partners and IP heads from Khaitan & Co, Mulla & Mulla, Trilegal, and Fox Mandal.",
+  alternates: {
+    canonical: "/events/certificate-course",
+  },
+  openGraph: {
+    title: "Executive Certificate Course Series in IP Law | GLC Mumbai",
+    description:
+      "Practitioner-led certificate courses instructed by India's leading IP attorneys at Government Law College Mumbai.",
+    url: "https://iprcellglc.in/events/certificate-course",
+  },
+};
 
 export default function CertificateCoursePage() {
   return (

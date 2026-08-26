@@ -1,41 +1,71 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
-import Hero from "@/components/home/Hero";
-import FigmaAboutIntro from "@/components/home/FigmaAboutIntro";
-import FigmaEventsGallery from "@/components/home/FigmaEventsGallery";
-import FigmaWhatWeDo from "@/components/home/FigmaWhatWeDo";
-import FigmaFlagshipToc from "@/components/home/FigmaFlagshipToc";
-import FigmaClinicProBono from "@/components/home/FigmaClinicProBono";
-import FigmaJournalPlatform from "@/components/home/FigmaJournalPlatform";
-import JoinCta from "@/components/home/JoinCta";
-import ScrollStack, { ScrollStackItem } from "@/components/ui/ScrollStack";
+import HomeClient from "@/components/home/HomeClient";
+
+export const metadata: Metadata = {
+  title: "IPR Cell | Government Law College, Mumbai",
+  description:
+    "Official portal of the Intellectual Property Rights (IPR) Cell, Government Law College Mumbai (Estd. 1855). Asia's oldest law institution hosting the Trademark Opposition Competition (TOC), Executive Certificate Courses, the peer-reviewed IPR Journal, and Grassroots IPR Clinic.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "IPR Cell | Government Law College, Mumbai",
+    description:
+      "Asia's oldest law institution (Estd. 1855). Advancing IP education, moot opposition proceedings, and peer-reviewed scholarship.",
+    url: "https://iprcellglc.in",
+  },
+};
+
+const jsonLdHome = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://iprcellglc.in/#website",
+      "url": "https://iprcellglc.in",
+      "name": "Intellectual Property Rights Cell — GLC Mumbai",
+      "description": "Official portal of the IPR Cell at Government Law College Mumbai (Estd. 1855).",
+      "publisher": {
+        "@id": "https://iprcellglc.in/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Event",
+      "name": "Trademark Opposition Competition (TOC)",
+      "description": "India's premier procedural trademark opposition simulation under Section 21 of the Trade Marks Act, 1999 and Rules 42–50 of the Trade Marks Rules, 2017.",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Government Law College, Mumbai",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "'A' Road, Churchgate",
+          "addressLocality": "Mumbai",
+          "addressRegion": "Maharashtra",
+          "postalCode": "400020",
+          "addressCountry": "IN"
+        }
+      },
+      "organizer": {
+        "@type": "EducationalOrganization",
+        "name": "Intellectual Property Rights Cell, GLC Mumbai",
+        "url": "https://iprcellglc.in"
+      }
+    }
+  ]
+};
 
 export default function HomePage() {
-  const sections = [
-    { id: "about", component: <FigmaAboutIntro /> },
-    { id: "events", component: <FigmaEventsGallery /> },
-    { id: "what-we-do", component: <FigmaWhatWeDo /> },
-    { id: "flagship-toc", component: <FigmaFlagshipToc /> },
-    { id: "clinic", component: <FigmaClinicProBono /> },
-    { id: "journal", component: <FigmaJournalPlatform /> },
-    { id: "join", component: <JoinCta /> },
-  ];
-
   return (
-    <main className="relative w-full overflow-x-clip bg-navy-950">
-      <Hero />
-      <ScrollStack>
-        {sections.map((sec, idx) => (
-          <ScrollStackItem
-            key={sec.id}
-            index={idx}
-            total={sections.length}
-          >
-            {sec.component}
-          </ScrollStackItem>
-        ))}
-      </ScrollStack>
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHome) }}
+      />
+      <HomeClient />
+    </>
   );
 }

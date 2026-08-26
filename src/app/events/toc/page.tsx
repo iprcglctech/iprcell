@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,11 +6,91 @@ import { Scale, ArrowRight } from "lucide-react";
 import eventsData from "@/content/events.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
+export const metadata: Metadata = {
+  title: "Trademark Opposition Competition (TOC) — Inter & Intra Simulation",
+  description:
+    "India's premier procedural trademark opposition simulation under Section 21 of the Trade Marks Act, 1999 and Rules 42–50 of the Trade Marks Rules, 2017 with Inter (National) and Intra (Institutional) oral advocacy rounds.",
+  alternates: {
+    canonical: "/events/toc",
+  },
+  openGraph: {
+    title: "Trademark Opposition Competition (TOC) | GLC Mumbai",
+    description:
+      "Simulating statutory opposition proceedings under Section 21 of the Trade Marks Act, 1999 at Government Law College Mumbai.",
+    url: "https://iprcellglc.in/events/toc",
+  },
+};
+
+const jsonLdToc = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Event",
+      "name": "Trademark Opposition Competition (TOC) — Government Law College, Mumbai",
+      "alternateName": ["TOC GLC Mumbai", "Inter-TOC", "Intra-TOC"],
+      "description": "India's premier procedural trademark opposition simulation under Section 21 of the Trade Marks Act, 1999 and Rules 42 to 50 of the Trade Marks Rules, 2017.",
+      "url": "https://iprcellglc.in/events/toc",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Government Law College, Mumbai",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "'A' Road, Churchgate",
+          "addressLocality": "Mumbai",
+          "addressRegion": "Maharashtra",
+          "postalCode": "400020",
+          "addressCountry": "IN"
+        }
+      },
+      "organizer": {
+        "@type": "EducationalOrganization",
+        "name": "Intellectual Property Rights Cell, GLC Mumbai",
+        "url": "https://iprcellglc.in"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Trademark Opposition Competition (TOC) at GLC Mumbai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Trademark Opposition Competition (TOC) is a procedural advocacy competition organized by the IPR Cell at Government Law College, Mumbai. It simulates statutory opposition proceedings under Section 21 of the Trade Marks Act, 1999 read with Rules 42 to 50 of the Trade Marks Rules, 2017 across Institutional (Intra) and National (Inter) collegiate tracks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What statutory provisions govern the Trademark Opposition Competition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The competition is strictly grounded in Section 21 of the Trade Marks Act, 1999 and Rules 42 through 50 of the Trade Marks Rules, 2017, encompassing Form TM-O drafting, notice of opposition filing, counter-statement submission, evidentiary affidavit review, and viva-voce oral advocacy before trademark registrars and senior IP advocates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is eligible to participate in Inter-TOC and Intra-TOC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intra-TOC is open exclusively to enrolled 3-year and 5-year LL.B. students of Government Law College, Mumbai. Inter-TOC invites teams from recognized law schools, National Law Universities (NLUs), and central universities across India."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function TOCPage() {
   const { trademarkOppositionCompetition: toc } = eventsData;
 
   return (
     <div className="bg-cream-100 text-ink min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdToc) }}
+      />
       {/* ── Page Hero: Deep Institutional Navy Banner ── */}
       <section className="relative bg-navy-950 text-white pt-28 pb-16 lg:pb-24 border-b border-navy-800 overflow-hidden">
         {/* Victorian Courtroom Engraving Watermark */}

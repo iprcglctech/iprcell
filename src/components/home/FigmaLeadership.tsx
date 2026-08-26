@@ -31,6 +31,8 @@ interface LeadershipMember {
   tier: "faculty" | "senior";
   tag: string;
   period?: string;
+  qualification?: string;
+  subject?: string;
 }
 
 export default function FigmaLeadership() {
@@ -62,6 +64,8 @@ export default function FigmaLeadership() {
     tag: "Faculty Leadership",
     period: "Permanent Faculty Roster",
     bio: p.bio,
+    qualification: p.qualification,
+    subject: p.subject,
   }));
 
   const seniorCore: LeadershipMember[] = teamData.seniorCore.map((s) => ({
@@ -293,19 +297,36 @@ export default function FigmaLeadership() {
 
                     {/* Metadata boxes */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                      {selectedMember.academicYear && (
-                        <div className="p-3.5 rounded-xl bg-white border border-[#E7E0D2] text-left">
+                      {selectedMember.qualification ? (
+                        <div className="p-3.5 rounded-xl bg-white border border-[#E7E0D2] text-left sm:col-span-2">
                           <div className="flex items-center space-x-2 text-[10px] font-mono uppercase tracking-wider text-slate-500 font-bold">
                             <GraduationCap className="w-3.5 h-3.5 text-[#B89B5E]" />
-                            <span>Academic Standing</span>
+                            <span>Academic Qualification &amp; Subject</span>
                           </div>
                           <div className="text-xs font-semibold text-[#07162C] mt-1 font-sans">
-                            {selectedMember.academicYear}
+                            {selectedMember.qualification}
                           </div>
+                          {selectedMember.subject && (
+                            <div className="text-[11px] text-slate-500 font-mono mt-0.5">
+                              Subject: <strong className="text-navy-950 font-sans">{selectedMember.subject}</strong>
+                            </div>
+                          )}
                         </div>
+                      ) : (
+                        selectedMember.academicYear && (
+                          <div className="p-3.5 rounded-xl bg-white border border-[#E7E0D2] text-left">
+                            <div className="flex items-center space-x-2 text-[10px] font-mono uppercase tracking-wider text-slate-500 font-bold">
+                              <GraduationCap className="w-3.5 h-3.5 text-[#B89B5E]" />
+                              <span>Academic Standing</span>
+                            </div>
+                            <div className="text-xs font-semibold text-[#07162C] mt-1 font-sans">
+                              {selectedMember.academicYear}
+                            </div>
+                          </div>
+                        )
                       )}
 
-                      <div className="p-3.5 rounded-xl bg-white border border-[#E7E0D2] text-left">
+                      <div className="p-3.5 rounded-xl bg-white border border-[#E7E0D2] text-left sm:col-span-2">
                         <div className="flex items-center space-x-2 text-[10px] font-mono uppercase tracking-wider text-slate-500 font-bold">
                           <Building2 className="w-3.5 h-3.5 text-[#B89B5E]" />
                           <span>Institution</span>

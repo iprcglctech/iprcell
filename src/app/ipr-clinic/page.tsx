@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +18,22 @@ import {
 import clinicData from "@/content/clinic.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-export default function IprClinicPage() {
+export const metadata: Metadata = {
+  title: "Pro Bono IPR Clinic for Creators & Innovators",
+  description:
+    "Providing pro bono preliminary guidance, trademark assistance, copyright literacy workshops, and patent awareness for student innovators, artists, and grassroots founders.",
+  alternates: {
+    canonical: "/ipr-clinic",
+  },
+  openGraph: {
+    title: "Pro Bono IPR Clinic | Government Law College Mumbai",
+    description:
+      "Free preliminary IP advisory and protection guidance for artists, startups, and innovators.",
+    url: "https://iprcellglc.in/ipr-clinic",
+  },
+};
+
+export default function IPRClinicPage() {
   return (
     <div className="bg-cream-100 text-ink min-h-screen">
       {/* ── Page Hero: Deep Institutional Navy Banner ── */}

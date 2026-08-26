@@ -8,29 +8,9 @@
   "aboutGlc": {
     "title": "Legacy of Government Law College, Mumbai",
     "established": "1855",
-    "description": "Established in 1855, Government Law College (GLC), Mumbai is a landmark institution in legal education and is recognised as Asia’s oldest law college. With a legacy built on academic excellence, practical legal training, and a commitment to shaping future legal professionals, GLC has played a defining role in India’s legal landscape.",
-    "distinguishedAlumni": [
-      {
-        "name": "Dr. B.R. Ambedkar",
-        "role": "Architect of the Indian Constitution"
-      },
-      {
-        "name": "Justice M.C. Chagla",
-        "role": "First Permanent Indian Chief Justice of Bombay High Court"
-      },
-      {
-        "name": "Nani Palkhivala",
-        "role": "Eminent Jurist & Constitutional Expert"
-      },
-      {
-        "name": "Ram Jethmalani",
-        "role": "Legendary Senior Advocate & Former Union Law Minister"
-      },
-      {
-        "name": "Fali S. Nariman",
-        "role": "Distinguished Jurist & Senior Advocate"
-      }
-    ],
+    "description": "Established in 1855, Government Law College (GLC), Mumbai is a landmark institution in legal education and is recognised as Asia’s oldest law college. With a legacy built on academic excellence, practical legal training, and a commitment to shaping future legal professionals, GLC, Mumbai has played a defining role in India’s legal landscape.",
+    "alumniSummary": "Its distinguished alumni include Bal Gangadhar Tilak, Nani Palkhivala, Soli Sorabjee, and Fali S. Nariman, reflecting the institution’s enduring influence across the Bar, Judiciary, academia, and public life.",
+    "forwardLooking": "Today, GLC, Mumbai continues to combine its rich heritage with a forward-looking approach, equipping students with the knowledge, skills, and practical exposure needed to navigate an evolving legal world.",
     "image": "/images/glc-heritage-facade.jpg",
     "campusImage": "/images/glc-campus-main.png"
   },

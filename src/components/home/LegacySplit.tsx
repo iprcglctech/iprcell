@@ -49,26 +49,15 @@ export default function LegacySplit() {
                 Established in 1855, <strong>Government Law College (GLC), Mumbai</strong> is a landmark institution in legal education. With a legacy built on academic excellence, practical legal training, and a commitment to shaping future legal professionals, GLC has played a defining role in India&apos;s constitutional and commercial jurisprudence.
               </p>
               <p>
-                Its distinguished alumni include <strong>Dr. B.R. Ambedkar</strong>, <strong>Justice M.C. Chagla</strong>, <strong>Nani Palkhivala</strong>, <strong>Ram Jethmalani</strong>, and <strong>Fali S. Nariman</strong>, reflecting the institution&apos;s enduring influence across the Bar, Judiciary, academia, and public life.
+                {siteData.aboutGlc.alumniSummary}
               </p>
             </div>
 
-            {/* Alumni Badges */}
+            {/* Forward Looking Note */}
             <div className="pt-2">
-              <div className="text-xs font-mono uppercase tracking-wider text-slate-light font-medium mb-3">
-                Distinguished Alumni Footprint
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {siteData.aboutGlc.distinguishedAlumni.slice(0, 4).map((alumnus) => (
-                  <div
-                    key={alumnus.name}
-                    className="p-2.5 rounded bg-surface-offwhite border border-surface-border text-xs"
-                  >
-                    <div className="font-semibold text-ink">{alumnus.name}</div>
-                    <div className="text-slate-light text-[11px] mt-0.5">{alumnus.role}</div>
-                  </div>
-                ))}
-              </div>
+              <p className="text-xs text-slate-muted italic">
+                {siteData.aboutGlc.forwardLooking}
+              </p>
             </div>
           </div>
 

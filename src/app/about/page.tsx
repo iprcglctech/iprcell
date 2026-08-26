@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +7,21 @@ import siteData from "@/content/site.json";
 import teamData from "@/content/team.json";
 import MemberCard from "@/components/ui/MemberCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "About the Cell & GLC Mumbai Legacy",
+  description:
+    "Discover the 170-year legacy of Government Law College, Mumbai (Estd. 1855), Asia's oldest law institution, and the founding mandate of its Intellectual Property Rights (IPR) Cell.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About the IPR Cell | Government Law College, Mumbai",
+    description:
+      "The 170-year legacy of GLC Mumbai and the founding mandate of its Intellectual Property Rights Cell.",
+    url: "https://iprcellglc.in/about",
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -68,13 +82,13 @@ export default function AboutPage() {
 
               <div className="space-y-4 text-slate-muted text-sm sm:text-base leading-relaxed font-sans font-normal">
                 <p>
-                  {siteData.aboutGlc.description}
+                  Established in 1855, Government Law College (GLC), Mumbai is a landmark institution in legal education and is recognised as Asia’s oldest law college. With a legacy built on academic excellence, practical legal training, and a commitment to shaping future legal professionals, GLC, Mumbai has played a defining role in India’s legal landscape.
                 </p>
                 <p>
-                  Its distinguished alumni include <strong>Dr. B.R. Ambedkar</strong> (Chief Architect of the Indian Constitution), <strong>Justice M.C. Chagla</strong>, <strong>Nani Palkhivala</strong>, <strong>Ram Jethmalani</strong>, and <strong>Fali S. Nariman</strong>, reflecting the institution&apos;s enduring influence across the Supreme Court, the Bar, and public governance.
+                  Its distinguished alumni include Bal Gangadhar Tilak, Nani Palkhivala, Soli Sorabjee, and Fali S. Nariman, reflecting the institution’s enduring influence across the Bar, Judiciary, academia, and public life.
                 </p>
                 <p>
-                  Today, GLC continues to combine its rich heritage with forward-looking legal scholarship, equipping students with practical acumen to navigate emerging technological frontiers.
+                  Today, GLC, Mumbai continues to combine its rich heritage with a forward-looking approach, equipping students with the knowledge, skills, and practical exposure needed to navigate an evolving legal world.
                 </p>
               </div>
             </ScrollReveal>
@@ -105,42 +119,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Section 2: Distinguished Alumni Roster ── */}
-      <section className="py-16 lg:py-24 bg-white border-b border-cream-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          <ScrollReveal delay={0.1} className="max-w-2xl space-y-2">
-            <div className="eyebrow-tag">
-              HALL OF FAME
-            </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-ink font-normal">
-              Distinguished Alumni of GLC
-            </h2>
-            <p className="text-slate-muted text-xs sm:text-sm">
-              Shaping Indian jurisprudence, constitutional democracy, and international law for over a century.
-            </p>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {siteData.aboutGlc.distinguishedAlumni.map((alumnus, idx) => (
-              <ScrollReveal
-                key={alumnus.name}
-                delay={0.1 + idx * 0.05}
-                yOffset={16}
-                className="p-6 rounded-xl bg-surface-offwhite border border-cream-border hover:border-electric transition-all hover:shadow-card hover:-translate-y-0.5 group"
-              >
-                <div className="font-serif font-normal text-lg text-ink group-hover:text-navy-950 transition-colors">
-                  {alumnus.name}
-                </div>
-                <div className="text-xs text-electric font-medium font-sans mt-1.5 leading-relaxed">
-                  {alumnus.role}
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Section 3: Genesis & Mandate of the IPR Cell ── */}
+      {/* ── Section 2: Genesis & Mandate of the IPR Cell ── */}
       <section className="relative py-16 lg:py-24 bg-navy-950 text-white border-b border-navy-800 overflow-hidden">
         {/* Pro Bono Shield Engraving Background */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[340px] lg:w-[520px] pointer-events-none select-none z-0 opacity-[0.12] filter invert contrast-125">
@@ -298,6 +277,8 @@ export default function AboutPage() {
                   bio={prof.bio}
                   image={prof.image}
                   tier="faculty"
+                  qualification={prof.qualification}
+                  subject={prof.subject}
                   compactOnMobile
                 />
               ))}

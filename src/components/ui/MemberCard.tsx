@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Linkedin } from "lucide-react";
+import { Linkedin, GraduationCap } from "lucide-react";
 import TiltedCard from "@/components/ui/TiltedCard";
 
 export interface MemberProps {
@@ -18,6 +18,8 @@ export interface MemberProps {
   tier: "faculty" | "senior" | "junior";
   compactOnMobile?: boolean;
   linkedin?: string;
+  qualification?: string;
+  subject?: string;
 }
 
 export default function MemberCard({
@@ -30,6 +32,8 @@ export default function MemberCard({
   tier,
   compactOnMobile = false,
   linkedin,
+  qualification,
+  subject,
 }: MemberProps) {
   const [isHovered, setIsHovered] = useState(false);
   const displayRole = position || designation || "Committee Member";
@@ -63,8 +67,34 @@ export default function MemberCard({
             }`}
           />
 
-          {/* LinkedIn hover overlay on image (desktop only) */}
-          {linkedin && (
+          {/* Academic Qualification & Subject hover overlay on image */}
+          {qualification && (
+            <div
+              className={`absolute inset-0 transition-all duration-300 ease-out bg-[#07162C]/92 backdrop-blur-xs p-4 flex flex-col justify-end z-20 ${
+                isHovered
+                  ? "opacity-100 pointer-events-auto"
+                  : "opacity-0 pointer-events-none"
+              }`}
+            >
+              <div className="space-y-1.5 text-left">
+                <div className="flex items-center space-x-1.5 text-[9px] font-mono font-bold uppercase tracking-widest text-[#CEB681]">
+                  <GraduationCap className="w-3.5 h-3.5 text-[#CEB681]" />
+                  <span>Academic Qualification</span>
+                </div>
+                <div className="text-xs font-serif text-white font-normal leading-snug">
+                  {qualification}
+                </div>
+                {subject && (
+                  <div className="text-[11px] font-sans text-slate-300 pt-1 border-t border-white/10">
+                    <span className="text-slate-400 font-mono text-[9px] uppercase">Subject:</span> <strong className="text-white font-medium">{subject}</strong>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* LinkedIn hover overlay on image (desktop only when no qualification) */}
+          {linkedin && !qualification && (
             <div
               className={`hidden sm:flex absolute inset-x-0 bottom-0 transition-all duration-300 ease-out bg-gradient-to-t from-[#07162C]/90 via-[#07162C]/60 to-transparent px-4 pt-8 pb-3.5 z-20 items-center justify-center ${
                 isHovered
@@ -87,33 +117,35 @@ export default function MemberCard({
         </div>
 
         {/* Name & Designation — always visible */}
-        <div className={`${compactOnMobile ? "py-4 pr-4 pl-0 sm:p-5" : "p-4 sm:p-5"} flex flex-col gap-1 bg-white z-10 min-w-0 flex-1`}>
-          <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#B89B5E]">
-            {displayRole}
-          </p>
-          <div className="flex items-center justify-between gap-1.5">
-            <h3 className="text-base sm:text-lg font-serif font-normal text-[#07162C] leading-snug">
-              {name}
-            </h3>
-            {linkedin && (
-              <a
-                href={linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                aria-label={`${name}'s LinkedIn profile`}
-                className={`text-[#0A66C2] hover:text-[#004182] transition-all duration-300 hover:scale-110 shrink-0 p-0.5 ${
-                  isHovered ? "opacity-100 scale-105" : "opacity-100 sm:opacity-60 group-hover:opacity-100"
-                }`}
-                title="View LinkedIn Profile"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
+        <div className={`${compactOnMobile ? "py-4 pr-4 pl-0 sm:p-5" : "p-4 sm:p-5"} flex flex-col gap-1 bg-white z-10 min-w-0 flex-1 justify-between`}>
+          <div>
+            <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#B89B5E]">
+              {displayRole}
+            </p>
+            <div className="flex items-center justify-between gap-1.5 mt-0.5">
+              <h3 className="text-base sm:text-lg font-serif font-normal text-[#07162C] leading-snug">
+                {name}
+              </h3>
+              {linkedin && (
+                <a
+                  href={linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  aria-label={`${name}'s LinkedIn profile`}
+                  className={`text-[#0A66C2] hover:text-[#004182] transition-all duration-300 hover:scale-110 shrink-0 p-0.5 ${
+                    isHovered ? "opacity-100 scale-105" : "opacity-100 sm:opacity-60 group-hover:opacity-100"
+                  }`}
+                  title="View LinkedIn Profile"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              )}
+            </div>
+            {academicYear && (
+              <p className="text-[10px] font-mono text-slate-400 mt-0.5">{academicYear}</p>
             )}
           </div>
-          {academicYear && (
-            <p className="text-[10px] font-mono text-slate-400">{academicYear}</p>
-          )}
         </div>
       </div>
     </TiltedCard>

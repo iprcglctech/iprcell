@@ -27,29 +27,51 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iprcellglc.in"),
-  title: "IPR Cell | Government Law College, Mumbai",
+  title: {
+    default: "IPR Cell | Government Law College, Mumbai",
+    template: "%s | IPR Cell, GLC Mumbai",
+  },
   description:
-    "Official website of the Intellectual Property Rights (IPR) Cell, Government Law College, Mumbai (Estd. 1855). Pioneering IP legal scholarship, Trademark Opposition Competitions (TOC), Executive Certificate Courses, and clinical research.",
+    "Official portal of the Intellectual Property Rights (IPR) Cell at Government Law College, Mumbai (Estd. 1855). Asia's oldest law institution hosting the Trademark Opposition Competition (TOC), Executive Certificate Courses, the peer-reviewed IPR Journal, and Grassroots IPR Clinic.",
   keywords: [
     "Government Law College Mumbai",
     "GLC Mumbai",
-    "IPR Cell",
-    "Intellectual Property Rights",
     "IPR Cell GLC Mumbai",
+    "Intellectual Property Rights Cell",
     "Trademark Opposition Competition",
-    "TOC GLC",
-    "Intellectual Property Law Mumbai",
-    "Tehemtan Daruwalla",
-    "IPR Journal GLC"
+    "TOC GLC Mumbai",
+    "Inter-TOC",
+    "Intra-TOC",
+    "IPR Journal GLC",
+    "IP Law Certificate Course Mumbai",
+    "Intellectual Property Law India",
+    "Pro Bono IPR Clinic Mumbai"
   ],
   authors: [{ name: "Intellectual Property Rights Cell, GLC Mumbai" }],
   creator: "Government Law College, Mumbai",
+  publisher: "Government Law College, Mumbai",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "IPR Cell — Government Law College, Mumbai",
+    title: "IPR Cell | Government Law College, Mumbai",
     description:
-      "Asia's oldest law college (Estd. 1855). Promoting advanced research, competition simulations, and practitioner-led certification in Intellectual Property Law.",
+      "Official portal of the Intellectual Property Rights Cell, Government Law College Mumbai (Estd. 1855). Pioneering legal scholarship, moot opposition proceedings, and certificate programs.",
     url: "https://iprcellglc.in",
-    siteName: "IPR Cell GLC Mumbai",
+    siteName: "IPR Cell — GLC Mumbai",
     images: [
       {
         url: "/images/glc-campus-main.png",
@@ -60,6 +82,13 @@ export const metadata: Metadata = {
     ],
     locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPR Cell | Government Law College, Mumbai",
+    description:
+      "Official portal of the Intellectual Property Rights Cell, Government Law College Mumbai (Estd. 1855).",
+    images: ["/images/glc-campus-main.png"],
   },
   icons: {
     icon: [
@@ -79,6 +108,59 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const jsonLdOrg = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://iprcellglc.in/#organization",
+  "name": "Intellectual Property Rights Cell, Government Law College, Mumbai",
+  "alternateName": ["IPR Cell GLC Mumbai", "GLC Mumbai IPR Cell", "IPR Cell"],
+  "url": "https://iprcellglc.in",
+  "logo": "https://iprcellglc.in/images/glc-crest.png",
+  "image": "https://iprcellglc.in/images/glc-campus-main.png",
+  "description": "The Intellectual Property Rights Cell of Government Law College Mumbai (Estd. 1855) is dedicated to advancing IP education, advocacy simulations, peer-reviewed scholarship, and pro bono community advisory.",
+  "foundingDate": "2023",
+  "knowsAbout": [
+    "Intellectual Property Law",
+    "Trademark Opposition Proceedings",
+    "Section 21 Trade Marks Act 1999",
+    "Trade Marks Rules 2017",
+    "Copyright Law and Generative AI",
+    "Patent Drafting & Prosecution",
+    "Pro Bono IPR Legal Advisory",
+    "Legal Scholarship & Peer-Reviewed Journals"
+  ],
+  "parentOrganization": {
+    "@type": "EducationalOrganization",
+    "name": "Government Law College, Mumbai",
+    "alternateName": "GLC Mumbai",
+    "foundingDate": "1855",
+    "url": "https://glcmumbai.com",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Government_Law_College,_Mumbai",
+      "https://www.wikidata.org/wiki/Q5588970"
+    ]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "'A' Road, Churchgate",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400020",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "iprcellglc@gmail.com",
+    "contactType": "Administrative Inquiries",
+    "areaServed": "IN",
+    "availableLanguage": ["English", "Hindi", "Marathi"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/ipr-cell-government-law-college-mumbai",
+    "https://instagram.com/iprcell.glc"
+  ]
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -95,6 +177,10 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrg) }}
+        />
       </head>
       <body className="bg-surface-offwhite text-ink flex flex-col min-h-screen">
         <Navbar />

@@ -1,26 +1,30 @@
 {
   "professorsInCharge": [
     {
-      "name": "Mr. Rahul Dhoble",
-      "designation": "Professor In-Charge & Faculty Advisor",
+      "name": "Smt. Krutika Chandrakant Tembhurnikar",
+      "designation": "Assistant Professor",
+      "qualification": "B.S.L.LL.B, LL.M. (Business Law), NET (Law)",
+      "subject": "Law",
+      "department": "Department of Law, Government Law College, Mumbai",
+      "specialization": "Commercial Laws, Trademarks & Media Regulations",
+      "academicYear": "Assistant Professor • Law",
+      "email": "krutika.tembhurnikar@glcmumbai.com",
+      "keyInitiatives": "Student research oversight, moot court IP benches, inter-collegiate liaison",
+      "image": "/images/krutika-tembhurnikar.jpg",
+      "bio": "Smt. Krutika Chandrakant Tembhurnikar is an Assistant Professor of Law at Government Law College, Mumbai. Holding B.S.L.LL.B, LL.M. (Business Law), and NET (Law) qualifications, she oversees the Cell's academic programs, legal clinic initiatives, and student advocacy ethics."
+    },
+    {
+      "name": "Dr. Rahul Dinkarrao Dhoble",
+      "designation": "Assistant Professor",
+      "qualification": "B.A., LL.M. NET, Ph.D (Law)",
+      "subject": "Law",
       "department": "Department of Law, Government Law College, Mumbai",
       "specialization": "Intellectual Property Law, Constitutional Law & Jurisprudence",
-      "academicYear": "Faculty Member",
+      "academicYear": "Assistant Professor • Law",
       "email": "rahul.dhoble@glcmumbai.com",
       "keyInitiatives": "Academic governance, national symposium curation, review board direction",
       "image": "/images/rahul-dhoble.jpg",
-      "bio": "Mr. Rahul Dhoble provides overarching academic stewardship, curriculum integration, and institutional governance to the IPR Cell. He actively mentors student researchers in patent litigation frameworks and guides the Cell's publication and seminar standards."
-    },
-    {
-      "name": "Ms. Krutika Tembhurnikar",
-      "designation": "Professor In-Charge & Faculty Co-Convenor",
-      "department": "Department of Law, Government Law College, Mumbai",
-      "specialization": "Commercial Laws, Trademarks & Media Regulations",
-      "academicYear": "Faculty Member",
-      "email": "krutika.tembhurnikar@glcmumbai.com",
-      "keyInitiatives": "Student research oversight, moot court IP benches, inter-collegiate liaison",
-      "image": "/images/glc-crest.png",
-      "bio": "Ms. Krutika Tembhurnikar oversees the Cell's student development, legal clinic operations, and academic colloquia. Her guidance anchors the Cell's community legal aid programs and student publication ethics."
+      "bio": "Dr. Rahul Dinkarrao Dhoble is an Assistant Professor of Law at Government Law College, Mumbai. Holding B.A., LL.M., NET, and Ph.D (Law) qualifications, he provides overarching academic stewardship, curriculum integration, and institutional governance to the IPR Cell."
     }
   ],
   "seniorCore": [

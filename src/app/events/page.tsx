@@ -1,11 +1,25 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import eventsData from "@/content/events.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Academic Flagships & Initiatives",
+  description:
+    "Explore the flagship academic programs, the Trademark Opposition Competition (TOC), Executive Certificate Courses in IP law, and distinguished guest colloquiums at GLC Mumbai.",
+  alternates: {
+    canonical: "/events",
+  },
+  openGraph: {
+    title: "Flagship Events & Programs | IPR Cell GLC Mumbai",
+    description:
+      "Trademark Opposition Competitions, Practitioner Certificate Courses, and Colloquiums at Government Law College Mumbai.",
+    url: "https://iprcellglc.in/events",
+  },
+};
 
 export default function EventsOverviewPage() {
   return (

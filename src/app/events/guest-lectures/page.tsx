@@ -1,11 +1,25 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { User, ArrowRight } from "lucide-react";
 import eventsData from "@/content/events.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Guest Lectures, Colloquiums & Webinars",
+  description:
+    "Eminent guest lectures and panels on media copyright, artists' rights, and trademark jurisprudence with Shri Javed Akhtar, Ms. Priyanka Khimani, and leading practitioners at GLC Mumbai.",
+  alternates: {
+    canonical: "/events/guest-lectures",
+  },
+  openGraph: {
+    title: "Guest Lectures & Colloquiums | IPR Cell GLC Mumbai",
+    description:
+      "Public discourses and panel debates on intellectual property with industry leaders at Government Law College Mumbai.",
+    url: "https://iprcellglc.in/events/guest-lectures",
+  },
+};
 
 export default function GuestLecturesPage() {
   return (

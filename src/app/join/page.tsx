@@ -1,11 +1,25 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import joinData from "@/content/join.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Student Induction & Membership Pathway",
+  description:
+    "Explore the selection protocol, tiered committee hierarchy, and recruitment roadmap to join the Intellectual Property Rights (IPR) Cell at Government Law College, Mumbai.",
+  alternates: {
+    canonical: "/join",
+  },
+  openGraph: {
+    title: "Join the IPR Cell | Government Law College, Mumbai",
+    description:
+      "Recruitment roadmap and membership hierarchy at Asia's oldest law institution.",
+    url: "https://iprcellglc.in/join",
+  },
+};
 
 export default function JoinPage() {
   const { whyJoin, hierarchy, selectionProcess } = joinData;
