@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ShieldCheck, Award, X, Building2, Mail, Maximize2, ChevronRight } from "lucide-react";
+import { ArrowRight, ShieldCheck, Award, X, Building2, Mail, Maximize2, ChevronRight, Linkedin } from "lucide-react";
 import teamData from "@/content/team.json";
 import TiltedCard from "@/components/ui/TiltedCard";
 
@@ -16,6 +16,7 @@ interface LeadershipMember {
   image: string;
   tier: "faculty" | "senior";
   tag?: string;
+  linkedin?: string;
 }
 
 export default function LeadershipTeaser() {
@@ -53,6 +54,7 @@ export default function LeadershipTeaser() {
     image: s.image,
     tier: "senior" as const,
     tag: "Senior Core Executive",
+    linkedin: s.linkedin,
   }));
 
   return (
@@ -91,9 +93,9 @@ export default function LeadershipTeaser() {
             {professors.map((prof) => (
               <TiltedCard
                 key={prof.name}
-                maxTilt={8}
-                scale={1.02}
-                glareOpacity={0.12}
+                maxTilt={16}
+                scale={1.04}
+                glareOpacity={0.2}
                 className="w-full h-full"
               >
                 <motion.div
@@ -149,9 +151,9 @@ export default function LeadershipTeaser() {
             {seniorCore.map((member) => (
               <TiltedCard
                 key={member.name}
-                maxTilt={10}
-                scale={1.03}
-                glareOpacity={0.16}
+                maxTilt={16}
+                scale={1.04}
+                glareOpacity={0.2}
                 className="w-full h-full"
               >
                 <motion.div
@@ -247,9 +249,20 @@ export default function LeadershipTeaser() {
 
                     <motion.h2
                       layoutId={`teaser-name-${selectedMember.name}`}
-                      className="text-2xl sm:text-3xl font-serif font-bold text-ink tracking-tight"
+                      className="text-2xl sm:text-3xl font-serif font-bold text-ink tracking-tight flex items-center gap-2"
                     >
-                      {selectedMember.name}
+                      <span>{selectedMember.name}</span>
+                      {selectedMember.linkedin && (
+                        <a
+                          href={selectedMember.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#0A66C2] hover:text-[#004182] transition-transform hover:scale-110 shrink-0"
+                          title="View LinkedIn Profile"
+                        >
+                          <Linkedin className="w-5 h-5" />
+                        </a>
+                      )}
                     </motion.h2>
 
                     <motion.div

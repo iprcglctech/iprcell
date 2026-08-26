@@ -10,11 +10,26 @@
     "established": "1855",
     "description": "Established in 1855, Government Law College (GLC), Mumbai is a landmark institution in legal education and is recognised as Asia’s oldest law college. With a legacy built on academic excellence, practical legal training, and a commitment to shaping future legal professionals, GLC has played a defining role in India’s legal landscape.",
     "distinguishedAlumni": [
-      { "name": "Dr. B.R. Ambedkar", "role": "Architect of the Indian Constitution" },
-      { "name": "Justice M.C. Chagla", "role": "First Permanent Indian Chief Justice of Bombay High Court" },
-      { "name": "Nani Palkhivala", "role": "Eminent Jurist & Constitutional Expert" },
-      { "name": "Ram Jethmalani", "role": "Legendary Senior Advocate & Former Union Law Minister" },
-      { "name": "Fali S. Nariman", "role": "Distinguished Jurist & Senior Advocate" }
+      {
+        "name": "Dr. B.R. Ambedkar",
+        "role": "Architect of the Indian Constitution"
+      },
+      {
+        "name": "Justice M.C. Chagla",
+        "role": "First Permanent Indian Chief Justice of Bombay High Court"
+      },
+      {
+        "name": "Nani Palkhivala",
+        "role": "Eminent Jurist & Constitutional Expert"
+      },
+      {
+        "name": "Ram Jethmalani",
+        "role": "Legendary Senior Advocate & Former Union Law Minister"
+      },
+      {
+        "name": "Fali S. Nariman",
+        "role": "Distinguished Jurist & Senior Advocate"
+      }
     ],
     "image": "/images/glc-heritage-facade.jpg",
     "campusImage": "/images/glc-campus-main.png"
@@ -54,7 +69,7 @@
       "image": "/images/glc-hall.jpg"
     },
     "founder": {
-      "name": "Gaurav Lokhandani",
+      "name": "Gaurav Lokchandani",
       "designation": "Founder, IPR Cell GLC Mumbai (2023)",
       "quote": "I watched it happen too often — batchmates and seniors writing off IP as a career before really giving it a chance, assuming it did not pay or did not matter. In law school, IP rarely went beyond the syllabus. Businesses carried the same blind spot, treating IP as something to sort out later, after there was actually something worth protecting. By then, someone else had already filed the mark, already owned the idea. That is why I started the IPR Cell in 2023, to make at least a few students look twice. The ones who take IP seriously now will be the ones protecting it later, in boardrooms, in courtrooms, and in businesses of their own.",
       "image": "/images/gaurav-lokhandani.jpg"
@@ -65,9 +80,24 @@
     "phone": "022-22041707",
     "email": "iprcell.glc@gmail.com",
     "studentOfficeBearers": [
-      { "name": "Ishita Dawda", "role": "President, IPR Cell", "phone": "+91 99224 49615" },
-      { "name": "Shivam Pawar", "role": "Vice President, IPR Cell", "phone": "+91 84509 67696" },
-      { "name": "Kritika Parkale", "role": "Secretary, IPR Cell", "phone": "+91 95884 15510" }
+      {
+        "name": "Ishita Dawda",
+        "role": "President, IPR Cell",
+        "phone": "+91 99224 49615",
+        "linkedin": "https://www.linkedin.com/in/ishita-dawda-717531321"
+      },
+      {
+        "name": "Shivam Pawar",
+        "role": "Vice President, IPR Cell",
+        "phone": "+91 84509 67696",
+        "linkedin": "https://www.linkedin.com/in/shivamslaw/"
+      },
+      {
+        "name": "Kritika Parkale",
+        "role": "Secretary, IPR Cell",
+        "phone": "+91 95884 15510",
+        "linkedin": "https://www.linkedin.com/in/kritika-parkale-642530321"
+      }
     ],
     "socials": {
       "linkedin": "https://www.linkedin.com/company/ipr-cell-glc-mumbai/",

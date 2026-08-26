@@ -153,12 +153,6 @@ export default function TOCPage() {
                       <p className="text-slate-muted leading-relaxed">{track.format}</p>
                     </div>
 
-                    <div className="space-y-1">
-                      <span className="font-semibold text-ink font-mono text-[11px] uppercase tracking-wider block text-slate-400">
-                        Core Advocacy Evaluated:
-                      </span>
-                      <p className="text-slate-muted leading-relaxed">{track.skillsTested}</p>
-                    </div>
                   </div>
 
                   {/* Track Gallery */}
@@ -189,7 +183,7 @@ export default function TOCPage() {
               Procedural Mandate Under Trade Marks Rules, 2017
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
-              The Trademark Opposition Competition specifically tests the application of <strong>Section 21 of the Trade Marks Act, 1999</strong> and <strong>Rules 42 to 50 of the Trade Marks Rules, 2017</strong> — requiring advocates to draft notices of opposition, verify counter-statements, structure statutory affidavits in support of opposition, and present live oral arguments before the Registrar of Trade Marks.
+              The Trademark Opposition Competition specifically tests the application of <strong>Section 21 of the Trade Marks Act, 1999</strong> read with <strong>Rules 42 to 50 of the Trade Marks Rules, 2017</strong> — requiring advocates to draft notices of opposition, verify counter-statements, structure statutory affidavits in support of opposition, and present live oral arguments before the Registrar of Trade Marks.
             </p>
           </ScrollReveal>
 

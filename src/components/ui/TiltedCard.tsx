@@ -54,11 +54,11 @@ export default function TiltedCard({
   children,
   className = "",
   containerClassName = "",
-  maxTilt = 5,
-  scale = 1.015,
-  perspective = 1400,
+  maxTilt = 16,
+  scale = 1.04,
+  perspective = 1000,
   glareEffect = true,
-  glareOpacity = 0.08,
+  glareOpacity = 0.2,
   onClick,
 }: TiltedCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin, Send, CheckCircle2, Building2, User, ArrowRight, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, Building2, User, ArrowRight, Clock, Linkedin } from "lucide-react";
 import siteData from "@/content/site.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
@@ -146,7 +146,20 @@ export default function ContactPage() {
                       className="p-4 bg-surface-offwhite border border-cream-border rounded-xl flex items-center justify-between shadow-xs hover:border-electric transition-colors"
                     >
                       <div>
-                        <div className="font-semibold text-ink text-sm">{officer.name}</div>
+                        <div className="font-semibold text-ink text-sm flex items-center gap-1.5">
+                          <span>{officer.name}</span>
+                          {(officer as Record<string, string>).linkedin && (
+                            <a
+                              href={(officer as Record<string, string>).linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#0A66C2] hover:text-[#004182] transition-transform hover:scale-110"
+                              title="View LinkedIn Profile"
+                            >
+                              <Linkedin className="w-3.5 h-3.5" />
+                            </a>
+                          )}
+                        </div>
                         <div className="text-xs text-slate-muted mt-0.5">{officer.role}</div>
                       </div>
                       <a

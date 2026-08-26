@@ -9,15 +9,42 @@
       "mode": "Online Weekend Program",
       "description": "Explored the evolving intersection of Intellectual Property, Cyber Law, and Data Protection in the digital era, offering participants practical insights into protecting digital content in the media and entertainment space.",
       "featuredExperts": [
-        { "name": "Purnima Thacker", "role": "Partner, Mulla & Mulla & Craigie Blunt & Caroe" },
-        { "name": "Rutwik Rao", "role": "Advocate, Bombay High Court" },
-        { "name": "V.C. Mathews", "role": "Partner, Fox Mandal & Associates" },
-        { "name": "Sujoy Mukerjee", "role": "Counsel, Bombay High Court" },
-        { "name": "Ishan Johri", "role": "Partner, Khaitan & Co." },
-        { "name": "Arpita K. Bhatt", "role": "Founder, BLU" },
-        { "name": "Astha Goel", "role": "Founder, Astha Goel & Associates" },
-        { "name": "Ritisha Mukherjee", "role": "Principal Associate, ANM Global" },
-        { "name": "Avadhi Joshi", "role": "Managing Partner, VNA Partners" }
+        {
+          "name": "Purnima Thacker",
+          "role": "Partner, Mulla & Mulla & Craigie Blunt & Caroe"
+        },
+        {
+          "name": "Rutwik Rao",
+          "role": "Advocate, Bombay High Court"
+        },
+        {
+          "name": "V.C. Mathews",
+          "role": "Partner, Fox Mandal & Associates"
+        },
+        {
+          "name": "Sujoy Mukerjee",
+          "role": "Counsel, Bombay High Court"
+        },
+        {
+          "name": "Ishan Johri",
+          "role": "Partner, Khaitan & Co."
+        },
+        {
+          "name": "Arpita K. Bhatt",
+          "role": "Founder, BLU"
+        },
+        {
+          "name": "Astha Goel",
+          "role": "Founder, Astha Goel & Associates"
+        },
+        {
+          "name": "Ritisha Mukherjee",
+          "role": "Principal Associate, ANM Global"
+        },
+        {
+          "name": "Avadhi Joshi",
+          "role": "Managing Partner, VNA Partners"
+        }
       ]
     },
     {
@@ -29,15 +56,42 @@
       "mode": "Online Weekend Program (13 Interactive Lectures)",
       "description": "Comprehensive curriculum covering the basics of IPR, copyright in media and entertainment, music rights, broadcasting and performing rights, influencer regulations, AI and copyright, e-sports and betting laws, dispute resolution, censorship issues, and strategies against online piracy.",
       "featuredExperts": [
-        { "name": "Arrpita K. Bhatt", "role": "Founder, BLU" },
-        { "name": "Arushi Jain", "role": "Partner, Cyril Amarchand Mangaldas" },
-        { "name": "Kirti Balasubramanian", "role": "Partner, Trilegal" },
-        { "name": "Mathews Varghese", "role": "Partner, Fox Mandal LLP" },
-        { "name": "Prashant Ramdas", "role": "Vice President & Head, Legal at ENIL" },
-        { "name": "Purnima Thacker", "role": "Head IP Practice, Mulla & Mulla" },
-        { "name": "Ritisha Mukherjee", "role": "Principal Associate, ANM Global" },
-        { "name": "Shailendra Bhandare", "role": "Partner, Khaitan & Co" },
-        { "name": "Sujoy Mukherji", "role": "Principal Associate, Naik Naik & Co." }
+        {
+          "name": "Arrpita K. Bhatt",
+          "role": "Founder, BLU"
+        },
+        {
+          "name": "Arushi Jain",
+          "role": "Partner, Cyril Amarchand Mangaldas"
+        },
+        {
+          "name": "Kirti Balasubramanian",
+          "role": "Partner, Trilegal"
+        },
+        {
+          "name": "Mathews Varghese",
+          "role": "Partner, Fox Mandal LLP"
+        },
+        {
+          "name": "Prashant Ramdas",
+          "role": "Vice President & Head, Legal at ENIL"
+        },
+        {
+          "name": "Purnima Thacker",
+          "role": "Head IP Practice, Mulla & Mulla"
+        },
+        {
+          "name": "Ritisha Mukherjee",
+          "role": "Principal Associate, ANM Global"
+        },
+        {
+          "name": "Shailendra Bhandare",
+          "role": "Partner, Khaitan & Co"
+        },
+        {
+          "name": "Sujoy Mukherji",
+          "role": "Principal Associate, Naik Naik & Co."
+        }
       ]
     },
     {
@@ -49,10 +103,22 @@
       "mode": "Comprehensive Weekend Certificate Course",
       "description": "Covered patents, trademarks, copyrights, designs, data protection, and emerging intersections with AI, blockchain, the metaverse, and space law. Emphasised monetization of IP, enforcement mechanisms, registration processes, and career pathways.",
       "featuredExperts": [
-        { "name": "Shailendra Bhandare", "role": "Partner, Khaitan & Co." },
-        { "name": "Purnima Thacker", "role": "IP Head, Mulla & Mulla" },
-        { "name": "Mathews V.C.", "role": "IP Head, Fox Mandal & Co." },
-        { "name": "Rutwik Rao", "role": "Advocate, Bombay High Court" }
+        {
+          "name": "Shailendra Bhandare",
+          "role": "Partner, Khaitan & Co."
+        },
+        {
+          "name": "Purnima Thacker",
+          "role": "IP Head, Mulla & Mulla"
+        },
+        {
+          "name": "Mathews V.C.",
+          "role": "IP Head, Fox Mandal & Co."
+        },
+        {
+          "name": "Rutwik Rao",
+          "role": "Advocate, Bombay High Court"
+        }
       ]
     },
     {
@@ -78,7 +144,7 @@
       {
         "type": "Inter-TOC (National)",
         "eligibility": "Open to LL.B. & Integrated Law students across BCI-recognized law schools nationwide",
-        "format": "Two-Phase Competition: (1) Written Submissions under Rules 42–47 of the Trade Marks Rules, 2017 read with Section 21 of the Trade Marks Act, 1999. (2) Oral Argument rounds under Rule 50 conducted offline at the historic GLC Mumbai campus.",
+        "format": "Two-Phase Competition: (1) Written Submissions under Rules 42–47 of the Trade Marks Rules, 2017 read with Section 21 of the Trade Marks Act, 1999. (2) Oral Argument rounds under Rule 50 read with Section 21 of the Trade Marks Act, 1999.",
         "skillsTested": "Notice filing, evidence submission, counter-statements, oral opposition advocacy before the Registrar.",
         "gallery": [
           "/images/events/inter-toc-1.jpg",

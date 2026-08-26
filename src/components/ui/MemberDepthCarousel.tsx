@@ -12,9 +12,9 @@ export interface CoreMemberItem {
   image: string;
   bio?: string;
   department?: string;
-  specialization?: string;
   academicYear?: string;
   email?: string;
+  linkedin?: string;
   keyInitiatives?: string;
 }
 
@@ -145,12 +145,6 @@ export default function MemberDepthCarousel({
                         <h3 className="text-xl sm:text-2xl font-serif font-normal text-[#07162C] tracking-tight mt-0.5 group-hover:text-[#2A54A7] transition-colors">
                           {member.name}
                         </h3>
-
-                        {member.specialization && (
-                          <p className="text-[11px] font-mono text-[#B89B5E] mt-0.5 truncate font-medium">
-                            {member.specialization}
-                          </p>
-                        )}
 
                         {member.bio && (
                           <p className="text-xs text-slate-500 font-sans mt-1 line-clamp-2 leading-relaxed">

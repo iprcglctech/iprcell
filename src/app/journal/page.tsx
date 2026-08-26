@@ -15,7 +15,6 @@ import {
   Award,
   Search,
   ExternalLink,
-  Mail,
 } from "lucide-react";
 import journalData from "@/content/journal.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -114,7 +113,7 @@ export default function JournalPage() {
                   ACADEMIC AFFILIATIONS
                 </div>
                 <h3 className="text-xl font-serif font-normal text-ink">
-                  Knowledge &amp; Database Partners
+                  Previous Knowledge &amp; Database Partners
                 </h3>
               </div>
 
@@ -212,22 +211,6 @@ export default function JournalPage() {
             </ScrollReveal>
           </div>
 
-          {/* Submission Action Callout */}
-          <ScrollReveal delay={0.3} className="p-8 bg-cream-100 border border-cream-border rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="space-y-1">
-              <div className="font-serif font-normal text-lg text-ink">Ready to Submit Your Manuscript?</div>
-              <p className="text-xs sm:text-sm text-slate-muted">
-                Submit anonymized manuscripts (.docx) with a separate cover letter to <strong className="text-ink font-semibold">iprcell.glc@gmail.com</strong>
-              </p>
-            </div>
-            <a
-              href="mailto:iprcell.glc@gmail.com?subject=GLC%20IPR%20Journal%20Submission"
-              className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs sm:text-sm uppercase font-bold tracking-wider px-6 py-3.5 rounded shadow-institutional transition-all shrink-0 hover:-translate-y-0.5"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Submit via Email</span>
-            </a>
-          </ScrollReveal>
         </div>
       </section>
 

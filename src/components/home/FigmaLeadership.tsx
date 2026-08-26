@@ -14,6 +14,7 @@ import {
   GraduationCap,
   Sparkles,
   BookOpen,
+  Linkedin,
 } from "lucide-react";
 import teamData from "@/content/team.json";
 
@@ -23,9 +24,9 @@ interface LeadershipMember {
   department?: string;
   bio?: string;
   image: string;
-  specialization?: string;
   academicYear?: string;
   email?: string;
+  linkedin?: string;
   keyInitiatives?: string;
   tier: "faculty" | "senior";
   tag: string;
@@ -54,7 +55,6 @@ export default function FigmaLeadership() {
     role: p.designation,
     department: p.department,
     image: p.image,
-    specialization: p.specialization,
     academicYear: p.academicYear,
     email: p.email,
     keyInitiatives: p.keyInitiatives,
@@ -70,9 +70,9 @@ export default function FigmaLeadership() {
     department: s.department || "Executive Committee",
     bio: s.bio,
     image: s.image,
-    specialization: s.specialization,
     academicYear: s.academicYear,
     email: s.email,
+    linkedin: s.linkedin,
     keyInitiatives: s.keyInitiatives,
     tier: "senior" as const,
     tag: "Executive Committee",
@@ -150,11 +150,6 @@ export default function FigmaLeadership() {
                     <p className="text-xs font-mono uppercase tracking-wider text-slate-500 font-medium">
                       {prof.role}
                     </p>
-                    {prof.specialization && (
-                      <p className="text-[11px] font-sans text-slate-400 truncate">
-                        {prof.specialization}
-                      </p>
-                    )}
                   </div>
 
                   <div className="w-8 h-8 rounded-full border border-slate-200 text-slate-400 group-hover:border-[#07162C] group-hover:text-[#07162C] flex items-center justify-center shrink-0 transition-colors">
@@ -202,11 +197,6 @@ export default function FigmaLeadership() {
                       <h3 className="text-sm sm:text-base font-serif font-normal text-[#07162C] leading-snug group-hover:text-[#2A54A7] transition-colors">
                         {member.name}
                       </h3>
-                      {member.specialization && (
-                        <p className="text-[10px] text-slate-400 truncate pt-0.5">
-                          {member.specialization}
-                        </p>
-                      )}
                     </div>
 
                     <div className="pt-2.5 border-t border-slate-100 flex items-center justify-end text-[11px] font-mono text-slate-400 mt-3 group-hover:text-[#07162C] transition-colors">
@@ -327,9 +317,9 @@ export default function FigmaLeadership() {
                       </div>
                     </div>
 
-                    {/* Direct Contact Button */}
-                    {selectedMember.email && (
-                      <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3">
+                    {/* Direct Contact & LinkedIn Buttons */}
+                    <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3">
+                      {selectedMember.email && (
                         <a
                           href={`mailto:${selectedMember.email}`}
                           className="inline-flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider px-4 py-2.5 rounded-xl bg-[#07162C] text-white hover:bg-[#2A54A7] transition-colors shadow-sm"
@@ -337,23 +327,21 @@ export default function FigmaLeadership() {
                           <Mail className="w-3.5 h-3.5 text-[#B89B5E]" />
                           <span>{selectedMember.email}</span>
                         </a>
-                      </div>
-                    )}
+                      )}
+                      {selectedMember.linkedin && (
+                        <a
+                          href={selectedMember.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider px-4 py-2.5 rounded-xl bg-[#0A66C2] text-white hover:bg-[#004182] transition-colors shadow-sm"
+                        >
+                          <Linkedin className="w-3.5 h-3.5 text-white" />
+                          <span>LinkedIn Profile</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-
-                {/* Specialization & Focus Area */}
-                {selectedMember.specialization && (
-                  <div className="p-5 rounded-2xl bg-white border border-[#E7E0D2] space-y-2">
-                    <div className="flex items-center space-x-2 text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#B89B5E]">
-                      <Sparkles className="w-3.5 h-3.5" />
-                      <span>Domain Specialization &amp; Research Focus</span>
-                    </div>
-                    <p className="text-sm font-sans text-[#07162C] font-medium leading-relaxed">
-                      {selectedMember.specialization}
-                    </p>
-                  </div>
-                )}
 
                 {/* Key Initiatives / Portfolios */}
                 {selectedMember.keyInitiatives && (

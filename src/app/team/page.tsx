@@ -32,6 +32,7 @@ interface UnifiedMember {
   image: string;
   category: string;
   tier: "faculty" | "senior" | "junior";
+  linkedin?: string;
 }
 
 export default function TeamPage() {
@@ -67,6 +68,7 @@ export default function TeamPage() {
       image: s.image,
       category: "senior",
       tier: "senior" as const,
+      linkedin: s.linkedin,
     }));
 
     const junior: UnifiedMember[] = teamData.juniorCore.map((j) => {
@@ -91,6 +93,7 @@ export default function TeamPage() {
         image: j.image,
         category: cat,
         tier: "junior" as const,
+        linkedin: j.linkedin,
       };
     });
 
@@ -260,12 +263,12 @@ export default function TeamPage() {
                     designation={member.designation}
                     department={member.department}
                     bio={member.bio}
-                    specialization={member.specialization}
                     academicYear={member.academicYear}
                     email={member.email}
                     keyInitiatives={member.keyInitiatives}
                     image={member.image}
                     tier={member.tier}
+                    linkedin={member.linkedin}
                   />
                 </motion.div>
               ))}

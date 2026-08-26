@@ -294,7 +294,6 @@ export default function AboutPage() {
                   name={prof.name}
                   designation={prof.designation}
                   department={prof.department}
-                  specialization={prof.specialization}
                   keyInitiatives={prof.keyInitiatives}
                   bio={prof.bio}
                   image={prof.image}
@@ -318,11 +317,11 @@ export default function AboutPage() {
                   position={member.position}
                   department={member.department}
                   academicYear={member.academicYear}
-                  specialization={member.specialization}
                   keyInitiatives={member.keyInitiatives}
                   bio={member.bio}
                   image={member.image}
                   tier="senior"
+                  linkedin={member.linkedin}
                   compactOnMobile
                 />
               ))}
@@ -342,11 +341,11 @@ export default function AboutPage() {
                   position={member.position}
                   department={member.department}
                   academicYear={member.academicYear}
-                  specialization={member.specialization}
                   keyInitiatives={member.keyInitiatives}
                   bio={member.bio}
                   image={member.image}
                   tier="junior"
+                  linkedin={member.linkedin}
                   compactOnMobile
                 />
               ))}

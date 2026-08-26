@@ -12,6 +12,7 @@ import {
   Sparkles,
   BookOpen,
   Send,
+  Linkedin,
 } from "lucide-react";
 
 export interface SelectedMemberData {
@@ -21,9 +22,9 @@ export interface SelectedMemberData {
   department?: string;
   bio?: string;
   image: string;
-  specialization?: string;
   academicYear?: string;
   email?: string;
+  linkedin?: string;
   keyInitiatives?: string;
   tier: "faculty" | "senior" | "junior";
 }
@@ -161,7 +162,7 @@ export default function MemberModal({ member, onClose }: MemberModalProps) {
                     </div>
                   </div>
 
-                  {/* Direct Contact Button */}
+                  {/* Direct Contact & Social Buttons */}
                   <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3">
                     <a
                       href={`mailto:${displayEmail}`}
@@ -170,22 +171,20 @@ export default function MemberModal({ member, onClose }: MemberModalProps) {
                       <Mail className="w-3.5 h-3.5 text-[#B89B5E]" />
                       <span>{displayEmail}</span>
                     </a>
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider px-4 py-2.5 rounded-xl bg-[#0A66C2] text-white hover:bg-[#004182] transition-colors shadow-sm"
+                      >
+                        <Linkedin className="w-3.5 h-3.5 text-white" />
+                        <span>LinkedIn Profile</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
-
-              {/* Specialization & Focus Area */}
-              {member.specialization && (
-                <div className="p-5 rounded-2xl bg-white border border-[#E7E0D2] space-y-2">
-                  <div className="flex items-center space-x-2 text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#B89B5E]">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>Domain Specialization &amp; Research Focus</span>
-                  </div>
-                  <p className="text-sm font-sans text-[#07162C] font-medium leading-relaxed">
-                    {member.specialization}
-                  </p>
-                </div>
-              )}
 
               {/* Key Initiatives / Responsibilities */}
               {member.keyInitiatives && (
