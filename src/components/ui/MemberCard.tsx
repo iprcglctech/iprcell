@@ -83,10 +83,10 @@ export default function MemberCard({
             </span>
           </div>
 
-          {/* LinkedIn hover overlay on image */}
+          {/* LinkedIn hover overlay on image (desktop only) */}
           {linkedin && (
             <div
-              className={`absolute inset-x-0 bottom-0 transition-all duration-300 ease-out bg-gradient-to-t from-[#07162C]/90 via-[#07162C]/60 to-transparent px-4 pt-8 pb-3.5 z-20 flex items-center justify-center ${
+              className={`hidden sm:flex absolute inset-x-0 bottom-0 transition-all duration-300 ease-out bg-gradient-to-t from-[#07162C]/90 via-[#07162C]/60 to-transparent px-4 pt-8 pb-3.5 z-20 items-center justify-center ${
                 isHovered
                   ? "opacity-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 translate-y-3 pointer-events-none"
@@ -123,7 +123,7 @@ export default function MemberCard({
                 onClick={(e) => e.stopPropagation()}
                 aria-label={`${name}'s LinkedIn profile`}
                 className={`text-[#0A66C2] hover:text-[#004182] transition-all duration-300 hover:scale-110 shrink-0 p-0.5 ${
-                  isHovered ? "opacity-100 scale-100" : "opacity-0 group-hover:opacity-100 sm:opacity-60"
+                  isHovered ? "opacity-100 scale-105" : "opacity-100 sm:opacity-60 group-hover:opacity-100"
                 }`}
                 title="View LinkedIn Profile"
               >
