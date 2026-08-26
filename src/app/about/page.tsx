@@ -288,7 +288,7 @@ export default function AboutPage() {
           {/* Senior Core */}
           <div className="space-y-6 pt-4">
             <h3 className="text-xl font-serif font-normal text-ink">
-              Senior Core Executive Committee
+              Senior Core
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
               {teamData.seniorCore.map((member) => (
