@@ -156,7 +156,7 @@ const jsonLdOrg = {
     "availableLanguage": ["English", "Hindi", "Marathi"]
   },
   "sameAs": [
-    "https://www.linkedin.com/company/ipr-cell-government-law-college-mumbai",
+    "https://www.linkedin.com/company/iprcellglcmumbai/",
     "https://instagram.com/iprcell.glc"
   ]
 };

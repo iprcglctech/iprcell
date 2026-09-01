@@ -138,7 +138,7 @@ export default function InstitutionalFooter() {
             <Link href="/about" className="hover:text-slate-300">About GLC</Link>
             <Link href="/contact" className="hover:text-slate-300">Contact</Link>
             <a
-              href="https://www.linkedin.com/company/ipr-cell-glc-mumbai/"
+              href="https://www.linkedin.com/company/iprcellglcmumbai/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-electric-light"
