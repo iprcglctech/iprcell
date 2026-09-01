@@ -156,59 +156,84 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Section 4: Leadership Addresses ── */}
-      <section className="py-16 lg:py-24 bg-cream-100 border-b border-cream-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <ScrollReveal delay={0.1} className="max-w-2xl space-y-2">
+      {/* ── Section 4: Faculty Founder's Address (Grand Standalone Showcase) ── */}
+      <section className="py-20 lg:py-28 bg-white border-b border-cream-border relative overflow-hidden">
+        {/* Subtle Background Flourish */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-cream-100 rounded-full filter blur-3xl opacity-60 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollReveal delay={0.1} className="max-w-3xl mb-10 space-y-2">
             <div className="eyebrow-tag">
-              INSTITUTIONAL VOICES
+              INSTITUTIONAL LEADERSHIP
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-ink font-normal">
-              Messages from Leadership
+              Message from the Faculty Founder
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Principal Message */}
-            <ScrollReveal delay={0.15} yOffset={20} className="bg-white border border-cream-border rounded-2xl p-8 sm:p-10 shadow-card flex flex-col justify-between space-y-6">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4 border-b border-cream-border pb-5">
-                  <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-electric shadow-sm">
-                    <Image
-                      src={siteData.messages.principal.image}
-                      alt={siteData.messages.principal.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-serif font-normal text-ink">
-                      {siteData.messages.principal.name}
-                    </h3>
-                    <p className="text-xs text-electric font-medium">
-                      {siteData.messages.principal.designation}
-                    </p>
-                    <p className="text-[11px] text-slate-muted font-mono mt-0.5">
-                      Government Law College, Mumbai
-                    </p>
-                  </div>
+          <ScrollReveal delay={0.15} yOffset={24} className="bg-cream-100/60 border border-cream-border rounded-3xl p-6 sm:p-10 lg:p-12 shadow-card">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+              {/* Left Half: Squarish Frame with Centered Portrait */}
+              <div className="lg:col-span-5 flex justify-center">
+                <div className="relative w-full max-w-[420px] aspect-square rounded-2xl overflow-hidden border-2 border-[#B89B5E]/40 shadow-elevated group bg-navy-950">
+                  <Image
+                    src={siteData.messages.principal.image}
+                    alt={siteData.messages.principal.name}
+                    fill
+                    priority
+                    className="object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+
+              {/* Right Half: Grand Editorial Address */}
+              <div className="lg:col-span-7 space-y-6">
+                <div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-normal text-ink leading-tight">
+                    {siteData.messages.principal.name}
+                  </h3>
+                  <p className="text-sm sm:text-base text-electric font-medium font-sans mt-1">
+                    {siteData.messages.principal.designation}
+                  </p>
+                  <p className="text-xs text-slate-muted font-mono mt-0.5">
+                    Government Law College, Mumbai (Estd. 1855)
+                  </p>
                 </div>
 
-                <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic font-serif pl-4 border-l-2 border-electric">
-                  &ldquo;{siteData.messages.principal.quote}&rdquo;
-                </blockquote>
+                <div className="relative">
+                  <span className="text-6xl sm:text-7xl font-serif text-[#B89B5E]/30 absolute -top-8 -left-3 select-none pointer-events-none">
+                    &ldquo;
+                  </span>
+                  <blockquote className="text-slate-700 text-sm sm:text-base lg:text-lg leading-relaxed font-serif italic relative z-10 pl-6 border-l-2 border-[#B89B5E]/60 space-y-4">
+                    <p>
+                      {siteData.messages.principal.quote}
+                    </p>
+                  </blockquote>
+                </div>
               </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
 
-              <div className="pt-4 border-t border-cream-border text-right text-xs text-slate-muted font-mono uppercase tracking-wider">
-                — Principal&apos;s Desk
-              </div>
-            </ScrollReveal>
+      {/* ── Section 4B: Founder's Perspective (Circular Portrait) ── */}
+      <section className="py-16 lg:py-24 bg-cream-100 border-b border-cream-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal delay={0.1} className="max-w-3xl mb-10 space-y-2">
+            <div className="eyebrow-tag">
+              CELL ORIGIN &amp; VISION
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-serif text-ink font-normal">
+              Founding Perspective
+            </h2>
+          </ScrollReveal>
 
-            {/* Founder Message */}
-            <ScrollReveal delay={0.25} yOffset={20} className="bg-white border border-cream-border rounded-2xl p-8 sm:p-10 shadow-card flex flex-col justify-between space-y-6">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4 border-b border-cream-border pb-5">
-                  <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-electric shadow-sm">
+          <ScrollReveal delay={0.15} yOffset={20} className="bg-white border border-cream-border rounded-3xl p-6 sm:p-10 lg:p-12 shadow-card">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              {/* Left Column: Circular Portrait */}
+              <div className="lg:col-span-4 flex flex-col items-center text-center space-y-4">
+                <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden shrink-0 border-4 border-[#B89B5E]/40 shadow-elevated bg-navy-950 p-1">
+                  <div className="relative w-full h-full rounded-full overflow-hidden">
                     <Image
                       src={siteData.messages.founder.image}
                       alt={siteData.messages.founder.name}
@@ -216,29 +241,46 @@ export default function AboutPage() {
                       className="object-cover"
                     />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-serif font-normal text-ink">
-                      {siteData.messages.founder.name}
-                    </h3>
-                    <p className="text-xs text-electric font-medium">
-                      {siteData.messages.founder.designation}
-                    </p>
-                    <p className="text-[11px] text-slate-muted font-mono mt-0.5">
-                      Inaugurated AY 2023–24
-                    </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif font-normal text-ink">
+                    {siteData.messages.founder.name}
+                  </h3>
+                  <p className="text-xs text-electric font-medium font-sans">
+                    {siteData.messages.founder.designation}
+                  </p>
+                  <p className="text-[11px] text-slate-muted font-mono mt-0.5">
+                    Inaugurated AY 2023–24
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column: Founder Narrative */}
+              <div className="lg:col-span-8 space-y-6">
+                <div className="space-y-1">
+                  <div className="text-[11px] font-mono uppercase tracking-wider text-electric font-bold">
+                    WHY THE CELL WAS ESTABLISHED
                   </div>
+                  <h3 className="text-xl sm:text-2xl font-serif font-normal text-ink">
+                    Bridging Classroom Theory with Industry IP Practice
+                  </h3>
                 </div>
 
-                <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic font-serif pl-4 border-l-2 border-electric">
-                  &ldquo;{siteData.messages.founder.quote}&rdquo;
-                </blockquote>
-              </div>
+                <div className="relative">
+                  <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic font-serif pl-5 border-l-2 border-electric space-y-3">
+                    <p>
+                      &ldquo;{siteData.messages.founder.quote}&rdquo;
+                    </p>
+                  </blockquote>
+                </div>
 
-              <div className="pt-4 border-t border-cream-border text-right text-xs text-slate-muted font-mono uppercase tracking-wider">
-                — Founding Address
+                <div className="pt-4 border-t border-cream-border flex items-center justify-between text-xs text-slate-muted font-mono">
+                  <span>Founding Executive Address (2023)</span>
+                  <span className="text-electric uppercase tracking-wider font-semibold">Founding Vision</span>
+                </div>
               </div>
-            </ScrollReveal>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

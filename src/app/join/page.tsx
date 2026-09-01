@@ -103,7 +103,7 @@ export default function JoinPage() {
                 className="bg-white border border-cream-border p-8 rounded-2xl shadow-card space-y-3"
               >
                 <div className="text-xs font-mono font-bold text-electric uppercase tracking-wider">
-                  0{idx + 1} • ADVANTAGE
+                  0{idx + 1}
                 </div>
                 <h3 className="font-serif font-normal text-xl text-ink">
                   {benefit.title}
@@ -135,41 +135,35 @@ export default function JoinPage() {
                 key={tier.tier}
                 delay={0.1 + idx * 0.1}
                 yOffset={24}
-                className="bg-surface-offwhite border border-cream-border rounded-2xl p-8 flex flex-col justify-between hover:border-electric transition-all shadow-xs space-y-8"
+                className="bg-surface-offwhite border border-cream-border rounded-2xl p-8 hover:border-electric transition-all shadow-xs space-y-4"
               >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-electric uppercase tracking-wider">
-                      TIER 0{idx + 1}
-                    </span>
-                    <span className="text-[11px] font-mono text-slate-700 bg-white border border-cream-border px-2.5 py-1 rounded-md shadow-xs">
-                      {tier.badge}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl font-serif font-normal text-ink">
-                    {tier.tier}
-                  </h3>
-
-                  <div className="space-y-4 text-xs sm:text-sm font-sans pt-2">
-                    <div className="space-y-1">
-                      <span className="font-semibold text-ink font-mono text-[11px] uppercase tracking-wider block text-slate-400">
-                        Eligibility:
-                      </span>
-                      <p className="text-slate-muted leading-relaxed">{tier.eligibility}</p>
-                    </div>
-
-                    <div className="space-y-1">
-                      <span className="font-semibold text-ink font-mono text-[11px] uppercase tracking-wider block text-slate-400">
-                        Core Responsibilities:
-                      </span>
-                      <p className="text-slate-muted leading-relaxed">{tier.responsibilities}</p>
-                    </div>
-                  </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono font-bold text-electric uppercase tracking-wider">
+                    TIER 0{idx + 1}
+                  </span>
+                  <span className="text-[11px] font-mono text-slate-700 bg-white border border-cream-border px-2.5 py-1 rounded-md shadow-xs">
+                    {tier.badge}
+                  </span>
                 </div>
 
-                <div className="pt-4 border-t border-cream-border text-[11px] font-mono text-slate-400">
-                  Government Law College IPR Cell
+                <h3 className="text-xl sm:text-2xl font-serif font-normal text-ink">
+                  {tier.tier}
+                </h3>
+
+                <div className="space-y-4 text-xs sm:text-sm font-sans pt-2">
+                  <div className="space-y-1">
+                    <span className="font-semibold text-ink font-mono text-[11px] uppercase tracking-wider block text-slate-400">
+                      Eligibility:
+                    </span>
+                    <p className="text-slate-muted leading-relaxed">{tier.eligibility}</p>
+                  </div>
+
+                  <div className="space-y-1">
+                    <span className="font-semibold text-ink font-mono text-[11px] uppercase tracking-wider block text-slate-400">
+                      Core Responsibilities:
+                    </span>
+                    <p className="text-slate-muted leading-relaxed">{tier.responsibilities}</p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}

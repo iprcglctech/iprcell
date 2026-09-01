@@ -74,7 +74,7 @@ export default function LegacySplit() {
                       : "text-slate-muted hover:text-ink hover:bg-slate-200/60"
                   }`}
                 >
-                  Principal&apos;s Address
+                  Faculty Founder&apos;s Address
                 </button>
                 <button
                   onClick={() => setActiveTab("founder")}
@@ -84,7 +84,7 @@ export default function LegacySplit() {
                       : "text-slate-muted hover:text-ink hover:bg-slate-200/60"
                   }`}
                 >
-                  Founder&apos;s Perspective (2023)
+                  Student Founder&apos;s Perspective (2023)
                 </button>
               </div>
 
@@ -97,7 +97,7 @@ export default function LegacySplit() {
                         src={siteData.messages.principal.image}
                         alt={siteData.messages.principal.name}
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                       />
                     </div>
                     <div>

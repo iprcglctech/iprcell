@@ -132,23 +132,17 @@ export default function IPRClinicPage() {
                 key={item.title}
                 delay={0.1 + idx * 0.08}
                 yOffset={20}
-                className="bg-surface-offwhite border border-cream-border p-8 rounded-2xl flex flex-col justify-between space-y-6 hover:border-electric transition-all hover:shadow-card group"
+                className="bg-surface-offwhite border border-cream-border p-8 rounded-2xl shadow-card space-y-3 hover:border-electric transition-all group"
               >
-                <div className="space-y-3">
-                  <div className="text-xs font-mono font-bold text-electric uppercase tracking-wider">
-                    0{idx + 1} • CLINICAL STREAM
-                  </div>
-                  <h3 className="font-serif font-normal text-xl text-ink group-hover:text-navy-950 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-muted leading-relaxed font-sans pt-1">
-                    {item.description}
-                  </p>
+                <div className="text-xs font-mono font-bold text-electric uppercase tracking-wider">
+                  0{idx + 1}
                 </div>
-
-                <div className="pt-4 border-t border-cream-border text-[11px] font-mono text-slate-400">
-                  Government Law College Legal Clinic
-                </div>
+                <h3 className="font-serif font-normal text-xl text-ink group-hover:text-navy-950 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-muted leading-relaxed font-sans pt-1">
+                  {item.description}
+                </p>
               </ScrollReveal>
             ))}
           </div>

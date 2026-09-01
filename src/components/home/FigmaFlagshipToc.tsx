@@ -33,10 +33,6 @@ export default function FigmaFlagshipToc() {
           delay={0.15}
           className="lg:col-span-5 bg-navy-950 p-6 sm:p-10 lg:p-16 flex flex-col justify-center space-y-4 sm:space-y-6 text-white border-t lg:border-t-0 lg:border-l border-navy-800"
         >
-          <div className="text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-electric-light font-sans">
-            FLAGSHIP INITIATIVE
-          </div>
-
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-normal leading-[1.15]">
             Trademark<br />
             Opposition<br />

@@ -125,12 +125,6 @@ export default function InstitutionalFooter() {
                   iprcell.glc@gmail.com
                 </a>
               </div>
-              <div className="pt-2 text-[11px] border-t border-navy-900 text-slate-400">
-                <span className="font-semibold text-slate-300">Office Bearers:</span>
-                <div>President: +91 99224 49615</div>
-                <div>Vice-President: +91 84509 67696</div>
-                <div>Secretary: +91 95884 15510</div>
-              </div>
             </div>
           </div>
         </div>

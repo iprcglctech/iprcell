@@ -7,14 +7,11 @@ import {
   BookOpen,
   Database,
   CheckCircle2,
-  FileText,
   Download,
   ShieldCheck,
   ArrowRight,
-  Sparkles,
   Award,
   Search,
-  ExternalLink,
 } from "lucide-react";
 import journalData from "@/content/journal.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -170,10 +167,6 @@ export default function JournalClient() {
                     {cat.description}
                   </p>
                 </div>
-
-                <div className="pt-3 border-t border-cream-border text-[11px] font-mono text-slate-400">
-                  Required Abstract: {cat.abstract}
-                </div>
               </ScrollReveal>
             ))}
           </div>
@@ -228,12 +221,12 @@ export default function JournalClient() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
           {/* Volume Header */}
-          <ScrollReveal delay={0.1} className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-navy-800 pb-6">
+          <ScrollReveal delay={0.1} className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-navy-800 pb-6">
             <div className="space-y-2 max-w-2xl">
               <div className="text-xs font-mono uppercase font-bold tracking-widest text-electric-light">
                 PUBLISHED ARCHIVE
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white font-normal">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white font-normal leading-tight">
                 {volume1.title}
               </h2>
               <p className="text-xs sm:text-sm text-slate-300">
@@ -241,57 +234,20 @@ export default function JournalClient() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 self-start md:self-auto">
-              <div className="text-xs font-mono bg-navy-900 border border-navy-700 px-3.5 py-2 rounded-lg text-slate-300">
-                License: {volume1.license}
-              </div>
-              {volume1.downloadUrl && (
+            {volume1.downloadUrl && (
+              <div className="shrink-0 self-start sm:self-end">
                 <a
                   href={volume1.downloadUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-[#B89B5E] hover:bg-[#A5884B] text-navy-950 text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-lg shadow-md transition-all hover:scale-105"
+                  className="inline-flex items-center justify-center space-x-2.5 bg-[#B89B5E] hover:bg-[#A5884B] text-navy-950 text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-institutional transition-all hover:scale-105"
                 >
-                  <Download className="w-3.5 h-3.5" />
-                  <span>Download PDF</span>
+                  <Download className="w-4 h-4 text-navy-950" />
+                  <span>Download Journal (PDF)</span>
                 </a>
-              )}
-            </div>
-          </ScrollReveal>
-
-          {/* Compendium PDF Download Action Banner */}
-          {volume1.downloadUrl && (
-            <div className="bg-gradient-to-r from-navy-900 via-navy-850 to-navy-900 border border-[#B89B5E]/40 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-xl">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-xl bg-[#B89B5E]/15 border border-[#B89B5E]/30 flex items-center justify-center shrink-0 text-[#B89B5E]">
-                  <FileText className="w-6 h-6" />
-                </div>
-                <div className="space-y-1">
-                  <div className="flex items-center space-x-2 text-[10px] font-mono font-bold uppercase tracking-widest text-[#B89B5E]">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>Official Publication Compendium</span>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-serif text-white font-normal">
-                    Download Full Volume I Issue (PDF)
-                  </h3>
-                  <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
-                    Access the complete peer-reviewed academic edition including all 10 scholarly research papers, editorial forewords, and citation indices.
-                  </p>
-                </div>
               </div>
-
-              <a
-                href={volume1.downloadUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center space-x-2 bg-[#B89B5E] hover:bg-[#A5884B] text-navy-950 text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-institutional transition-all hover:scale-105 shrink-0"
-              >
-                <Download className="w-4 h-4 text-navy-950" />
-                <span>Download Journal</span>
-                <ExternalLink className="w-3.5 h-3.5 text-navy-950/70" />
-              </a>
-            </div>
-          )}
+            )}
+          </ScrollReveal>
 
           {/* Search Papers */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
