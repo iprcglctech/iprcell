@@ -87,7 +87,7 @@ export default function DepthCarousel({
 
   return (
     <div
-      className="relative w-full h-[260px] sm:h-[360px] md:h-[440px] lg:h-[500px] xl:h-[530px] flex items-center justify-center select-none group/carousel overflow-hidden"
+      className="relative w-full h-[340px] xs:h-[370px] sm:h-[360px] md:h-[440px] lg:h-[500px] xl:h-[530px] flex items-center justify-center select-none group/carousel overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={onTouchStart}
@@ -102,7 +102,7 @@ export default function DepthCarousel({
           prevSlide();
         }}
         aria-label="Previous slide"
-        className="absolute left-1 sm:left-4 md:left-8 z-40 p-2 sm:p-2.5 rounded-full bg-navy-950/80 hover:bg-navy-900 text-white/90 hover:text-white border border-white/15 hover:border-electric-light/50 backdrop-blur-md shadow-xl transition-all hover:scale-110 active:scale-95"
+        className="absolute left-0.5 sm:left-4 md:left-8 z-40 p-1.5 sm:p-2.5 rounded-full bg-navy-950/85 hover:bg-navy-900 text-white/90 hover:text-white border border-white/15 hover:border-electric-light/50 backdrop-blur-md shadow-xl transition-all hover:scale-110 active:scale-95"
       >
         <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
       </button>
@@ -115,7 +115,7 @@ export default function DepthCarousel({
           nextSlide();
         }}
         aria-label="Next slide"
-        className="absolute right-1 sm:right-4 md:right-8 z-40 p-2 sm:p-2.5 rounded-full bg-navy-950/80 hover:bg-navy-900 text-white/90 hover:text-white border border-white/15 hover:border-electric-light/50 backdrop-blur-md shadow-xl transition-all hover:scale-110 active:scale-95"
+        className="absolute right-0.5 sm:right-4 md:right-8 z-40 p-1.5 sm:p-2.5 rounded-full bg-navy-950/85 hover:bg-navy-900 text-white/90 hover:text-white border border-white/15 hover:border-electric-light/50 backdrop-blur-md shadow-xl transition-all hover:scale-110 active:scale-95"
       >
         <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
       </button>
@@ -129,7 +129,7 @@ export default function DepthCarousel({
             <div
               key={item.image + index}
               onClick={() => setActiveIndex(index)}
-              className={`absolute w-[82vw] max-w-[320px] sm:w-[500px] sm:max-w-none md:w-[680px] lg:w-[840px] xl:w-[920px] h-[180px] sm:h-[290px] md:h-[370px] lg:h-[430px] xl:h-[460px] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl cursor-pointer depth-carousel-card ${cardState} group`}
+              className={`absolute w-[92vw] max-w-[420px] sm:w-[500px] sm:max-w-none md:w-[680px] lg:w-[840px] xl:w-[920px] h-[260px] xs:h-[290px] sm:h-[290px] md:h-[370px] lg:h-[430px] xl:h-[460px] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl cursor-pointer depth-carousel-card ${cardState} group`}
             >
               {/* Image Frame */}
               <div className="relative w-full h-full bg-navy-950">
@@ -150,19 +150,19 @@ export default function DepthCarousel({
 
                 {/* Title and Subheading overlay */}
                 <div
-                  className={`absolute inset-x-0 bottom-0 z-20 p-3 sm:p-6 lg:p-8 transition-all duration-300 ${
+                  className={`absolute inset-x-0 bottom-0 z-20 p-4 sm:p-6 lg:p-8 transition-all duration-300 ${
                     isActive
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-4 pointer-events-none"
                   }`}
                 >
-                  <div className="space-y-0.5 sm:space-y-1.5 max-w-3xl">
+                  <div className="space-y-1 sm:space-y-1.5 max-w-3xl">
                     {item.subtitle && (
                       <p className="text-[10px] sm:text-xs md:text-sm font-mono uppercase tracking-wider sm:tracking-[0.2em] text-electric-light font-bold drop-shadow-md line-clamp-1">
                         {item.subtitle}
                       </p>
                     )}
-                    <h3 className="text-xs sm:text-lg md:text-xl lg:text-2xl font-serif text-white font-normal leading-snug drop-shadow-lg line-clamp-2">
+                    <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-serif text-white font-normal leading-snug drop-shadow-lg line-clamp-2">
                       {item.title}
                     </h3>
                   </div>
