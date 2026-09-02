@@ -12,20 +12,20 @@ export default function InstitutionalFooter() {
           {/* Col 1: Institutional Authority */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-3.5">
-              <div className="relative w-11 h-11 flex items-center justify-center shrink-0">
+              <div className="relative w-10 h-10 flex items-center justify-center shrink-0">
                 <Image
                   src="/images/ipr-cell-emblem.png"
                   alt="Intellectual Property Rights Cell Emblem"
                   fill
-                  sizes="48px"
+                  sizes="40px"
                   className="object-contain drop-shadow-sm"
                 />
               </div>
-              <div>
-                <h3 className="text-white font-serif font-semibold tracking-tight text-base sm:text-lg">
+              <div className="flex flex-col justify-center">
+                <h3 className="text-white font-sans font-bold tracking-tight text-base sm:text-[17px] leading-none">
                   IPR Cell
                 </h3>
-                <p className="text-slate-400 text-[11px] sm:text-xs mt-0.5 font-sans">
+                <p className="text-slate-400 text-[11px] font-sans tracking-normal mt-1 leading-none">
                   Government Law College, Mumbai
                 </p>
               </div>

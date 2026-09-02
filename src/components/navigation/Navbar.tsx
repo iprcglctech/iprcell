@@ -78,20 +78,21 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Institutional Brand */}
           <Link href="/" className="flex items-center space-x-3 group pointer-events-auto">
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shrink-0">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shrink-0">
               <Image
                 src="/images/ipr-cell-emblem.png"
                 alt="Intellectual Property Rights Cell Emblem"
                 fill
-                sizes="48px"
+                sizes="40px"
                 className="object-contain"
+                priority
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-white font-serif font-semibold tracking-tight text-base sm:text-lg leading-tight">
+            <div className="flex flex-col justify-center">
+              <span className="text-white font-sans font-bold tracking-tight text-base sm:text-[17px] leading-none">
                 IPR Cell
               </span>
-              <span className="text-slate-400 text-[11px] sm:text-xs font-sans tracking-normal mt-0.5">
+              <span className="text-slate-400 text-[11px] font-sans tracking-normal mt-1 leading-none">
                 Government Law College, Mumbai
               </span>
             </div>

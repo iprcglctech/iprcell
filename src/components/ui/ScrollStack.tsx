@@ -25,7 +25,7 @@ export function ScrollStackItem({
   total = 7,
   className,
   topOffset = 0,
-  scaleFactor = 0.04,
+  scaleFactor = 0.035,
   dimOnStack = true,
 }: ScrollStackItemProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,19 +45,23 @@ export function ScrollStackItem({
   // Subtle dimming as the next card stacks over
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.7, 1],
-    [1, 1, 0.85]
+    [0, 0.75, 1],
+    [1, 1, 0.88]
   );
 
   return (
     <div
       ref={containerRef}
       className={cn(
-        "sticky top-0 w-full min-h-screen min-h-[100dvh] flex flex-col justify-center",
+        "sticky top-0 w-full min-h-screen min-h-[100dvh] flex flex-col justify-center transform-gpu",
         className
       )}
       style={{
         zIndex: index + 1,
+        transform: "translate3d(0, 0, 0)",
+        WebkitTransform: "translate3d(0, 0, 0)",
+        WebkitBackfaceVisibility: "hidden",
+        backfaceVisibility: "hidden",
       }}
     >
       <motion.div
@@ -65,8 +69,11 @@ export function ScrollStackItem({
           scale,
           opacity: dimOnStack ? opacity : 1,
           transformOrigin: "top center",
+          WebkitBackfaceVisibility: "hidden",
+          backfaceVisibility: "hidden",
+          transform: "translate3d(0, 0, 0)",
         }}
-        className="w-full transition-shadow duration-300 shadow-2xl"
+        className="w-full transform-gpu will-change-[transform,opacity] transition-shadow duration-300 shadow-2xl"
       >
         {children}
       </motion.div>

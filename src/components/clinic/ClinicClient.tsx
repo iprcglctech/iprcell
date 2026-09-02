@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -12,31 +12,40 @@ import {
   CheckCircle2,
   ArrowRight,
   ExternalLink,
-  HelpCircle,
   Users,
-  Sparkles,
   Info,
+  CalendarCheck,
 } from "lucide-react";
 import clinicData from "@/content/clinic.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ClinicClient() {
-  const [calendlyLoaded, setCalendlyLoaded] = useState(false);
-  const calendlyUrl = clinicData.calendlyUrl || "https://calendly.com/iprcellglc";
+  const bookingUrl = clinicData.calendlyUrl || "https://calendly.com/iprcellglc";
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && (window as unknown as { Calendly?: { initInlineWidget: (config: { url: string; parentElement: HTMLElement | null }) => void } }).Calendly) {
-      setCalendlyLoaded(true);
+  const handleOpenBooking = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    if (
+      typeof window !== "undefined" &&
+      (window as unknown as { Calendly?: { initPopupWidget: (options: { url: string }) => void } }).Calendly
+    ) {
+      (window as unknown as { Calendly: { initPopupWidget: (options: { url: string }) => void } }).Calendly.initPopupWidget({
+        url: bookingUrl,
+      });
+    } else if (typeof window !== "undefined") {
+      window.open(bookingUrl, "_blank", "noopener,noreferrer");
     }
-  }, []);
+  };
 
   return (
     <div className="bg-cream-100 text-ink min-h-screen">
-      {/* Calendly Official Widget Script */}
+      {/* Official Widget Script & Stylesheet for seamless popup overlay */}
+      <link
+        href="https://assets.calendly.com/assets/external/widget.css"
+        rel="stylesheet"
+      />
       <Script
         src="https://assets.calendly.com/assets/external/widget.js"
         strategy="lazyOnload"
-        onLoad={() => setCalendlyLoaded(true)}
       />
 
       {/* ── Page Hero: Deep Institutional Navy Banner ── */}
@@ -68,13 +77,13 @@ export default function ClinicClient() {
             </p>
 
             <div className="pt-4 flex flex-wrap items-center gap-3">
-              <a
-                href="#schedule"
-                className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs uppercase font-bold tracking-wider px-5 py-3 rounded shadow-institutional transition-all hover:-translate-y-0.5"
+              <button
+                onClick={handleOpenBooking}
+                className="inline-flex items-center space-x-2 bg-electric hover:bg-electric-dark text-white text-xs uppercase font-bold tracking-wider px-5 py-3 rounded shadow-institutional transition-all hover:-translate-y-0.5 cursor-pointer"
               >
                 <Calendar className="w-3.5 h-3.5" />
-                <span>Book Guidance Session (Calendly)</span>
-              </a>
+                <span>Book a Session</span>
+              </button>
               <a
                 href="#mandate"
                 className="inline-flex items-center space-x-2 bg-navy-900 hover:bg-navy-850 border border-navy-700 text-slate-200 text-xs uppercase font-bold tracking-wider px-5 py-3 rounded transition-all"
@@ -161,42 +170,42 @@ export default function ClinicClient() {
         </div>
       </section>
 
-      {/* ── Section 3: Calendly Appointment Integration Suite ── */}
+      {/* ── Section 3: Book a Guidance Session Suite ── */}
       <section id="schedule" className="py-16 lg:py-24 bg-cream-100 border-b border-cream-border relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
           <ScrollReveal delay={0.1} className="max-w-3xl space-y-2">
             <div className="eyebrow-tag">
-              ONLINE SCHEDULER
+              CONSULTATION REGISTRY
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-ink font-normal">
-              Schedule a Pro Bono Guidance Session
+              Book a Pro Bono Guidance Session
             </h2>
             <p className="text-slate-muted text-xs sm:text-sm leading-relaxed font-sans">
-              Select a convenient time slot via our official Calendly integration to meet with student coordinators and researchers from the GLC IPR Clinic.
+              Schedule a one-on-one preliminary advisory session with student coordinators and researchers from the GLC IPR Clinic.
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Left Column: Guidance Session Information */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Card 1: Consultation Details & Scope */}
             <ScrollReveal
               delay={0.15}
               yOffset={20}
-              className="lg:col-span-4 bg-white border border-cream-border rounded-3xl p-6 sm:p-8 shadow-card space-y-6 flex flex-col justify-between"
+              className="lg:col-span-6 bg-white border border-cream-border rounded-3xl p-6 sm:p-8 shadow-card flex flex-col justify-between space-y-6"
             >
               <div className="space-y-5 font-sans">
                 <div className="space-y-1.5">
                   <div className="text-[11px] font-mono font-bold text-electric uppercase tracking-wider">
-                    CONSULTATION DETAILS
+                    SESSION SPECIFICATIONS
                   </div>
                   <h3 className="font-serif font-normal text-2xl text-ink">
                     Preliminary IP Advisory
                   </h3>
                   <p className="text-xs text-slate-muted leading-relaxed pt-1">
-                    30-minute introductory consultation to analyze your intellectual property inquiries and outline statutory procedures.
+                    Structured 30-minute consultation addressing initial brand protection, copyright registration, patent basics, and statutory procedures under Indian law.
                   </p>
                 </div>
 
-                <div className="space-y-3 pt-3 border-t border-cream-border text-xs text-slate-700">
+                <div className="space-y-3.5 pt-4 border-t border-cream-border text-xs text-slate-700">
                   <div className="flex items-start space-x-3">
                     <Clock className="w-4 h-4 text-electric shrink-0 mt-0.5" />
                     <div>
@@ -208,8 +217,8 @@ export default function ClinicClient() {
                   <div className="flex items-start space-x-3">
                     <Video className="w-4 h-4 text-electric shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-ink block font-semibold">Meeting Mode:</strong>
-                      <span>Virtual via Google Meet or In-person at GLC Campus</span>
+                      <strong className="text-ink block font-semibold">Mode:</strong>
+                      <span>Virtual via Google Meet or In-person at GLC Mumbai</span>
                     </div>
                   </div>
 
@@ -217,63 +226,105 @@ export default function ClinicClient() {
                     <Users className="w-4 h-4 text-electric shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-ink block font-semibold">Eligible Beneficiaries:</strong>
-                      <span>Student innovators, independent creators, artists, grassroots founders</span>
+                      <span>Student creators, campus startups, independent artists, and grassroots inventors</span>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3">
                     <ShieldCheck className="w-4 h-4 text-electric shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-ink block font-semibold">Supervision:</strong>
-                      <span>Conducted under Faculty In-Charge oversight</span>
+                      <strong className="text-ink block font-semibold">Institutional Governance:</strong>
+                      <span>Conducted by Student Clinic Researchers under Faculty In-Charge oversight</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4 bg-surface-offwhite border border-cream-border rounded-2xl">
+                <div className="text-[11px] font-mono uppercase tracking-wider font-semibold text-slate-500 mb-1">
+                  Pro Bono Service
+                </div>
+                <p className="text-xs text-slate-600 font-sans">
+                  All clinical sessions are offered entirely free of cost as part of GLC Mumbai&apos;s academic public interest mandate.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            {/* Card 2: What to Prepare & Instant Booking CTA */}
+            <ScrollReveal
+              delay={0.2}
+              yOffset={20}
+              className="lg:col-span-6 bg-white border border-cream-border rounded-3xl p-6 sm:p-8 shadow-card flex flex-col justify-between space-y-6"
+            >
+              <div className="space-y-5 font-sans">
+                <div className="space-y-1.5">
+                  <div className="text-[11px] font-mono font-bold text-electric uppercase tracking-wider">
+                    PREPARATION &amp; BOOKING
+                  </div>
+                  <h3 className="font-serif font-normal text-2xl text-ink">
+                    How It Works
+                  </h3>
+                  <p className="text-xs text-slate-muted leading-relaxed pt-1">
+                    Select a time slot that suits you. You will receive an instant calendar invitation with meeting details.
+                  </p>
+                </div>
+
+                <div className="space-y-3 pt-3 border-t border-cream-border">
+                  <div className="flex items-start space-x-3 text-xs">
+                    <span className="w-5 h-5 rounded-full bg-navy-950 text-white flex items-center justify-center font-mono text-[10px] font-bold shrink-0 mt-0.5">
+                      1
+                    </span>
+                    <div>
+                      <strong className="text-ink font-semibold">Pick an available time slot:</strong>
+                      <p className="text-slate-500 text-[11px]">Select your preferred date from our live calendar roster.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 text-xs">
+                    <span className="w-5 h-5 rounded-full bg-navy-950 text-white flex items-center justify-center font-mono text-[10px] font-bold shrink-0 mt-0.5">
+                      2
+                    </span>
+                    <div>
+                      <strong className="text-ink font-semibold">Briefly describe your query:</strong>
+                      <p className="text-slate-500 text-[11px]">Include your trademark, copyright, or invention inquiry.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 text-xs">
+                    <span className="w-5 h-5 rounded-full bg-navy-950 text-white flex items-center justify-center font-mono text-[10px] font-bold shrink-0 mt-0.5">
+                      3
+                    </span>
+                    <div>
+                      <strong className="text-ink font-semibold">Receive session link &amp; confirmation:</strong>
+                      <p className="text-slate-500 text-[11px]">Get an automated calendar invitation with Google Meet link.</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-4 bg-surface-offwhite border border-cream-border rounded-2xl space-y-2">
+                <div className="p-4 bg-surface-offwhite border border-cream-border rounded-2xl space-y-1.5">
                   <div className="flex items-center space-x-2 text-xs font-mono font-bold text-ink uppercase">
                     <Info className="w-3.5 h-3.5 text-electric" />
-                    <span>What to Prepare</span>
+                    <span>Helpful Items to Have Ready</span>
                   </div>
-                  <ul className="text-[11px] text-slate-600 space-y-1.5 list-disc list-inside">
-                    <li>Brief description of your brand, design, or invention</li>
-                    <li>Specific trademark or copyright questions</li>
-                    <li>Current filing status (if any)</li>
+                  <ul className="text-[11px] text-slate-600 space-y-1 list-disc list-inside">
+                    <li>Sample logo, brand name, design draft, or technical summary</li>
+                    <li>Specific IP questions or filing challenges</li>
+                    <li>Any existing registration numbers or prior correspondence</li>
                   </ul>
                 </div>
               </div>
 
               <div className="pt-4 border-t border-cream-border space-y-2">
-                <a
-                  href={calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center space-x-2 bg-electric hover:bg-electric-dark text-white font-mono uppercase font-bold tracking-wider text-xs py-3.5 rounded-xl shadow-institutional transition-all hover:-translate-y-0.5"
+                <button
+                  onClick={handleOpenBooking}
+                  className="w-full inline-flex items-center justify-center space-x-2 bg-electric hover:bg-electric-dark text-white font-mono uppercase font-bold tracking-wider text-xs sm:text-sm py-4 rounded-xl shadow-institutional transition-all hover:-translate-y-0.5 cursor-pointer"
                 >
-                  <span>Open in Calendly Directly</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
+                  <CalendarCheck className="w-4 h-4" />
+                  <span>Book a Session</span>
+                </button>
                 <p className="text-[10px] text-slate-400 font-mono text-center">
-                  SSL encrypted &bull; Instant calendar confirmation
+                  Live calendar &bull; Instant confirmation &bull; Pro bono guidance
                 </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Right Column: Embedded Calendly Widget Frame */}
-            <ScrollReveal
-              delay={0.2}
-              yOffset={20}
-              className="lg:col-span-8 bg-white border border-cream-border rounded-3xl p-2 sm:p-4 shadow-card overflow-hidden min-h-[680px] flex flex-col justify-center"
-            >
-              <div className="w-full h-full min-h-[660px] rounded-2xl overflow-hidden relative bg-surface-offwhite">
-                <iframe
-                  src={`${calendlyUrl}?embed_domain=localhost&embed_type=Inline&hide_landing_page_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=07162c&primary_color=2a54a7`}
-                  width="100%"
-                  height="660"
-                  frameBorder="0"
-                  title="IPR Clinic Calendly Scheduler"
-                  className="w-full h-[660px] rounded-2xl border-0"
-                />
               </div>
             </ScrollReveal>
           </div>
@@ -290,3 +341,4 @@ export default function ClinicClient() {
     </div>
   );
 }
+
