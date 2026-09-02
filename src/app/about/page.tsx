@@ -216,74 +216,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Section 4B: Founder's Perspective (Circular Portrait) ── */}
-      <section className="py-16 lg:py-24 bg-cream-100 border-b border-cream-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal delay={0.1} className="max-w-3xl mb-10 space-y-2">
-            <div className="eyebrow-tag">
-              CELL ORIGIN &amp; VISION
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-serif text-ink font-normal">
-              Founding Perspective
-            </h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.15} yOffset={20} className="bg-white border border-cream-border rounded-3xl p-6 sm:p-10 lg:p-12 shadow-card">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              {/* Left Column: Circular Portrait */}
-              <div className="lg:col-span-4 flex flex-col items-center text-center space-y-4">
-                <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden shrink-0 border-4 border-[#B89B5E]/40 shadow-elevated bg-navy-950 p-1">
-                  <div className="relative w-full h-full rounded-full overflow-hidden">
-                    <Image
-                      src={siteData.messages.founder.image}
-                      alt={siteData.messages.founder.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-serif font-normal text-ink">
-                    {siteData.messages.founder.name}
-                  </h3>
-                  <p className="text-xs text-electric font-medium font-sans">
-                    {siteData.messages.founder.designation}
-                  </p>
-                  <p className="text-[11px] text-slate-muted font-mono mt-0.5">
-                    Inaugurated AY 2023–24
-                  </p>
-                </div>
-              </div>
-
-              {/* Right Column: Founder Narrative */}
-              <div className="lg:col-span-8 space-y-6">
-                <div className="space-y-1">
-                  <div className="text-[11px] font-mono uppercase tracking-wider text-electric font-bold">
-                    WHY THE CELL WAS ESTABLISHED
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-serif font-normal text-ink">
-                    Bridging Classroom Theory with Industry IP Practice
-                  </h3>
-                </div>
-
-                <div className="relative">
-                  <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic font-serif pl-5 border-l-2 border-electric space-y-3">
-                    <p>
-                      &ldquo;{siteData.messages.founder.quote}&rdquo;
-                    </p>
-                  </blockquote>
-                </div>
-
-                <div className="pt-4 border-t border-cream-border flex items-center justify-between text-xs text-slate-muted font-mono">
-                  <span>Founding Executive Address (2023)</span>
-                  <span className="text-electric uppercase tracking-wider font-semibold">Founding Vision</span>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* ── Section 5: Faculty In-Charge & Core Committee ── */}
       <section id="committee" className="py-16 lg:py-24 bg-white border-b border-cream-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -321,6 +253,28 @@ export default function AboutPage() {
                   tier="faculty"
                   qualification={prof.qualification}
                   subject={prof.subject}
+                  compactOnMobile
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Founders */}
+          <div className="space-y-4 pt-4">
+            <h3 className="text-xl font-serif font-normal text-ink">
+              Founders
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+              {((teamData as { founders?: Array<{ name: string; position: string; department?: string; academicYear?: string; bio?: string; image: string }> }).founders || []).map((founder) => (
+                <MemberCard
+                  key={founder.name}
+                  name={founder.name}
+                  position={founder.position}
+                  department={founder.department}
+                  academicYear={founder.academicYear}
+                  bio={founder.bio}
+                  image={founder.image}
+                  tier="founder"
                   compactOnMobile
                 />
               ))}

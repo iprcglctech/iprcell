@@ -21,7 +21,7 @@ interface UnifiedMember {
   keyInitiatives?: string;
   image: string;
   category: string;
-  tier: "faculty" | "senior" | "junior";
+  tier: "faculty" | "founder" | "senior" | "junior";
   linkedin?: string;
   qualification?: string;
   subject?: string;
@@ -48,6 +48,21 @@ export default function TeamClient() {
       tier: "faculty" as const,
       qualification: p.qualification,
       subject: p.subject,
+    }));
+
+    const founders: UnifiedMember[] = ((teamData as { founders?: Array<{ name: string; position: string; department?: string; specialization?: string; academicYear?: string; email?: string; keyInitiatives?: string; image: string; bio?: string; linkedin?: string }> }).founders || []).map((f) => ({
+      name: f.name,
+      position: f.position,
+      department: f.department || "Founding Committee (2023)",
+      bio: f.bio,
+      specialization: f.specialization,
+      academicYear: f.academicYear,
+      email: f.email,
+      keyInitiatives: f.keyInitiatives,
+      image: f.image,
+      category: "founders",
+      tier: "founder" as const,
+      linkedin: f.linkedin,
     }));
 
     const senior: UnifiedMember[] = teamData.seniorCore.map((s) => ({
@@ -91,13 +106,14 @@ export default function TeamClient() {
       };
     });
 
-    return [...faculty, ...senior, ...junior];
+    return [...faculty, ...founders, ...senior, ...junior];
   }, []);
 
   // Filter categories definition
   const categories = [
     { id: "all", label: "All Members", count: allMembers.length },
     { id: "faculty", label: "Professors In-Charge", count: teamData.professorsInCharge.length },
+    { id: "founders", label: "Founders", count: ((teamData as { founders?: unknown[] }).founders || []).length },
     { id: "senior", label: "Senior Core", count: teamData.seniorCore.length },
     { id: "research", label: "Research & Journal", count: allMembers.filter((m) => m.category === "research").length },
     { id: "creatives", label: "Creatives & Editorial", count: allMembers.filter((m) => m.category === "creatives").length },
@@ -112,7 +128,7 @@ export default function TeamClient() {
     return allMembers.filter((member) => {
       const matchesCategory =
         selectedCategory === "all" ||
-        (selectedCategory === "junior" ? member.tier === "junior" : member.category === selectedCategory);
+        (selectedCategory === "founders" ? member.tier === "founder" : selectedCategory === "junior" ? member.tier === "junior" : member.category === selectedCategory);
 
       const matchesSearch =
         searchQuery === "" ||
@@ -147,8 +163,8 @@ export default function TeamClient() {
             {/* Quiet Institutional Metrics */}
             <div className="flex items-center space-x-4 shrink-0">
               <div className="p-4 rounded-xl bg-white border border-[#E7E0D2] shadow-subtle text-center min-w-[105px]">
-                <div className="text-2xl font-serif text-navy-950 font-normal">17</div>
-                <div className="text-[10px] font-mono uppercase tracking-widest text-slate-500 mt-1">Core Board</div>
+                <div className="text-2xl font-serif text-navy-950 font-normal">{allMembers.length}</div>
+                <div className="text-[10px] font-mono uppercase tracking-widest text-slate-500 mt-1">Full Roster</div>
               </div>
               <div className="p-4 rounded-xl bg-white border border-[#E7E0D2] shadow-subtle text-center min-w-[105px]">
                 <div className="text-2xl font-serif text-[#B89B5E] font-normal">6</div>

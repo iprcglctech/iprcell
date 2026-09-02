@@ -173,9 +173,6 @@ export default function ContactClient() {
                       <div className="text-xs font-medium text-electric mt-0.5">
                         {officer.role}
                       </div>
-                      <p className="text-[11px] text-slate-muted font-mono mt-1">
-                        GLC Mumbai
-                      </p>
                     </div>
 
                     <div className="pt-3 border-t border-cream-border">

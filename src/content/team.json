@@ -27,6 +27,32 @@
       "bio": "Dr. Rahul Dinkarrao Dhoble is an Assistant Professor of Law at Government Law College, Mumbai. Holding B.A., LL.M., NET, and Ph.D (Law) qualifications, he provides overarching academic stewardship, curriculum integration, and institutional governance to the IPR Cell."
     }
   ],
+  "founders": [
+    {
+      "name": "Gaurav Lokchandani",
+      "position": "Student Founder",
+      "department": "Founding Committee (2023)",
+      "specialization": "IP Strategy, Trademark Litigation & Founding Vision",
+      "image": "/images/gaurav-lokhandani.jpg",
+      "bio": "Gaurav founded the Intellectual Property Rights Cell at Government Law College, Mumbai in 2023 to bridge academic legal education with real-world IP practice, establishing the Cell's flagship symposiums and journal."
+    },
+    {
+      "name": "Atharva Mahesh Avhad",
+      "position": "Co-Founder",
+      "department": "Founding Committee (2023)",
+      "specialization": "Founding Operations, Institutional Affairs & IP Development",
+      "image": "/images/atharva-mahesh-avhad.png",
+      "bio": "Atharva co-founded the Intellectual Property Rights Cell in 2023, steering foundational institutional operations, competition frameworks, and academic initiatives at GLC Mumbai."
+    },
+    {
+      "name": "Siddhant Ashok Kinkar",
+      "position": "Co-Founder",
+      "department": "Founding Committee (2023)",
+      "specialization": "Founding Strategy, Research Governance & Cell Administration",
+      "image": "/images/siddhant-ashok-kinkar.jpg",
+      "bio": "Siddhant co-founded the Intellectual Property Rights Cell in 2023, playing a pivotal role in formulating the cell's charter, research guidelines, and initial national outreach."
+    }
+  ],
   "seniorCore": [
     {
       "name": "Awanti Bhandarwar",
@@ -164,15 +190,15 @@
     },
     {
       "name": "Sahil Angre",
-      "position": "HOD Logistics",
-      "department": "Logistics & Operations Wing",
-      "specialization": "Auditorium Stage Operations, Security Protocol & Technical Infrastructure",
+      "position": "HOD Finance",
+      "department": "Finance & Sponsorship Wing",
+      "specialization": "Financial Planning, Corporate Sponsorship Procurement & Budget Execution",
       "academicYear": "V-II (Batch of 2030)",
       "email": "sahil.angre@glcmumbai.com",
       "linkedin": "https://www.linkedin.com/in/sahil-angre-1a1908386",
-      "keyInitiatives": "Venue management, audiovisual stage setups, live streaming infrastructure",
+      "keyInitiatives": "Corporate sponsorships, budget allocations, vendor fiscal management",
       "image": "/images/sahil-angre.jpg",
-      "bio": "Sahil oversees venue setup, hardware technology setups, on-ground crowd management, and seamless offline execution for major national events."
+      "bio": "Sahil manages financial planning, sponsor pitch packages, fund allocations, and fiscal compliance for cell events and initiatives."
     },
     {
       "name": "Sumit Parbat",
@@ -188,14 +214,14 @@
     },
     {
       "name": "Riddhim Shrivastava",
-      "position": "Executive Member",
-      "department": "Executive Working Committee",
-      "specialization": "Student Welfare, Induction Coordination & Task Delegation",
+      "position": "HOD Logistics",
+      "department": "Logistics & Operations Wing",
+      "specialization": "Auditorium Stage Operations, Venue Logistics & Technical Infrastructure",
       "academicYear": "V-II (Batch of 2030)",
       "email": "riddhim.s@glcmumbai.com",
-      "keyInitiatives": "Volunteer cohort management, inter-wing task scheduling, internal notices",
+      "keyInitiatives": "Venue management, event logistics, stage coordination and on-ground execution",
       "image": "/images/riddhim-shrivastava.jpg",
-      "bio": "Riddhim assists the executive board in volunteer mobilization, membership tracking, on-ground support, and internal cell administrative workflows."
+      "bio": "Riddhim oversees event logistics, venue coordination, operational planning, and on-ground execution for major conferences and competitions."
     }
   ]
 }

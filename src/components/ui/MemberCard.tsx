@@ -15,7 +15,7 @@ export interface MemberProps {
   email?: string;
   keyInitiatives?: string;
   image: string;
-  tier: "faculty" | "senior" | "junior";
+  tier: "faculty" | "founder" | "senior" | "junior";
   compactOnMobile?: boolean;
   linkedin?: string;
   qualification?: string;
