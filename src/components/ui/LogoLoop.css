@@ -1,0 +1,49 @@
+@keyframes logoloop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes logoloop-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.logoloop-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: logoloop var(--logoloop-speed, 35s) linear infinite;
+}
+
+.logoloop-track.reverse {
+  animation-name: logoloop-reverse;
+}
+
+.logoloop-container:hover .logoloop-track.pause-on-hover {
+  animation-play-state: paused;
+}
+
+.logoloop-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}

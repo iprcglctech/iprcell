@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import eventsData from "@/content/events.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import LogoLoop from "@/components/ui/LogoLoop";
 
 export const metadata: Metadata = {
   title: "Academic Flagships & Initiatives",
@@ -285,6 +286,33 @@ export default function EventsOverviewPage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── Section 4: Thank You to Our Sponsors & Partners ── */}
+      <section className="py-16 lg:py-24 bg-white border-t border-cream-border overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <ScrollReveal delay={0.1} className="text-center max-w-3xl mx-auto space-y-2.5">
+            <div className="eyebrow-tag inline-block">
+              INSTITUTIONAL SUPPORTERS &amp; PARTNERS
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-ink font-normal tracking-tight">
+              Thank You to Our Sponsors &amp; Knowledge Partners
+            </h2>
+            <p className="text-slate-muted text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto">
+              We extend our sincere gratitude to our global trademark alliances, bar associations, esteemed law firm patrons, and legal research partners whose continuous collaboration powers our flagship competitions, academic courses, and colloquiums.
+            </p>
+          </ScrollReveal>
+
+          {/* LogoLoop Infinite Marquee */}
+          <ScrollReveal delay={0.2} yOffset={16} className="pt-2">
+            <LogoLoop
+              logos={eventsData.sponsors || []}
+              speed={50}
+              pauseOnHover={true}
+              cardClassName="bg-white border-cream-border hover:border-electric/50 shadow-subtle hover:shadow-card"
+            />
           </ScrollReveal>
         </div>
       </section>

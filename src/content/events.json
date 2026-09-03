@@ -218,5 +218,55 @@
         "/images/events/panel-discussion-3.jpg"
       ]
     }
+  ],
+  "sponsors": [
+    {
+      "name": "The International Trademark Association",
+      "src": "/images/sponsors/inta.jpg",
+      "alt": "The International Trademark Association (INTA)",
+      "role": "Global Partner"
+    },
+    {
+      "name": "Bombay Bar Association",
+      "src": "/images/sponsors/bombay-bar-association.png",
+      "alt": "Bombay Bar Association (BBA)",
+      "role": "Institutional Partner"
+    },
+    {
+      "name": "Manupatra",
+      "src": "/images/sponsors/manupatra.png",
+      "alt": "Knowledge Partner Manupatra",
+      "role": "Knowledge Partner"
+    },
+    {
+      "name": "Crawford Bayley & Co.",
+      "src": "/images/sponsors/crawford-bayley.png",
+      "alt": "Crawford Bayley & Co.",
+      "role": "Legal Partner"
+    },
+    {
+      "name": "Jehangir Gulabbhai & Bilimoria & Daruwalla",
+      "src": "/images/sponsors/jgbd-advocates.png",
+      "alt": "Jehangir Gulabbhai & Bilimoria & Daruwalla (JGBD)",
+      "role": "Law Firm Partner"
+    },
+    {
+      "name": "RNA Technology and IP Attorneys",
+      "src": "/images/sponsors/rna-technology-ip-attorneys.png",
+      "alt": "RNA Technology and IP Attorneys",
+      "role": "IP Partner"
+    },
+    {
+      "name": "Casemine",
+      "src": "/images/sponsors/casemine.png",
+      "alt": "Casemine Legal Research",
+      "role": "Research Partner"
+    },
+    {
+      "name": "The International Legal Alliance",
+      "src": "/images/sponsors/international-legal-alliance.jpg",
+      "alt": "The International Legal Alliance (ILA)",
+      "role": "Alliance Partner"
+    }
   ]
 }
