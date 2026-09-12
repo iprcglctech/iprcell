@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Executive Certificate Course Series in IP Law | GLC Mumbai",
     description:
       "Practitioner-led certificate courses instructed by India's leading IP attorneys at Government Law College Mumbai.",
-    url: "https://iprcellglc.in/events/certificate-course",
+    url: "https://iprcellglcmumbai.in/events/certificate-course",
   },
 };
 

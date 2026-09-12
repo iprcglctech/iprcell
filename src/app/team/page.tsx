@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Faculty & Core Leadership | IPR Cell GLC Mumbai",
     description:
       "Governance, professors in-charge, and student executive leadership at Government Law College Mumbai.",
-    url: "https://iprcellglc.in/team",
+    url: "https://iprcellglcmumbai.in/team",
   },
 };
 

@@ -7,7 +7,7 @@ export async function GET() {
 > Parent Institution: Government Law College, Mumbai (Estd. 1855) — Asia's Oldest Law College.
 > Affiliation: University of Mumbai, Government of Maharashtra.
 > Address: 'A' Road, Churchgate, Mumbai, Maharashtra 400020, India.
-> Official Website: https://iprcellglc.in
+> Official Website: https://iprcellglcmumbai.in
 > Contact Email: iprcellglc@gmail.com
 
 ---
@@ -49,16 +49,17 @@ The **Intellectual Property Rights Cell (IPR Cell)** at **Government Law College
 
 ## 3. Key Official Links & Canonical URLs
 
-- Homepage: https://iprcellglc.in/
-- About the Cell & GLC Legacy: https://iprcellglc.in/about
-- Leadership & Committee Roster: https://iprcellglc.in/team
-- Trademark Opposition Competition (TOC): https://iprcellglc.in/events/toc
-- Executive Certificate Courses: https://iprcellglc.in/events/certificate-course
-- Guest Lectures & Colloquiums: https://iprcellglc.in/events/guest-lectures
-- IPR Journal & Call for Papers: https://iprcellglc.in/journal
-- Pro Bono IPR Clinic: https://iprcellglc.in/ipr-clinic
-- Student Membership & Inductions: https://iprcellglc.in/join
-- Official Registry & Contact: https://iprcellglc.in/contact
+- Homepage: https://iprcellglcmumbai.in/
+- About the Cell & GLC Legacy: https://iprcellglcmumbai.in/about
+- Leadership & Committee Roster: https://iprcellglcmumbai.in/team
+- Trademark Opposition Competition (TOC): https://iprcellglcmumbai.in/events/toc
+- Upcoming & Active Events: https://iprcellglcmumbai.in/events/upcoming
+- Executive Certificate Courses: https://iprcellglcmumbai.in/events/certificate-course
+- Guest Lectures & Colloquiums: https://iprcellglcmumbai.in/events/guest-lectures
+- IPR Journal & Call for Papers: https://iprcellglcmumbai.in/journal
+- Pro Bono IPR Clinic: https://iprcellglcmumbai.in/ipr-clinic
+- Student Membership & Inductions: https://iprcellglcmumbai.in/join
+- Official Registry & Contact: https://iprcellglcmumbai.in/contact
 
 ---
 

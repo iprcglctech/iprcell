@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Join the IPR Cell | Government Law College, Mumbai",
     description:
       "Recruitment roadmap and membership hierarchy at Asia's oldest law institution.",
-    url: "https://iprcellglc.in/join",
+    url: "https://iprcellglcmumbai.in/join",
   },
 };
 

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Flagship Events & Programs | IPR Cell GLC Mumbai",
     description:
       "Trademark Opposition Competitions, Practitioner Certificate Courses, and Colloquiums at Government Law College Mumbai.",
-    url: "https://iprcellglc.in/events",
+    url: "https://iprcellglcmumbai.in/events",
   },
 };
 

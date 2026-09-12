@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "IPR Cell | Government Law College, Mumbai",
     description:
       "Asia's oldest law institution (Estd. 1855). Advancing IP education, moot opposition proceedings, and peer-reviewed scholarship.",
-    url: "https://iprcellglc.in",
+    url: "https://iprcellglcmumbai.in",
   },
 };
 
@@ -22,12 +22,12 @@ const jsonLdHome = {
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://iprcellglc.in/#website",
-      "url": "https://iprcellglc.in",
+      "@id": "https://iprcellglcmumbai.in/#website",
+      "url": "https://iprcellglcmumbai.in",
       "name": "Intellectual Property Rights Cell — GLC Mumbai",
       "description": "Official portal of the IPR Cell at Government Law College Mumbai (Estd. 1855).",
       "publisher": {
-        "@id": "https://iprcellglc.in/#organization"
+        "@id": "https://iprcellglcmumbai.in/#organization"
       },
       "inLanguage": "en"
     },
@@ -52,7 +52,7 @@ const jsonLdHome = {
       "organizer": {
         "@type": "EducationalOrganization",
         "name": "Intellectual Property Rights Cell, GLC Mumbai",
-        "url": "https://iprcellglc.in"
+        "url": "https://iprcellglcmumbai.in"
       }
     }
   ]

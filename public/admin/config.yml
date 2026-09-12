@@ -1,8 +1,7 @@
 backend:
   name: github
-  repo: Anicantcode/iprcell
+  repo: iprcglctech/iprcell
   branch: main
-  base_url: https://iprcellglc.in
 
 # Enable local backend proxy when running 'npx decap-server' during local development
 local_backend: true
@@ -10,12 +9,13 @@ local_backend: true
 media_folder: "public/images"
 public_folder: "/images"
 
-display_url: "https://iprcellglc.in"
+display_url: "https://iprcellglcmumbai.in"
 logo_url: "/images/favicon-tab.png"
 
 collections:
   - name: "team"
     label: "Team & Leadership"
+    icon: "groups"
     files:
       - file: "src/content/team.json"
         label: "Team Roster & Faculty"
@@ -67,7 +67,8 @@ collections:
               - { label: "Bio / Scope of Work", name: "bio", widget: "text" }
 
   - name: "events"
-    label: "Events & Competitions"
+    label: "Flagship Events & TOC"
+    icon: "event"
     files:
       - file: "src/content/events.json"
         label: "Events, TOC & Certificate Courses"
@@ -139,8 +140,59 @@ collections:
                 required: false
                 field: { label: "Photo", name: "image", widget: "image" }
 
+  - name: "upcoming_events"
+    label: "Upcoming & Active Events"
+    icon: "campaign"
+    files:
+      - file: "src/content/upcoming-events.json"
+        label: "Events & Announcements Registry"
+        name: "events_list"
+        fields:
+          - label: "Events & Initiatives List"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.title}} [{{fields.status}} — {{fields.category}}]"
+            fields:
+              - { label: "Event Unique ID / Slug", name: "id", widget: "string", required: true }
+              - { label: "Event Title", name: "title", widget: "string", required: true }
+              - label: "Category / Type"
+                name: "category"
+                widget: "select"
+                options: ["Workshop", "Seminar", "Competition", "Guest Lecture", "Webinar", "Colloquium", "Conference", "Panel Discussion", "Special Initiative"]
+                default: "Workshop"
+                required: false
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                options: ["Upcoming", "Registration Open", "In Progress", "Completed"]
+                default: "Upcoming"
+                required: false
+              - { label: "Event Date (e.g. 28th October / Special Session)", name: "date", widget: "string", required: false }
+              - { label: "Event Time (e.g. 3:00 PM – 5:30 PM IST)", name: "time", widget: "string", required: false }
+              - { label: "Venue / Mode (e.g. GLC Auditorium / Online Zoom)", name: "venue", widget: "string", required: false }
+              - { label: "Event Poster / Banner Image", name: "image", widget: "image", required: false }
+              - { label: "Registration Link (Google Form / Unstop / Portal URL)", name: "registrationUrl", widget: "string", required: false }
+              - { label: "Brochure PDF / Document URL", name: "brochureUrl", widget: "string", required: false }
+              - { label: "Event Overview & Description", name: "description", widget: "text", required: false }
+              - label: "Distinguished Speakers & Guests"
+                name: "speakers"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Speaker Name", name: "name", widget: "string", required: false }
+                  - { label: "Designation / Affiliation", name: "designation", widget: "string", required: false }
+                  - { label: "Speaker Photo", name: "image", widget: "image", required: false }
+              - label: "Student Coordinators & Inquiries"
+                name: "coordinators"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Coordinator Name", name: "name", widget: "string", required: false }
+                  - { label: "Contact Phone or Email", name: "contact", widget: "string", required: false }
+
   - name: "journal"
     label: "IPR Journal & CFP"
+    icon: "menu_book"
     files:
       - file: "src/content/journal.json"
         label: "Journal Publications & Call for Papers"
@@ -172,7 +224,8 @@ collections:
                   - { label: "Category Scope", name: "description", widget: "string" }
 
   - name: "site_settings"
-    label: "Site Settings & Leadership Messages"
+    label: "Site Settings & Quotes"
+    icon: "tune"
     files:
       - file: "src/content/site.json"
         label: "Contact, Principal & Founder Quotes"
@@ -214,5 +267,5 @@ collections:
                 name: "socials"
                 widget: "object"
                 fields:
-                  - { label: "LinkedIn Page URL", name: "linkedin", widget: "string" }
-                  - { label: "Instagram Handle URL", name: "instagram", widget: "string" }
+                  - { label: "LinkedIn Page URL", name: "linkedin", widget: "string", required: false }
+                  - { label: "Instagram Handle URL", name: "instagram", widget: "string", required: false }

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Contact & Institutional Registry | IPR Cell GLC Mumbai",
     description:
       "Connect with the student secretariat, faculty, and convenors at Government Law College Mumbai.",
-    url: "https://iprcellglc.in/contact",
+    url: "https://iprcellglcmumbai.in/contact",
   },
 };
 

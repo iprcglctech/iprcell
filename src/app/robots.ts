@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://iprcellglc.in";
+  const baseUrl = "https://iprcellglcmumbai.in";
 
   const aiUserAgents = [
     "GPTBot",

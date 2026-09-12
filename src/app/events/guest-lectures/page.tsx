@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Guest Lectures & Colloquiums | IPR Cell GLC Mumbai",
     description:
       "Public discourses and panel debates on intellectual property with industry leaders at Government Law College Mumbai.",
-    url: "https://iprcellglc.in/events/guest-lectures",
+    url: "https://iprcellglcmumbai.in/events/guest-lectures",
   },
 };
 

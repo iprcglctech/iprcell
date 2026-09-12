@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Pro Bono IPR Clinic | Government Law College Mumbai",
     description:
       "Free preliminary IP advisory and protection guidance for artists, startups, and innovators.",
-    url: "https://iprcellglc.in/ipr-clinic",
+    url: "https://iprcellglcmumbai.in/ipr-clinic",
   },
 };
 

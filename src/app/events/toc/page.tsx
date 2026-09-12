@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Trademark Opposition Competition (TOC) | GLC Mumbai",
     description:
       "Simulating statutory opposition proceedings under Section 21 of the Trade Marks Act, 1999 at Government Law College Mumbai.",
-    url: "https://iprcellglc.in/events/toc",
+    url: "https://iprcellglcmumbai.in/events/toc",
   },
 };
 
@@ -29,7 +29,7 @@ const jsonLdToc = {
       "name": "Trademark Opposition Competition (TOC) — Government Law College, Mumbai",
       "alternateName": ["TOC GLC Mumbai", "Inter-TOC", "Intra-TOC"],
       "description": "India's premier procedural trademark opposition simulation under Section 21 of the Trade Marks Act, 1999 and Rules 42 to 50 of the Trade Marks Rules, 2017.",
-      "url": "https://iprcellglc.in/events/toc",
+      "url": "https://iprcellglcmumbai.in/events/toc",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "location": {
@@ -47,7 +47,7 @@ const jsonLdToc = {
       "organizer": {
         "@type": "EducationalOrganization",
         "name": "Intellectual Property Rights Cell, GLC Mumbai",
-        "url": "https://iprcellglc.in"
+        "url": "https://iprcellglcmumbai.in"
       }
     },
     {

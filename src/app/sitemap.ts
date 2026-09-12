@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://iprcellglc.in";
+  const baseUrl = "https://iprcellglcmumbai.in";
   const lastModified = new Date();
 
   return [
@@ -25,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/events`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/events/upcoming`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.95,

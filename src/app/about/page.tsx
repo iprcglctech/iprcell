@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "About the IPR Cell | Government Law College, Mumbai",
     description:
       "The 170-year legacy of GLC Mumbai and the founding mandate of its Intellectual Property Rights Cell.",
-    url: "https://iprcellglc.in/about",
+    url: "https://iprcellglcmumbai.in/about",
   },
 };
 

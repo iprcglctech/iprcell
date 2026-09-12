@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "IPR Journal | Government Law College, Mumbai",
     description:
       "Peer-reviewed scholarship, call for papers, and open-access research repository in Intellectual Property Law.",
-    url: "https://iprcellglc.in/journal",
+    url: "https://iprcellglcmumbai.in/journal",
   },
 };
 
@@ -27,7 +27,7 @@ const jsonLdJournal = {
       "publisher": {
         "@type": "EducationalOrganization",
         "name": "Intellectual Property Rights Cell, Government Law College, Mumbai",
-        "url": "https://iprcellglc.in"
+        "url": "https://iprcellglcmumbai.in"
       },
       "inLanguage": "en",
       "hasPart": [

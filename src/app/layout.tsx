@@ -26,7 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iprcellglc.in"),
+  metadataBase: new URL("https://iprcellglcmumbai.in"),
   title: {
     default: "IPR Cell | Government Law College, Mumbai",
     template: "%s | IPR Cell, GLC Mumbai",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "IPR Cell | Government Law College, Mumbai",
     description:
       "Official portal of the Intellectual Property Rights Cell, Government Law College Mumbai (Estd. 1855). Pioneering legal scholarship, moot opposition proceedings, and certificate programs.",
-    url: "https://iprcellglc.in",
+    url: "https://iprcellglcmumbai.in",
     siteName: "IPR Cell — GLC Mumbai",
     images: [
       {
@@ -111,12 +111,12 @@ export const viewport: Viewport = {
 const jsonLdOrg = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  "@id": "https://iprcellglc.in/#organization",
+  "@id": "https://iprcellglcmumbai.in/#organization",
   "name": "Intellectual Property Rights Cell, Government Law College, Mumbai",
   "alternateName": ["IPR Cell GLC Mumbai", "GLC Mumbai IPR Cell", "IPR Cell"],
-  "url": "https://iprcellglc.in",
-  "logo": "https://iprcellglc.in/images/glc-crest.png",
-  "image": "https://iprcellglc.in/images/glc-campus-main.png",
+  "url": "https://iprcellglcmumbai.in",
+  "logo": "https://iprcellglcmumbai.in/images/glc-crest.png",
+  "image": "https://iprcellglcmumbai.in/images/glc-campus-main.png",
   "description": "The Intellectual Property Rights Cell of Government Law College Mumbai (Estd. 1855) is dedicated to advancing IP education, advocacy simulations, peer-reviewed scholarship, and pro bono community advisory.",
   "foundingDate": "2023",
   "knowsAbout": [
@@ -172,6 +172,10 @@ export default function RootLayout({
       className={`scroll-smooth ${playfair.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />

@@ -57,6 +57,7 @@ export default function Navbar() {
       href: "/events",
       subItems: [
         { name: "Events Overview", href: "/events", desc: "All academic flagships & initiatives" },
+        { name: "Upcoming & Active Events", href: "/events/upcoming", desc: "Workshops, symposiums & active registrations" },
         { name: "Certificate Course", href: "/events/certificate-course", desc: "Practitioner-led weekend certificate program" },
         { name: "Trademark Opposition (TOC)", href: "/events/toc", desc: "National Opposition Simulation" },
         { name: "Guest Lectures & Webinars", href: "/events/guest-lectures", desc: "AI vs Artist, Media Law & INTA series" },
