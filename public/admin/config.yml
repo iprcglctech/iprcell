@@ -2,6 +2,8 @@ backend:
   name: github
   repo: iprcglctech/iprcell
   branch: main
+  base_url: https://www.iprcellglcmumbai.in
+  auth_endpoint: api/auth
 
 # Enable local backend proxy when running 'npx decap-server' during local development
 local_backend: true
