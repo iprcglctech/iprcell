@@ -1,3 +1,35 @@
 {
-  "events": []
+  "events": [
+    {
+      "id": "1",
+      "title": "Orientation & Interviews",
+      "category": "",
+      "status": "Registration Open",
+      "date": "1 October, 2026",
+      "time": "10:00 AM",
+      "venue": "GLC Auditorium",
+      "image": "/images/1 (1).png",
+      "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdR_AHz4Rp4t6tPSVlK74WGIh3EHZRP8xGp62ilLlOAiYkqGQ/viewform?usp=dialog",
+      "brochureUrl": "",
+      "description": "",
+      "speakers": [
+        {
+          "name": "",
+          "designation": "",
+          "image": ""
+        },
+        {
+          "name": "",
+          "designation": "",
+          "image": ""
+        }
+      ],
+      "coordinators": [
+        {
+          "name": "",
+          "contact": ""
+        }
+      ]
+    }
+  ]
 }
