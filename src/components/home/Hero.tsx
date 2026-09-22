@@ -23,13 +23,20 @@ export default function Hero() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
               <Link
                 href="/events"
-                className="inline-flex items-center justify-center space-x-2.5 bg-electric hover:bg-electric-dark text-white text-xs sm:text-sm uppercase tracking-wider font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded shadow-institutional transition-all hover:translate-y-[-1px] w-full sm:w-auto text-center"
+                className="inline-flex items-center justify-center space-x-2.5 bg-electric hover:bg-electric-dark active:bg-electric-dark text-white text-xs sm:text-sm uppercase tracking-wider font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded shadow-institutional transition-all hover:translate-y-[-1px] active:translate-y-0 w-full sm:w-auto text-center"
               >
                 <span>Explore Our Initiatives</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 shrink-0" />
+              </Link>
+              <Link
+                href="/events/upcoming"
+                className="inline-flex items-center justify-center space-x-2.5 bg-electric hover:bg-electric-dark active:bg-electric-dark text-white text-xs sm:text-sm uppercase tracking-wider font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded shadow-institutional transition-all hover:translate-y-[-1px] active:translate-y-0 w-full sm:w-auto text-center"
+              >
+                <span>Upcoming Initiatives</span>
+                <ArrowRight className="w-4 h-4 shrink-0" />
               </Link>
             </div>
           </div>

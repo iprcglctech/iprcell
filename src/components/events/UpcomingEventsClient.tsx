@@ -309,153 +309,9 @@ export default function UpcomingEventsClient({ initialEvents = [] }: UpcomingEve
               ) : (
                 /* Events Grid */
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {filteredEvents.map((event, idx) => {
-                    const hasMeta = Boolean(event.date || event.time || event.venue);
-                    const hasSpeakers = Boolean(event.speakers && event.speakers.length > 0);
-                    const hasCoordinators = Boolean(event.coordinators && event.coordinators.length > 0);
-                    const hasActions = Boolean(event.registrationUrl || event.brochureUrl);
-
-                    return (
-                      <ScrollReveal
-                        key={event.id || idx}
-                        delay={0.05 + idx * 0.05}
-                        yOffset={20}
-                        className="bg-white border border-cream-border rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-electric transition-all shadow-card group"
-                      >
-                        <div className="space-y-6">
-                          {/* Event Banner Image (Optional) */}
-                          {event.image ? (
-                            <div className="relative h-48 sm:h-56 w-full rounded-xl overflow-hidden border border-cream-border/60 bg-navy-950/5">
-                              <Image
-                                src={event.image}
-                                alt={event.title || "Event Image"}
-                                fill
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
-                                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                              />
-                            </div>
-                          ) : null}
-
-                          {/* Top Badges (Category & Status) */}
-                          <div className="flex flex-wrap items-center justify-between gap-2">
-                            {event.category ? (
-                              <span className="text-[11px] font-mono font-bold text-electric uppercase tracking-wider">
-                                {event.category}
-                              </span>
-                            ) : (
-                              <span className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">
-                                Initiative
-                              </span>
-                            )}
-                            {getStatusBadge(event.status)}
-                          </div>
-
-                          {/* Event Title */}
-                          <h3 className="text-xl sm:text-2xl font-serif font-normal text-ink group-hover:text-navy-950 transition-colors leading-snug break-words">
-                            {event.title}
-                          </h3>
-
-                          {/* Meta Details: Date, Time, Venue (Only if at least one exists) */}
-                          {hasMeta && (
-                            <div className="space-y-2 bg-surface-offwhite p-4 rounded-xl border border-cream-border/80 text-xs sm:text-sm text-slate-700 font-sans">
-                              {event.date && (
-                                <div className="flex items-center space-x-2.5">
-                                  <Calendar className="w-4 h-4 text-electric shrink-0" />
-                                  <span className="font-medium text-ink">{event.date}</span>
-                                </div>
-                              )}
-                              {event.time && (
-                                <div className="flex items-center space-x-2.5">
-                                  <Clock className="w-4 h-4 text-slate-400 shrink-0" />
-                                  <span>{event.time}</span>
-                                </div>
-                              )}
-                              {event.venue && (
-                                <div className="flex items-center space-x-2.5">
-                                  <MapPin className="w-4 h-4 text-slate-400 shrink-0" />
-                                  <span>{event.venue}</span>
-                                </div>
-                              )}
-                            </div>
-                          )}
-
-                          {/* Description (Optional) */}
-                          {event.description && (
-                            <p className="text-xs sm:text-sm text-slate-muted leading-relaxed font-sans break-words whitespace-pre-line">
-                              {event.description}
-                            </p>
-                          )}
-
-                          {/* Speakers Section (Optional) */}
-                          {hasSpeakers && (
-                            <div className="space-y-2 pt-2 border-t border-cream-border/60">
-                              <div className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider flex items-center">
-                                <Users className="w-3.5 h-3.5 mr-1 text-electric" /> Featured Speakers &amp; Guests
-                              </div>
-                              <div className="space-y-1.5">
-                                {event.speakers!.map((spk, sIdx) => {
-                                  if (!spk?.name) return null;
-                                  return (
-                                    <div key={sIdx} className="text-xs text-ink font-sans flex items-start space-x-2">
-                                      <span className="text-electric font-bold">•</span>
-                                      <div>
-                                        <span className="font-semibold text-ink">{spk.name}</span>
-                                        {spk.designation && (
-                                          <span className="text-slate-500"> — {spk.designation}</span>
-                                        )}
-                                      </div>
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Card Bottom Actions (Only rendered if actions or coordinators exist) */}
-                        {(hasActions || hasCoordinators) && (
-                          <div className="mt-8 pt-4 border-t border-cream-border flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-                            <div className="flex flex-wrap items-center gap-2.5">
-                              {event.registrationUrl ? (
-                                <a
-                                  href={event.registrationUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center space-x-1.5 bg-electric hover:bg-electric-dark text-white text-xs uppercase font-bold tracking-wider px-4 py-2.5 rounded shadow-institutional transition-all hover:-translate-y-0.5"
-                                >
-                                  <span>Register Now</span>
-                                  <ExternalLink className="w-3 h-3" />
-                                </a>
-                              ) : null}
-
-                              {event.brochureUrl ? (
-                                <a
-                                  href={event.brochureUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center space-x-1.5 bg-surface-offwhite hover:bg-white border border-cream-border text-ink text-xs uppercase font-bold tracking-wider px-3.5 py-2.5 rounded transition-all"
-                                >
-                                  <FileText className="w-3.5 h-3.5 text-slate-500" />
-                                  <span>Brochure</span>
-                                </a>
-                              ) : null}
-                            </div>
-
-                            {/* Coordinators Contact (Optional) */}
-                            {hasCoordinators && (
-                              <div className="text-[11px] text-slate-500 font-sans flex items-center space-x-1.5 shrink-0">
-                                <Mail className="w-3 h-3 text-slate-400" />
-                                <span>
-                                  {event.coordinators![0].name}
-                                  {event.coordinators![0].contact ? ` (${event.coordinators![0].contact})` : ""}
-                                </span>
-                              </div>
-                            )}
-                          </div>
-                        )}
-                      </ScrollReveal>
-                    );
-                  })}
+                  {filteredEvents.map((event, idx) => (
+                    <EventCard key={event.id || idx} event={event} idx={idx} getStatusBadge={getStatusBadge} />
+                  ))}
                 </div>
               )}
             </>
@@ -491,3 +347,178 @@ export default function UpcomingEventsClient({ initialEvents = [] }: UpcomingEve
     </div>
   );
 }
+
+function EventImage({ src, alt }: { src?: string; alt: string }) {
+  const [hasError, setHasError] = useState(false);
+
+  if (!src || !src.trim() || hasError) {
+    return null;
+  }
+
+  return (
+    <div className="relative aspect-video w-full rounded-xl overflow-hidden border border-cream-border/60 bg-surface-offwhite">
+      <Image
+        src={src}
+        alt={alt || "Event Image"}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+        className="object-contain group-hover:scale-[1.02] transition-transform duration-500"
+        onError={() => setHasError(true)}
+      />
+    </div>
+  );
+}
+
+interface EventCardProps {
+  event: EventItem;
+  idx: number;
+  getStatusBadge: (status?: string) => React.ReactNode;
+}
+
+function EventCard({ event, idx, getStatusBadge }: EventCardProps) {
+  const hasMeta = Boolean(event.date?.trim() || event.time?.trim() || event.venue?.trim());
+  
+  // Filter out any speaker objects that have empty names
+  const validSpeakers = useMemo(() => {
+    return (event.speakers || []).filter((s) => Boolean(s && s.name && s.name.trim().length > 0));
+  }, [event.speakers]);
+  const hasSpeakers = validSpeakers.length > 0;
+
+  // Filter out any coordinator objects that have empty names
+  const validCoordinators = useMemo(() => {
+    return (event.coordinators || []).filter((c) => Boolean(c && c.name && c.name.trim().length > 0));
+  }, [event.coordinators]);
+  const hasCoordinators = validCoordinators.length > 0;
+
+  const hasActions = Boolean(event.registrationUrl?.trim() || event.brochureUrl?.trim());
+
+  return (
+    <ScrollReveal
+      delay={0.05 + idx * 0.05}
+      yOffset={20}
+      className="bg-white border border-cream-border rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-electric transition-all shadow-card group"
+    >
+      <div className="space-y-6">
+        {/* Event Banner Image (Optional with graceful error fallback) */}
+        {event.image && (
+          <EventImage src={event.image} alt={event.title} />
+        )}
+
+        {/* Top Badges (Category & Status) */}
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          {event.category?.trim() ? (
+            <span className="text-[11px] font-mono font-bold text-electric uppercase tracking-wider">
+              {event.category.trim()}
+            </span>
+          ) : (
+            <span className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">
+              Initiative
+            </span>
+          )}
+          {getStatusBadge(event.status)}
+        </div>
+
+        {/* Event Title */}
+        <h3 className="text-xl sm:text-2xl font-serif font-normal text-ink group-hover:text-navy-950 transition-colors leading-snug break-words">
+          {event.title}
+        </h3>
+
+        {/* Meta Details: Date, Time, Venue (Only if at least one exists) */}
+        {hasMeta && (
+          <div className="space-y-2 bg-surface-offwhite p-4 rounded-xl border border-cream-border/80 text-xs sm:text-sm text-slate-700 font-sans">
+            {event.date?.trim() && (
+              <div className="flex items-center space-x-2.5">
+                <Calendar className="w-4 h-4 text-electric shrink-0" />
+                <span className="font-medium text-ink">{event.date.trim()}</span>
+              </div>
+            )}
+            {event.time?.trim() && (
+              <div className="flex items-center space-x-2.5">
+                <Clock className="w-4 h-4 text-slate-400 shrink-0" />
+                <span>{event.time.trim()}</span>
+              </div>
+            )}
+            {event.venue?.trim() && (
+              <div className="flex items-center space-x-2.5">
+                <MapPin className="w-4 h-4 text-slate-400 shrink-0" />
+                <span>{event.venue.trim()}</span>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Description (Optional) */}
+        {event.description?.trim() && (
+          <p className="text-xs sm:text-sm text-slate-muted leading-relaxed font-sans break-words whitespace-pre-line">
+            {event.description.trim()}
+          </p>
+        )}
+
+        {/* Speakers Section (Only rendered if there are speakers with names) */}
+        {hasSpeakers && (
+          <div className="space-y-2 pt-2 border-t border-cream-border/60">
+            <div className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider flex items-center">
+              <Users className="w-3.5 h-3.5 mr-1 text-electric" /> Featured Speakers &amp; Guests
+            </div>
+            <div className="space-y-1.5">
+              {validSpeakers.map((spk, sIdx) => (
+                <div key={sIdx} className="text-xs text-ink font-sans flex items-start space-x-2">
+                  <span className="text-electric font-bold">•</span>
+                  <div>
+                    <span className="font-semibold text-ink">{spk.name}</span>
+                    {spk.designation?.trim() && (
+                      <span className="text-slate-500"> — {spk.designation.trim()}</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Card Bottom Actions (Only rendered if actions or coordinators exist) */}
+      {(hasActions || hasCoordinators) && (
+        <div className="mt-8 pt-4 border-t border-cream-border flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center gap-2.5">
+            {event.registrationUrl?.trim() ? (
+              <a
+                href={event.registrationUrl.trim()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-1.5 bg-electric hover:bg-electric-dark text-white text-xs uppercase font-bold tracking-wider px-4 py-2.5 rounded shadow-institutional transition-all hover:-translate-y-0.5"
+              >
+                <span>Register Now</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            ) : null}
+
+            {event.brochureUrl?.trim() ? (
+              <a
+                href={event.brochureUrl.trim()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-1.5 bg-surface-offwhite hover:bg-white border border-cream-border text-ink text-xs uppercase font-bold tracking-wider px-3.5 py-2.5 rounded transition-all"
+              >
+                <FileText className="w-3.5 h-3.5 text-slate-500" />
+                <span>Brochure</span>
+              </a>
+            ) : null}
+          </div>
+
+          {/* Coordinators Contact (Optional) */}
+          {hasCoordinators && (
+            <div className="text-[11px] text-slate-500 font-sans flex items-center space-x-1.5 shrink-0">
+              <Mail className="w-3 h-3 text-slate-400" />
+              <span>
+                {validCoordinators[0].name}
+                {validCoordinators[0].contact?.trim() ? ` (${validCoordinators[0].contact.trim()})` : ""}
+              </span>
+            </div>
+          )}
+        </div>
+      )}
+    </ScrollReveal>
+  );
+}
+
