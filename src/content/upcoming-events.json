@@ -1,46 +1,15 @@
 {
   "events": [
     {
-      "id": "1",
-      "title": "Orientation & Interviews",
-      "category": "",
-      "status": "Registration Open",
-      "date": "1 October, 2026",
-      "time": "10:00 AM",
-      "venue": "GLC Auditorium",
-      "image": "/images/Website-poster.png",
-      "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdR_AHz4Rp4t6tPSVlK74WGIh3EHZRP8xGp62ilLlOAiYkqGQ/viewform?usp=dialog",
-      "brochureUrl": "",
-      "description": "Inviting applications for the position of Junior Members for the year 2026-27. Junior Members will work closely with the Core Team to drive the Cell's key initiatives throughout the year, from organizing events and competitions to contributing to research, content, and outreach activities. \n\nEligibility: Batch of 2029 and 2031\n\nApplication Deadline: 27th September 2026",
-      "speakers": [
-        {
-          "name": "",
-          "designation": "",
-          "image": ""
-        },
-        {
-          "name": "",
-          "designation": "",
-          "image": ""
-        }
-      ],
-      "coordinators": [
-        {
-          "name": "",
-          "contact": ""
-        }
-      ]
-    },
-    {
       "id": "INTRATOC26",
       "title": "Intra-Trademark Opposition Competition",
       "category": "Competition",
-      "status": "Registration Open",
+      "status": "Completed",
       "date": "10th October & 17th October 2026",
       "time": "",
       "venue": "",
       "image": "/images/Banner.PNG",
-      "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLScVbL7O3WwsrYHxOtwL3fgZNH5GTfebsfJvlFOzmwnOvNQtLg/viewform?usp=dialog",
+      "registrationUrl": "",
       "brochureUrl": "",
       "description": "A first-of-its-kind adversarial exercise simulating trademark opposition proceedings before the Trade Marks Registry. Participants will represent the Opponent or Applicant in a hypothetical trademark dispute and argue their case entirely through oral advocacy, without written submissions or memorials. The competition will test participants' understanding of trademark law, procedural knowledge, and advocacy skills.\n\nEligibility: All batches of B.A. LL.B. and LL.B. at GLC, Mumbai.\n\nRegistration Deadline: 30th September 2026",
       "speakers": [],
