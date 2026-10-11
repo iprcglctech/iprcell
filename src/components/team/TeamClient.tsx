@@ -304,40 +304,47 @@ export default function TeamClient() {
         </section>
 
         {/* 4. Founding Inception Monograph (Regal Oxford Navy & Brass) */}
-        <section className="bg-navy-950 text-white rounded-2xl p-6 sm:p-10 border border-navy-900 shadow-elevated relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-          
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
-            <div className="md:col-span-3 flex justify-center">
-              <div className="relative w-40 h-48 sm:w-44 sm:h-52 rounded-xl overflow-hidden border border-white/20 shadow-xl bg-navy-900">
-                <Image
-                  src={siteData.messages.founder.image}
-                  alt={siteData.messages.founder.name}
-                  fill
-                  className="object-cover object-top filter grayscale contrast-[1.05]"
-                />
+        {(() => {
+          const founder = siteData.messages?.founder || (siteData as any).founder;
+          if (!founder) return null;
+
+          return (
+            <section className="bg-navy-950 text-white rounded-2xl p-6 sm:p-10 border border-navy-900 shadow-elevated relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+              
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+                <div className="md:col-span-3 flex justify-center">
+                  <div className="relative w-40 h-48 sm:w-44 sm:h-52 rounded-xl overflow-hidden border border-white/20 shadow-xl bg-navy-900">
+                    <Image
+                      src={founder.image}
+                      alt={founder.name}
+                      fill
+                      className="object-cover object-top filter grayscale contrast-[1.05]"
+                    />
+                  </div>
+                </div>
+
+                <div className="md:col-span-9 space-y-3.5">
+                  <div className="inline-flex items-center space-x-2 text-[10px] font-mono uppercase tracking-[0.2em] text-[#CEB681] bg-white/10 border border-white/15 px-3 py-1 rounded">
+                    <span>Founding Inception (Academic Year 2023–2024)</span>
+                  </div>
+
+                  <h3 className="text-2xl sm:text-3xl font-serif font-normal text-white">
+                    {founder.name}
+                  </h3>
+
+                  <p className="text-xs font-mono text-[#CEB681]">
+                    {founder.designation}
+                  </p>
+
+                  <blockquote className="text-xs sm:text-sm text-slate-300 leading-relaxed italic font-serif pt-1 border-l-2 border-[#B89B5E] pl-4">
+                    &ldquo;{founder.quote}&rdquo;
+                  </blockquote>
+                </div>
               </div>
-            </div>
-
-            <div className="md:col-span-9 space-y-3.5">
-              <div className="inline-flex items-center space-x-2 text-[10px] font-mono uppercase tracking-[0.2em] text-[#CEB681] bg-white/10 border border-white/15 px-3 py-1 rounded">
-                <span>Founding Inception (Academic Year 2023–2024)</span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-serif font-normal text-white">
-                {siteData.messages.founder.name}
-              </h3>
-
-              <p className="text-xs font-mono text-[#CEB681]">
-                {siteData.messages.founder.designation}
-              </p>
-
-              <blockquote className="text-xs sm:text-sm text-slate-300 leading-relaxed italic font-serif pt-1 border-l-2 border-[#B89B5E] pl-4">
-                &ldquo;{siteData.messages.founder.quote}&rdquo;
-              </blockquote>
-            </div>
-          </div>
-        </section>
+            </section>
+          );
+        })()}
 
         {/* 5. Join Inductions Callout */}
         <div className="p-8 sm:p-10 bg-white border border-[#E7E0D2] rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-subtle">

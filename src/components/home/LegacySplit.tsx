@@ -89,63 +89,68 @@ export default function LegacySplit() {
               </div>
 
               {/* Dynamic Tab Content */}
-              {activeTab === "principal" ? (
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-navy-950/20 bg-white">
-                      <Image
-                        src={siteData.messages.principal.image}
-                        alt={siteData.messages.principal.name}
-                        fill
-                        className="object-cover object-top"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="text-base font-serif font-bold text-ink">
-                        {siteData.messages.principal.name}
-                      </h4>
-                      <p className="text-xs text-electric font-medium font-sans">
-                        {siteData.messages.principal.designation}
-                      </p>
-                      <p className="text-[11px] text-slate-light font-mono mt-0.5">
-                        Government Law College, Mumbai
-                      </p>
-                    </div>
-                  </div>
+              {(() => {
+                const principal = siteData.messages?.principal || (siteData as any).principal;
+                const founder = siteData.messages?.founder || (siteData as any).founder;
 
-                  <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic font-serif relative pl-6 border-l-2 border-electric">
-                    &ldquo;{siteData.messages.principal.quote}&rdquo;
-                  </blockquote>
-                </div>
-              ) : (
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-electric/30 bg-white">
-                      <Image
-                        src={siteData.messages.founder.image}
-                        alt={siteData.messages.founder.name}
-                        fill
-                        className="object-cover"
-                      />
+                return activeTab === "principal" && principal ? (
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-navy-950/20 bg-white">
+                        <Image
+                          src={principal.image}
+                          alt={principal.name}
+                          fill
+                          className="object-cover object-top"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-base font-serif font-bold text-ink">
+                          {principal.name}
+                        </h4>
+                        <p className="text-xs text-electric font-medium font-sans">
+                          {principal.designation}
+                        </p>
+                        <p className="text-[11px] text-slate-light font-mono mt-0.5">
+                          Government Law College, Mumbai
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="text-base font-serif font-bold text-ink">
-                        {siteData.messages.founder.name}
-                      </h4>
-                      <p className="text-xs text-electric font-medium font-sans">
-                        {siteData.messages.founder.designation}
-                      </p>
-                      <p className="text-[11px] text-slate-light font-mono mt-0.5">
-                        Inaugurated AY 2023–24
-                      </p>
-                    </div>
-                  </div>
 
-                  <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic font-serif relative pl-6 border-l-2 border-electric">
-                    &ldquo;{siteData.messages.founder.quote}&rdquo;
-                  </blockquote>
-                </div>
-              )}
+                    <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic font-serif relative pl-6 border-l-2 border-electric">
+                      &ldquo;{principal.quote}&rdquo;
+                    </blockquote>
+                  </div>
+                ) : founder ? (
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-electric/30 bg-white">
+                        <Image
+                          src={founder.image}
+                          alt={founder.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-base font-serif font-bold text-ink">
+                          {founder.name}
+                        </h4>
+                        <p className="text-xs text-electric font-medium font-sans">
+                          {founder.designation}
+                        </p>
+                        <p className="text-[11px] text-slate-light font-mono mt-0.5">
+                          Inaugurated AY 2023–24
+                        </p>
+                      </div>
+                    </div>
+
+                    <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic font-serif relative pl-6 border-l-2 border-electric">
+                      &ldquo;{founder.quote}&rdquo;
+                    </blockquote>
+                  </div>
+                ) : null;
+              })()}
 
               <div className="mt-8 pt-4 border-t border-surface-border flex items-center justify-between text-xs">
                 <span className="text-slate-light">Learn more about our governance</span>

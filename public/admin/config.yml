@@ -38,6 +38,19 @@ collections:
               - { label: "Profile Photo", name: "image", widget: "image", default: "/images/glc-crest.png" }
               - { label: "Biographical Profile", name: "bio", widget: "text" }
 
+          - label: "Student Founders (Founding Committee 2023)"
+            name: "founders"
+            widget: "list"
+            required: false
+            summary: "{{fields.name}} — {{fields.position}}"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Position (e.g. Student Founder, Co-Founder)", name: "position", widget: "string" }
+              - { label: "Department / Committee", name: "department", widget: "string" }
+              - { label: "Specialization", name: "specialization", widget: "string" }
+              - { label: "Member Photo", name: "image", widget: "image" }
+              - { label: "Bio / Scope of Work", name: "bio", widget: "text" }
+
           - label: "Senior Core & Executive Board"
             name: "seniorCore"
             widget: "list"
@@ -142,6 +155,17 @@ collections:
                 required: false
                 field: { label: "Photo", name: "image", widget: "image" }
 
+          - label: "Institutional & Law Firm Partners (Sponsors)"
+            name: "sponsors"
+            widget: "list"
+            required: false
+            summary: "{{fields.name}} [{{fields.role}}]"
+            fields:
+              - { label: "Partner / Sponsor Name", name: "name", widget: "string" }
+              - { label: "Partnership Role", name: "role", widget: "string" }
+              - { label: "Logo Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string", required: false }
+
   - name: "upcoming_events"
     label: "Upcoming & Active Events"
     icon: "campaign"
@@ -209,47 +233,71 @@ collections:
             fields:
               - { label: "Partner Name", name: "name", widget: "string" }
               - { label: "Role & Partnership Scope", name: "role", widget: "string" }
-          - label: "Call for Papers (Current Volume)"
-            name: "callForPapers"
+          - label: "Volume I (Current Edition)"
+            name: "volume1"
             widget: "object"
+            required: false
             fields:
-              - { label: "Volume & CFP Title", name: "title", widget: "string" }
-              - { label: "Submission Deadline", name: "submissionDeadline", widget: "string" }
-              - { label: "Scope & Academic Themes", name: "theme", widget: "text" }
-              - { label: "Submission Portal URL / Email", name: "submissionEmail", widget: "string" }
+              - { label: "Volume Title", name: "title", widget: "string" }
+              - { label: "Status (e.g. Published)", name: "status", widget: "string" }
+              - { label: "Download URL (PDF)", name: "downloadUrl", widget: "string" }
+              - { label: "Open Access License", name: "license", widget: "string" }
+              - label: "Published Papers List"
+                name: "papers"
+                widget: "list"
+                required: false
+                summary: "{{fields.title}} by {{fields.author}}"
+                fields:
+                  - { label: "Author(s)", name: "author", widget: "string" }
+                  - { label: "Paper Title", name: "title", widget: "string" }
+                  - { label: "Category", name: "category", widget: "string" }
+          - label: "Call for Papers & Submission Guidelines"
+            name: "cfp"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Edition / Heading", name: "edition", widget: "string" }
+              - { label: "Guidelines Title", name: "title", widget: "string" }
+              - { label: "Eligibility Criteria", name: "eligibility", widget: "text" }
               - label: "Acceptable Manuscript Categories"
                 name: "categories"
                 widget: "list"
+                summary: "{{fields.type}} ({{fields.wordCount}})"
                 fields:
                   - { label: "Category Name", name: "type", widget: "string" }
-                  - { label: "Word Count Limit", name: "wordLimit", widget: "string" }
-                  - { label: "Category Scope", name: "description", widget: "string" }
+                  - { label: "Word Count", name: "wordCount", widget: "string" }
+                  - { label: "Abstract Requirement", name: "abstract", widget: "string", required: false }
+                  - { label: "Category Scope & Description", name: "description", widget: "text" }
 
   - name: "site_settings"
-    label: "Site Settings & Quotes"
+    label: "Site Settings & Leadership Messages"
     icon: "tune"
     files:
       - file: "src/content/site.json"
         label: "Contact, Principal & Founder Quotes"
         name: "site_info"
         fields:
-          - label: "Principal's Official Message"
-            name: "principal"
+          - label: "Leadership Messages & Quotes"
+            name: "messages"
             widget: "object"
             fields:
-              - { label: "Principal Name", name: "name", widget: "string" }
-              - { label: "Designation", name: "designation", widget: "string" }
-              - { label: "Official Address / Quote", name: "quote", widget: "text" }
-              - { label: "Principal Portrait", name: "image", widget: "image" }
+              - label: "Principal's Official Message"
+                name: "principal"
+                widget: "object"
+                fields:
+                  - { label: "Principal Name", name: "name", widget: "string" }
+                  - { label: "Designation", name: "designation", widget: "string" }
+                  - { label: "Official Address / Quote", name: "quote", widget: "text" }
+                  - { label: "Principal Portrait", name: "image", widget: "image" }
 
-          - label: "Founder's Vision"
-            name: "founder"
-            widget: "object"
-            fields:
-              - { label: "Founder Name", name: "name", widget: "string" }
-              - { label: "Designation", name: "designation", widget: "string" }
-              - { label: "Founding Note / Quote", name: "quote", widget: "text" }
-              - { label: "Founder Portrait", name: "image", widget: "image" }
+              - label: "Founder's Vision"
+                name: "founder"
+                widget: "object"
+                fields:
+                  - { label: "Founder Name", name: "name", widget: "string" }
+                  - { label: "Designation", name: "designation", widget: "string" }
+                  - { label: "Founding Note / Quote", name: "quote", widget: "text" }
+                  - { label: "Founder Portrait", name: "image", widget: "image" }
 
           - label: "Institutional Contact Details"
             name: "contact"
@@ -258,13 +306,14 @@ collections:
               - { label: "Campus Address", name: "address", widget: "string" }
               - { label: "Telephone Number", name: "phone", widget: "string" }
               - { label: "Official Inquiry Email", name: "email", widget: "string" }
-              - label: "Student Office Bearers & Emergency Dials"
+              - label: "Student Office Bearers"
                 name: "studentOfficeBearers"
                 widget: "list"
                 fields:
                   - { label: "Officer Name", name: "name", widget: "string" }
                   - { label: "Role / Position", name: "role", widget: "string" }
-                  - { label: "Contact Phone Number", name: "phone", widget: "string" }
+                  - { label: "LinkedIn Profile URL", name: "linkedin", widget: "string", required: false }
+                  - { label: "Contact Phone Number", name: "phone", widget: "string", required: false }
               - label: "Social Media Channels"
                 name: "socials"
                 widget: "object"

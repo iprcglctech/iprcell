@@ -17,14 +17,17 @@ import journalData from "@/content/journal.json";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function JournalClient() {
-  const { volume1, cfp, partners } = journalData;
+  const volume1 = journalData.volume1 || { title: "Volume I", status: "Published", downloadUrl: "", license: "", recognitions: [], papers: [] };
+  const cfp = journalData.cfp || (journalData as any).callForPapers || { edition: "", title: "", eligibility: "", categories: [], formatting: {}, submissionProtocol: [] };
+  const partners = journalData.partners || [];
+  const papers = Array.isArray(volume1?.papers) ? volume1.papers : [];
   const [paperSearch, setPaperSearch] = useState("");
 
-  const filteredPapers = volume1.papers.filter(
+  const filteredPapers = papers.filter(
     (p) =>
-      p.title.toLowerCase().includes(paperSearch.toLowerCase()) ||
-      p.author.toLowerCase().includes(paperSearch.toLowerCase()) ||
-      p.category.toLowerCase().includes(paperSearch.toLowerCase())
+      (p.title && p.title.toLowerCase().includes(paperSearch.toLowerCase())) ||
+      (p.author && p.author.toLowerCase().includes(paperSearch.toLowerCase())) ||
+      (p.category && p.category.toLowerCase().includes(paperSearch.toLowerCase()))
   );
 
   return (
@@ -149,9 +152,9 @@ export default function JournalClient() {
 
           {/* Submission Categories Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {cfp.categories.map((cat, idx) => (
+            {(cfp.categories || []).map((cat, idx) => (
               <ScrollReveal
-                key={cat.type}
+                key={cat.type || idx}
                 delay={0.1 + idx * 0.08}
                 yOffset={16}
                 className="bg-surface-offwhite border border-cream-border p-6 rounded-2xl flex flex-col justify-between space-y-6 hover:border-electric transition-all hover:shadow-card group"
@@ -174,34 +177,38 @@ export default function JournalClient() {
           {/* Formatting & Submission Protocol */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Formatting */}
-            <ScrollReveal delay={0.2} className="bg-surface-offwhite border border-cream-border p-6 sm:p-8 rounded-2xl space-y-4">
-              <h3 className="text-sm font-mono uppercase tracking-wider font-bold text-ink">
-                Formatting &amp; Citation Specifications
-              </h3>
-              <ul className="text-xs sm:text-sm space-y-2.5 text-slate-muted">
-                <li>• <strong className="text-ink">Citation Style:</strong> {cfp.formatting.citation}</li>
-                <li>• <strong className="text-ink">Typography:</strong> {cfp.formatting.font}</li>
-                <li>• <strong className="text-ink">Spacing:</strong> {cfp.formatting.spacing}</li>
-                <li>• <strong className="text-ink">Headings:</strong> {cfp.formatting.alignment}</li>
-                <li>• <strong className="text-ink">Co-authorship:</strong> {cfp.formatting.authorship}</li>
-                <li>• <strong className="text-ink">Originality:</strong> {cfp.formatting.plagiarism}</li>
-              </ul>
-            </ScrollReveal>
+            {cfp.formatting && (
+              <ScrollReveal delay={0.2} className="bg-surface-offwhite border border-cream-border p-6 sm:p-8 rounded-2xl space-y-4">
+                <h3 className="text-sm font-mono uppercase tracking-wider font-bold text-ink">
+                  Formatting &amp; Citation Specifications
+                </h3>
+                <ul className="text-xs sm:text-sm space-y-2.5 text-slate-muted">
+                  {cfp.formatting.citation && <li>• <strong className="text-ink">Citation Style:</strong> {cfp.formatting.citation}</li>}
+                  {cfp.formatting.font && <li>• <strong className="text-ink">Typography:</strong> {cfp.formatting.font}</li>}
+                  {cfp.formatting.spacing && <li>• <strong className="text-ink">Spacing:</strong> {cfp.formatting.spacing}</li>}
+                  {cfp.formatting.alignment && <li>• <strong className="text-ink">Headings:</strong> {cfp.formatting.alignment}</li>}
+                  {cfp.formatting.authorship && <li>• <strong className="text-ink">Co-authorship:</strong> {cfp.formatting.authorship}</li>}
+                  {cfp.formatting.plagiarism && <li>• <strong className="text-ink">Originality:</strong> {cfp.formatting.plagiarism}</li>}
+                </ul>
+              </ScrollReveal>
+            )}
 
             {/* Review Protocol */}
-            <ScrollReveal delay={0.25} className="bg-surface-offwhite border border-cream-border p-6 sm:p-8 rounded-2xl space-y-4">
-              <h3 className="text-sm font-mono uppercase tracking-wider font-bold text-ink">
-                Submission &amp; Review Protocol
-              </h3>
-              <ul className="text-xs sm:text-sm space-y-2.5 text-slate-muted">
-                {cfp.submissionProtocol.map((item, idx) => (
-                  <li key={idx} className="flex items-start space-x-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-electric shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </ScrollReveal>
+            {cfp.submissionProtocol && cfp.submissionProtocol.length > 0 && (
+              <ScrollReveal delay={0.25} className="bg-surface-offwhite border border-cream-border p-6 sm:p-8 rounded-2xl space-y-4">
+                <h3 className="text-sm font-mono uppercase tracking-wider font-bold text-ink">
+                  Submission &amp; Review Protocol
+                </h3>
+                <ul className="text-xs sm:text-sm space-y-2.5 text-slate-muted">
+                  {cfp.submissionProtocol.map((item, idx) => (
+                    <li key={idx} className="flex items-start space-x-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-electric shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </ScrollReveal>
+            )}
           </div>
         </div>
       </section>

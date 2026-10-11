@@ -24,6 +24,9 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const principal = siteData.messages?.principal || (siteData as any).principal;
+  const founder = siteData.messages?.founder || (siteData as any).founder;
+
   return (
     <div className="bg-cream-100 text-ink min-h-screen">
       {/* ── Page Hero: Deep Institutional Navy Header ── */}
@@ -177,8 +180,8 @@ export default function AboutPage() {
               <div className="lg:col-span-5 flex justify-center">
                 <div className="relative w-full max-w-[420px] aspect-square rounded-2xl overflow-hidden border-2 border-[#B89B5E]/40 shadow-elevated group bg-navy-950">
                   <Image
-                    src={siteData.messages.principal.image}
-                    alt={siteData.messages.principal.name}
+                    src={principal.image}
+                    alt={principal.name}
                     fill
                     priority
                     className="object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
@@ -190,10 +193,10 @@ export default function AboutPage() {
               <div className="lg:col-span-7 space-y-6">
                 <div>
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-normal text-ink leading-tight">
-                    {siteData.messages.principal.name}
+                    {principal.name}
                   </h3>
                   <p className="text-sm sm:text-base text-electric font-medium font-sans mt-1">
-                    {siteData.messages.principal.designation}
+                    {principal.designation}
                   </p>
                   <p className="text-xs text-slate-muted font-mono mt-0.5">
                     Government Law College, Mumbai (Estd. 1855)
@@ -206,7 +209,7 @@ export default function AboutPage() {
                   </span>
                   <blockquote className="text-slate-700 text-sm sm:text-base lg:text-lg leading-relaxed font-serif italic relative z-10 pl-6 border-l-2 border-[#B89B5E]/60 space-y-4">
                     <p>
-                      {siteData.messages.principal.quote}
+                      {principal.quote}
                     </p>
                   </blockquote>
                 </div>
@@ -235,8 +238,8 @@ export default function AboutPage() {
                 <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden shrink-0 border-4 border-[#B89B5E]/40 shadow-elevated bg-navy-950 p-1">
                   <div className="relative w-full h-full rounded-full overflow-hidden">
                     <Image
-                      src={siteData.messages.founder.image}
-                      alt={siteData.messages.founder.name}
+                      src={founder.image}
+                      alt={founder.name}
                       fill
                       className="object-cover"
                     />
@@ -244,10 +247,10 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-serif font-normal text-ink">
-                    {siteData.messages.founder.name}
+                    {founder.name}
                   </h3>
                   <p className="text-xs text-electric font-medium font-sans">
-                    {siteData.messages.founder.designation}
+                    {founder.designation}
                   </p>
                   <p className="text-[11px] text-slate-muted font-mono mt-0.5">
                     Inaugurated AY 2023–24
@@ -269,7 +272,7 @@ export default function AboutPage() {
                 <div className="relative">
                   <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic font-serif pl-5 border-l-2 border-electric space-y-3">
                     <p>
-                      &ldquo;{siteData.messages.founder.quote}&rdquo;
+                      &ldquo;{founder.quote}&rdquo;
                     </p>
                   </blockquote>
                 </div>
