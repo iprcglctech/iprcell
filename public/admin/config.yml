@@ -130,11 +130,11 @@ collections:
             fields:
               - { label: "Lecture ID", name: "id", widget: "string" }
               - { label: "Speaker Name", name: "speaker", widget: "string" }
-              - { label: "Speaker Designation", name: "designation", widget: "string" }
+              - { label: "Speaker Designation", name: "designation", widget: "string", required: false }
               - { label: "Topic / Panel Title", name: "topic", widget: "string" }
-              - { label: "Date", name: "date", widget: "string" }
-              - { label: "Key Themes", name: "keyThemes", widget: "string" }
-              - { label: "Narrative Overview", name: "narrative", widget: "text" }
+              - { label: "Date / Year", name: "date", widget: "string" }
+              - { label: "Key Themes / Category", name: "keyThemes", widget: "string", required: false }
+              - { label: "Narrative Overview", name: "narrative", widget: "text", required: false }
               - { label: "Speaker Headshot", name: "speakerImage", widget: "image", required: false }
               - label: "Event Photos"
                 name: "photos"

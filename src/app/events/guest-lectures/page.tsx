@@ -93,51 +93,78 @@ export default function GuestLecturesPage() {
           </ScrollReveal>
 
           <div className="space-y-8">
-            {eventsData.guestLecturesAndWebinars.map((item, idx) => (
-              <ScrollReveal
-                key={item.id}
-                delay={0.1 + idx * 0.08}
-                yOffset={24}
-                className="bg-white border border-cream-border rounded-2xl p-8 sm:p-10 shadow-card hover:border-electric transition-all space-y-6"
-              >
-                <div className={`grid grid-cols-1 ${item.images && item.images.length > 0 ? "lg:grid-cols-12" : ""} gap-8 items-start`}>
-                  <div className={`${item.images && item.images.length > 0 ? "lg:col-span-7" : "max-w-4xl"} space-y-4`}>
-                    <div className="flex items-center space-x-2.5">
-                      <span className="text-xs font-mono font-bold uppercase text-electric bg-electric/10 px-2.5 py-1 rounded">
-                        {item.category}
-                      </span>
-                      <span className="text-xs font-mono text-slate-muted">
-                        AY {item.year}
-                      </span>
+            {((eventsData.guestLectures || eventsData.guestLecturesAndWebinars || []) as any[]).map((item, idx) => {
+              const title = item.topic || item.title || "";
+              const speaker = item.speaker || "";
+              const designation = item.designation || "";
+              const category = item.keyThemes || item.category || "Guest Lecture";
+              const dateOrYear = item.date || (item.year ? `AY ${item.year}` : "");
+              const description = item.narrative && item.narrative !== "." ? item.narrative : (item.description && item.description !== "." ? item.description : "");
+              const images = (item.photos && item.photos.length > 0)
+                ? item.photos
+                : (item.images && item.images.length > 0)
+                  ? item.images
+                  : item.speakerImage
+                    ? [item.speakerImage]
+                    : [];
+
+              return (
+                <ScrollReveal
+                  key={item.id || idx}
+                  delay={0.1 + idx * 0.08}
+                  yOffset={24}
+                  className="bg-white border border-cream-border rounded-2xl p-8 sm:p-10 shadow-card hover:border-electric transition-all space-y-6"
+                >
+                  <div className={`grid grid-cols-1 ${images.length > 0 ? "lg:grid-cols-12" : ""} gap-8 items-start`}>
+                    <div className={`${images.length > 0 ? "lg:col-span-7" : "max-w-4xl"} space-y-4`}>
+                      <div className="flex items-center space-x-2.5">
+                        <span className="text-xs font-mono font-bold uppercase text-electric bg-electric/10 px-2.5 py-1 rounded">
+                          {category}
+                        </span>
+                        {dateOrYear && (
+                          <span className="text-xs font-mono text-slate-muted">
+                            {dateOrYear}
+                          </span>
+                        )}
+                      </div>
+
+                      <h3 className="text-2xl sm:text-3xl font-serif font-normal text-ink leading-snug">
+                        {title}
+                      </h3>
+
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm text-electric font-semibold font-sans">
+                        <div className="flex items-center space-x-1.5">
+                          <User className="w-4 h-4 shrink-0" />
+                          <span>{speaker}</span>
+                        </div>
+                        {designation && (
+                          <span className="text-slate-muted font-normal text-xs">
+                            — {designation}
+                          </span>
+                        )}
+                      </div>
+
+                      {description && (
+                        <p className="text-slate-muted text-sm sm:text-base leading-relaxed font-sans font-normal pt-1">
+                          {description}
+                        </p>
+                      )}
                     </div>
 
-                    <h3 className="text-2xl sm:text-3xl font-serif font-normal text-ink leading-snug">
-                      {item.title}
-                    </h3>
-
-                    <div className="flex items-center space-x-2 text-xs sm:text-sm text-electric font-semibold font-sans">
-                      <User className="w-4 h-4 shrink-0" />
-                      <span>{item.speaker}</span>
-                    </div>
-
-                    <p className="text-slate-muted text-sm sm:text-base leading-relaxed font-sans font-normal pt-1">
-                      {item.description}
-                    </p>
+                    {/* Event Photo Carousel */}
+                    {images.length > 0 && (
+                      <div className="lg:col-span-5 w-full">
+                        <EventImageCarousel
+                          images={images}
+                          alt={title}
+                          className="relative h-64 sm:h-72 lg:h-80 w-full rounded-2xl overflow-hidden border border-cream-border shadow-md"
+                        />
+                      </div>
+                    )}
                   </div>
-
-                  {/* Event Photo Carousel */}
-                  {item.images && item.images.length > 0 && (
-                    <div className="lg:col-span-5 w-full">
-                      <EventImageCarousel
-                        images={item.images}
-                        alt={item.title}
-                        className="relative h-64 sm:h-72 lg:h-80 w-full rounded-2xl overflow-hidden border border-cream-border shadow-md"
-                      />
-                    </div>
-                  )}
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>

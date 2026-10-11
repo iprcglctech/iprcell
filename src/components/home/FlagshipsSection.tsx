@@ -218,48 +218,59 @@ export default function FlagshipsSection() {
         {/* Tab 3: Guest Lectures & Colloquiums */}
         {activeTab === "lectures" && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {eventsData.guestLecturesAndWebinars.slice(0, 3).map((lecture) => (
-              <div
-                key={lecture.id}
-                className="bg-surface-offwhite border border-surface-border rounded-xl overflow-hidden flex flex-col justify-between hover:border-electric transition-all"
-              >
-                <div className="relative h-44 w-full bg-slate-200">
-                  <Image
-                    src={lecture.images[0]}
-                    alt={lecture.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 left-2 bg-navy-950/90 text-white text-[10px] font-mono px-2 py-0.5 rounded border border-navy-800">
-                    {lecture.category}
-                  </div>
-                </div>
+            {((eventsData.guestLectures || eventsData.guestLecturesAndWebinars || []) as any[]).slice(0, 3).map((lecture) => {
+              const title = lecture.topic || lecture.title || "";
+              const speaker = lecture.speaker || "";
+              const category = lecture.keyThemes || lecture.category || "Guest Lecture";
+              const description = lecture.narrative && lecture.narrative !== "." ? lecture.narrative : (lecture.description || "");
+              const imageSrc = (lecture.photos && lecture.photos.length > 0 && lecture.photos[0]) ||
+                (lecture.images && lecture.images.length > 0 && lecture.images[0]) ||
+                lecture.speakerImage ||
+                "/images/events/ai-artist-1.jpg";
 
-                <div className="p-5 flex-grow flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-base font-serif font-bold text-ink mb-1.5 leading-snug">
-                      {lecture.title}
-                    </h3>
-                    <p className="text-xs text-electric font-medium mb-2 font-sans">
-                      {lecture.speaker}
-                    </p>
-                    <p className="text-xs text-slate-muted leading-relaxed line-clamp-3">
-                      {lecture.description}
-                    </p>
+              return (
+                <div
+                  key={lecture.id}
+                  className="bg-surface-offwhite border border-surface-border rounded-xl overflow-hidden flex flex-col justify-between hover:border-electric transition-all"
+                >
+                  <div className="relative h-44 w-full bg-slate-200">
+                    <Image
+                      src={imageSrc}
+                      alt={title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute top-2 left-2 bg-navy-950/90 text-white text-[10px] font-mono px-2 py-0.5 rounded border border-navy-800">
+                      {category}
+                    </div>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-surface-border">
-                    <Link
-                      href="/events/guest-lectures"
-                      className="inline-flex items-center space-x-1 text-xs font-bold text-electric hover:text-electric-dark"
-                    >
-                      <span>Read Event Summary</span>
-                      <ArrowRight className="w-3 h-3" />
-                    </Link>
+                  <div className="p-5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-base font-serif font-bold text-ink mb-1.5 leading-snug">
+                        {title}
+                      </h3>
+                      <p className="text-xs text-electric font-medium mb-2 font-sans">
+                        {speaker}
+                      </p>
+                      <p className="text-xs text-slate-muted leading-relaxed line-clamp-3">
+                        {description}
+                      </p>
+                    </div>
+
+                    <div className="mt-4 pt-3 border-t border-surface-border">
+                      <Link
+                        href="/events/guest-lectures"
+                        className="inline-flex items-center space-x-1 text-xs font-bold text-electric hover:text-electric-dark"
+                      >
+                        <span>Read Event Summary</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

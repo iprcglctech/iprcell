@@ -162,14 +162,140 @@
       "speaker": "Purnima Thacker",
       "designation": "Partner - Head, IP Practice Group at Mulla & Mulla & Craigie Blunt & Caroe",
       "topic": "Trademark Opposition Proceedings Workshop",
+      "title": "Trademark Opposition Proceedings Workshop",
       "date": "9 October 2026",
+      "year": "2026",
       "keyThemes": "Trade Mark Opposition Proceedings",
-      "narrative": ".",
+      "category": "Trade Mark Opposition Proceedings",
+      "narrative": "A masterclass and procedural workshop on trademark opposition proceedings, counter-statements, evidence filing under Rule 45-47, and hearing advocacy before the Trade Marks Registry.",
+      "description": "A masterclass and procedural workshop on trademark opposition proceedings, counter-statements, evidence filing under Rule 45-47, and hearing advocacy before the Trade Marks Registry.",
       "speakerImage": "",
-      "photos": []
+      "photos": [],
+      "images": []
+    },
+    {
+      "id": "javed-akhtar-panel",
+      "speaker": "Javed Akhtar (Renowned Lyricist, Screenwriter & Copyright Activist)",
+      "designation": "Renowned Lyricist, Screenwriter & Copyright Activist",
+      "topic": "Javed Akhtar on Authorship, Lyrics & Intellectual Property in Indian Cinema",
+      "title": "Javed Akhtar on Authorship, Lyrics & Intellectual Property in Indian Cinema",
+      "date": "AY 2026",
+      "year": "2026",
+      "keyThemes": "Media & Copyright",
+      "category": "Media & Copyright",
+      "narrative": "A historic institutional panel examining the struggle for authors' and lyricists' statutory royalties, the 2012 Copyright Amendment, and contemporary challenges facing creators in the digital streaming era.",
+      "description": "A historic institutional panel examining the struggle for authors' and lyricists' statutory royalties, the 2012 Copyright Amendment, and contemporary challenges facing creators in the digital streaming era.",
+      "speakerImage": "",
+      "photos": [
+        "/images/events/javed-akhtar-1.jpg",
+        "/images/events/javed-akhtar-2.jpg",
+        "/images/events/javed-akhtar-3.jpg"
+      ],
+      "images": [
+        "/images/events/javed-akhtar-1.jpg",
+        "/images/events/javed-akhtar-2.jpg",
+        "/images/events/javed-akhtar-3.jpg"
+      ]
+    },
+    {
+      "id": "ai-vs-artist",
+      "speaker": "Seven Distinguished IP Leaders (Arrpita K Bhatt, Pooja Kapadia, Prashant Ramdas, Purnima Thacker, Shailendra Bhandare, Sujoy Mukherji)",
+      "designation": "Leading IP Practitioners & Industry Counsel",
+      "topic": "IPR Colloquium: AI vs ARTIST — Who Really Holds the Creative Crown?",
+      "title": "IPR Colloquium: AI vs ARTIST — Who Really Holds the Creative Crown?",
+      "date": "AY 2025",
+      "year": "2025",
+      "keyThemes": "Frontier IP & AI",
+      "category": "Frontier IP & AI",
+      "narrative": "Held on World IP Day 2025, exploring two critical legal debates: Intellectual Property Rights in AI-Generated Content, and Personality Rights & Voice Cloning Jurisprudence in India.",
+      "description": "Held on World IP Day 2025, exploring two critical legal debates: Intellectual Property Rights in AI-Generated Content, and Personality Rights & Voice Cloning Jurisprudence in India.",
+      "speakerImage": "",
+      "photos": [
+        "/images/events/ai-artist-1.jpg",
+        "/images/events/ai-artist-2.jpg",
+        "/images/events/ai-artist-3.jpg"
+      ],
+      "images": [
+        "/images/events/ai-artist-1.jpg",
+        "/images/events/ai-artist-2.jpg",
+        "/images/events/ai-artist-3.jpg"
+      ]
+    },
+    {
+      "id": "priyanka-khimani",
+      "speaker": "Priyanka Khimani (Founder, Khimani & Associates; Distinguished GLC Alumna)",
+      "designation": "Founder, Khimani & Associates; Distinguished GLC Alumna",
+      "topic": "In Conversation with Priyanka Khimani: Media Laws, Music Rights & IP Trends",
+      "title": "In Conversation with Priyanka Khimani: Media Laws, Music Rights & IP Trends",
+      "date": "AY 2025",
+      "year": "2025",
+      "keyThemes": "Entertainment Law",
+      "category": "Entertainment Law",
+      "narrative": "An intensive session delving into the commercial contracts, digital platform negotiations, and evolving entertainment law practices with interactive Q&A for GLC students.",
+      "description": "An intensive session delving into the commercial contracts, digital platform negotiations, and evolving entertainment law practices with interactive Q&A for GLC students.",
+      "speakerImage": "",
+      "photos": [
+        "/images/events/priyanka-khimani-1.jpg",
+        "/images/events/priyanka-khimani-2.jpg",
+        "/images/events/priyanka-khimani-3.jpg"
+      ],
+      "images": [
+        "/images/events/priyanka-khimani-1.jpg",
+        "/images/events/priyanka-khimani-2.jpg",
+        "/images/events/priyanka-khimani-3.jpg"
+      ]
+    },
+    {
+      "id": "inta-unreal",
+      "speaker": "Adv. Girish Bhatia (In collaboration with RNA, Technology and IP Attorneys & INTA)",
+      "designation": "In collaboration with RNA, Technology and IP Attorneys & INTA",
+      "topic": "Deep Dive into IP Enforcement & The INTA Unreal Campaign",
+      "title": "Deep Dive into IP Enforcement & The INTA Unreal Campaign",
+      "date": "AY 2025",
+      "year": "2025",
+      "keyThemes": "Brand Protection",
+      "category": "Brand Protection",
+      "narrative": "High-impact brand enforcement awareness focusing on counterfeit detection, anti-counterfeiting litigation, consumer economic impacts, and trademark defense.",
+      "description": "High-impact brand enforcement awareness focusing on counterfeit detection, anti-counterfeiting litigation, consumer economic impacts, and trademark defense.",
+      "speakerImage": "",
+      "photos": [],
+      "images": []
+    },
+    {
+      "id": "world-ip-day-2024",
+      "speaker": "Purnima Thacker, Rutwik Kishan Rao, and Shailendra Bhandare",
+      "designation": "Distinguished IP Practitioners & Advocates",
+      "topic": "Panel Discussion: IP Challenges and Trends in Entertainment Law",
+      "title": "Panel Discussion: IP Challenges and Trends in Entertainment Law",
+      "date": "AY 2024",
+      "year": "2024",
+      "keyThemes": "Entertainment Law",
+      "category": "Entertainment Law",
+      "narrative": "Commemorating World Intellectual Property Day with a deep dive into media contracts, broadcasting rights, and the nascent impacts of generative AI on creative industries.",
+      "description": "Commemorating World Intellectual Property Day with a deep dive into media contracts, broadcasting rights, and the nascent impacts of generative AI on creative industries.",
+      "speakerImage": "",
+      "photos": [
+        "/images/events/panel-discussion-1.jpg",
+        "/images/events/panel-discussion-2.jpg",
+        "/images/events/panel-discussion-3.jpg"
+      ],
+      "images": [
+        "/images/events/panel-discussion-1.jpg",
+        "/images/events/panel-discussion-2.jpg",
+        "/images/events/panel-discussion-3.jpg"
+      ]
     }
   ],
   "guestLecturesAndWebinars": [
+    {
+      "category": "Trade Mark Opposition Proceedings",
+      "description": "A masterclass and procedural workshop on trademark opposition proceedings, counter-statements, evidence filing under Rule 45-47, and hearing advocacy before the Trade Marks Registry.",
+      "id": "TM_OPP_ONLINE",
+      "images": [],
+      "speaker": "Purnima Thacker",
+      "title": "Trademark Opposition Proceedings Workshop",
+      "year": "2026"
+    },
     {
       "category": "Media & Copyright",
       "description": "A historic institutional panel examining the struggle for authors' and lyricists' statutory royalties, the 2012 Copyright Amendment, and contemporary challenges facing creators in the digital streaming era.",
