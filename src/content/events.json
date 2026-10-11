@@ -156,117 +156,130 @@
       }
     ]
   },
+  "guestLectures": [
+    {
+      "id": "TM_OPP_ONLINE",
+      "speaker": "Purnima Thacker",
+      "designation": "Partner - Head, IP Practice Group at Mulla & Mulla & Craigie Blunt & Caroe",
+      "topic": "Trademark Opposition Proceedings Workshop",
+      "date": "9 October 2026",
+      "keyThemes": "Trade Mark Opposition Proceedings",
+      "narrative": ".",
+      "speakerImage": "",
+      "photos": []
+    }
+  ],
   "guestLecturesAndWebinars": [
     {
-      "id": "javed-akhtar-panel",
-      "year": "2026",
       "category": "Media & Copyright",
-      "title": "Javed Akhtar on Authorship, Lyrics & Intellectual Property in Indian Cinema",
-      "speaker": "Javed Akhtar (Renowned Lyricist, Screenwriter & Copyright Activist)",
       "description": "A historic institutional panel examining the struggle for authors' and lyricists' statutory royalties, the 2012 Copyright Amendment, and contemporary challenges facing creators in the digital streaming era.",
+      "id": "javed-akhtar-panel",
       "images": [
         "/images/events/javed-akhtar-1.jpg",
         "/images/events/javed-akhtar-2.jpg",
         "/images/events/javed-akhtar-3.jpg"
-      ]
+      ],
+      "speaker": "Javed Akhtar (Renowned Lyricist, Screenwriter & Copyright Activist)",
+      "title": "Javed Akhtar on Authorship, Lyrics & Intellectual Property in Indian Cinema",
+      "year": "2026"
     },
     {
-      "id": "ai-vs-artist",
-      "year": "2025",
       "category": "Frontier IP & AI",
-      "title": "IPR Colloquium: AI vs ARTIST — Who Really Holds the Creative Crown?",
-      "speaker": "Seven Distinguished IP Leaders (Arrpita K Bhatt, Pooja Kapadia, Prashant Ramdas, Purnima Thacker, Shailendra Bhandare, Sujoy Mukherji)",
       "description": "Held on World IP Day 2025, exploring two critical legal debates: Intellectual Property Rights in AI-Generated Content, and Personality Rights & Voice Cloning Jurisprudence in India.",
+      "id": "ai-vs-artist",
       "images": [
         "/images/events/ai-artist-1.jpg",
         "/images/events/ai-artist-2.jpg",
         "/images/events/ai-artist-3.jpg"
-      ]
+      ],
+      "speaker": "Seven Distinguished IP Leaders (Arrpita K Bhatt, Pooja Kapadia, Prashant Ramdas, Purnima Thacker, Shailendra Bhandare, Sujoy Mukherji)",
+      "title": "IPR Colloquium: AI vs ARTIST — Who Really Holds the Creative Crown?",
+      "year": "2025"
     },
     {
-      "id": "priyanka-khimani",
-      "year": "2025",
       "category": "Entertainment Law",
-      "title": "In Conversation with Priyanka Khimani: Media Laws, Music Rights & IP Trends",
-      "speaker": "Priyanka Khimani (Founder, Khimani & Associates; Distinguished GLC Alumna)",
       "description": "An intensive session delving into the commercial contracts, digital platform negotiations, and evolving entertainment law practices with interactive Q&A for GLC students.",
+      "id": "priyanka-khimani",
       "images": [
         "/images/events/priyanka-khimani-1.jpg",
         "/images/events/priyanka-khimani-2.jpg",
         "/images/events/priyanka-khimani-3.jpg"
-      ]
+      ],
+      "speaker": "Priyanka Khimani (Founder, Khimani & Associates; Distinguished GLC Alumna)",
+      "title": "In Conversation with Priyanka Khimani: Media Laws, Music Rights & IP Trends",
+      "year": "2025"
     },
     {
-      "id": "inta-unreal",
-      "year": "2025",
       "category": "Brand Protection",
-      "title": "Deep Dive into IP Enforcement & The INTA Unreal Campaign",
-      "speaker": "Adv. Girish Bhatia (In collaboration with RNA, Technology and IP Attorneys & INTA)",
       "description": "High-impact brand enforcement awareness focusing on counterfeit detection, anti-counterfeiting litigation, consumer economic impacts, and trademark defense.",
-      "images": []
+      "id": "inta-unreal",
+      "images": [],
+      "speaker": "Adv. Girish Bhatia (In collaboration with RNA, Technology and IP Attorneys & INTA)",
+      "title": "Deep Dive into IP Enforcement & The INTA Unreal Campaign",
+      "year": "2025"
     },
     {
-      "id": "world-ip-day-2024",
-      "year": "2024",
       "category": "Entertainment Law",
-      "title": "Panel Discussion: IP Challenges and Trends in Entertainment Law",
-      "speaker": "Purnima Thacker, Rutwik Kishan Rao, and Shailendra Bhandare",
       "description": "Commemorating World Intellectual Property Day with a deep dive into media contracts, broadcasting rights, and the nascent impacts of generative AI on creative industries.",
+      "id": "world-ip-day-2024",
       "images": [
         "/images/events/panel-discussion-1.jpg",
         "/images/events/panel-discussion-2.jpg",
         "/images/events/panel-discussion-3.jpg"
-      ]
+      ],
+      "speaker": "Purnima Thacker, Rutwik Kishan Rao, and Shailendra Bhandare",
+      "title": "Panel Discussion: IP Challenges and Trends in Entertainment Law",
+      "year": "2024"
     }
   ],
   "sponsors": [
     {
-      "name": "The International Trademark Association",
-      "src": "/images/sponsors/inta.jpg",
       "alt": "The International Trademark Association (INTA)",
-      "role": "Global Partner"
+      "name": "The International Trademark Association",
+      "role": "Global Partner",
+      "src": "/images/sponsors/inta.jpg"
     },
     {
-      "name": "Bombay Bar Association",
-      "src": "/images/sponsors/bombay-bar-association.png",
       "alt": "Bombay Bar Association (BBA)",
-      "role": "Institutional Partner"
+      "name": "Bombay Bar Association",
+      "role": "Institutional Partner",
+      "src": "/images/sponsors/bombay-bar-association.png"
     },
     {
-      "name": "Manupatra",
-      "src": "/images/sponsors/manupatra.png",
       "alt": "Knowledge Partner Manupatra",
-      "role": "Knowledge Partner"
+      "name": "Manupatra",
+      "role": "Knowledge Partner",
+      "src": "/images/sponsors/manupatra.png"
     },
     {
-      "name": "Crawford Bayley & Co.",
-      "src": "/images/sponsors/crawford-bayley.png",
       "alt": "Crawford Bayley & Co.",
-      "role": "Legal Partner"
+      "name": "Crawford Bayley & Co.",
+      "role": "Legal Partner",
+      "src": "/images/sponsors/crawford-bayley.png"
     },
     {
-      "name": "Jehangir Gulabbhai & Bilimoria & Daruwalla",
-      "src": "/images/sponsors/jgbd-advocates.png",
       "alt": "Jehangir Gulabbhai & Bilimoria & Daruwalla (JGBD)",
-      "role": "Law Firm Partner"
+      "name": "Jehangir Gulabbhai & Bilimoria & Daruwalla",
+      "role": "Law Firm Partner",
+      "src": "/images/sponsors/jgbd-advocates.png"
     },
     {
-      "name": "RNA Technology and IP Attorneys",
-      "src": "/images/sponsors/rna-technology-ip-attorneys.png",
       "alt": "RNA Technology and IP Attorneys",
-      "role": "IP Partner"
+      "name": "RNA Technology and IP Attorneys",
+      "role": "IP Partner",
+      "src": "/images/sponsors/rna-technology-ip-attorneys.png"
     },
     {
-      "name": "Casemine",
-      "src": "/images/sponsors/Casemine.png",
       "alt": "Casemine Legal Research",
-      "role": "Research Partner"
+      "name": "Casemine",
+      "role": "Research Partner",
+      "src": "/images/sponsors/Casemine.png"
     },
     {
-      "name": "The International Legal Alliance",
-      "src": "/images/sponsors/international-legal-alliance.jpg",
       "alt": "The International Legal Alliance (ILA)",
-      "role": "Alliance Partner"
+      "name": "The International Legal Alliance",
+      "role": "Alliance Partner",
+      "src": "/images/sponsors/international-legal-alliance.jpg"
     }
   ]
 }
